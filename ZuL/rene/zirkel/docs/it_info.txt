@@ -1,0 +1,1721 @@
+// Sintassi della Guida
+// Questa è la Guida di C.a.R., utilizzata all'interno del programma
+// come guida contestuale e per l'estrazione di pagine HTML
+// mediante l'apposito programma contenuto in C.a.R.
+// Per ulteriori informazioni fare riferimento al Wiki.
+
+.index
+.related start online license gui
+C.a.R.
+
+//image images/ZuL-Logo.png
+
+C.a.R. contiene una __Guida§attiva__ che può essere richiamata mentre si utilizza il programma. Essa fornisce informazioni relative allo strumento in uso. Le pagine Web che state leggendo sono state estratte dalla Guida. In queste pagine Web è inoltre disponibile un elenco di __parole§chiave__ e un indice generale.
+Inoltre sia sul Web che nel programma è disponibile una funzione di ricerca. 
+
+Per ulteriori informazioni relative a C.a.R. fare riferimento alle applicazioni, ai demo, alle esercitazioni e all'introduzione in Flash. Sono inoltre disponibili un forum di discussione su Yahoo e un Wiki di C.a.R., oltre ad una pubblicazione multilingua, CarZine.
+Ricercando nel web troverete sicuramente molte altre risorse e informazioni su questo programma.
+
+L'autore Vi augura un grande successo con C.a.R.
+
+Rene Grothmann
+
+.start
+.related online license gui tips localize language
+Guida attiva
+
+//image images/Help.jpg
+
+//image- images/info.png
+Questa __Guida__ fornisce suggerimenti sullo strumento in uso o sull'ultima azione. Ad esempio, per ottenere aiuto sullo strumento macro, selezionare lo strumento e fare clic sul pulsante  __I__ . Per chiudere la Guida utilizzare lo stesso pulsante. Inoltre è possibile lasciare la Guida aperta, posizionarla e ridimensionarne la finestra in modo da visualizzare contemporaneamente sia il programma che la Guida. C.a.R. memorizza automaticamente queste impostazioni. 
+
+Nella parte superiore della finestra della Guida è presente un elenco a discesa contenente gli __argomenti§correlati__ a quello scelto.
+
+Si può inoltre effettuare la ricerca attraverso __parole§chiave__ .
+Cercando "macro" verranno trovati anche "Macro" e tutte le parole contenenti "macro". I risultati della ricerca vengono memorizzati nell'elenco a discesa; viene visualizzata automaticamente la descrizione del primo risultato trovato.
+
+I migliori auguri per il tuo lavoro con C.a.R.
+
+René Grothmann
+
+.online
+.related start tips license
+Guida in linea
+
+La __home§page__ di C.a.R. è all'indirizzo "www.z-u-l.de". Qui è disponibile l'ultima versione del programma, oltre a vari esempi e demo. Se è stata installata la documentazione, verrà installato sul computer dell'utente un collegamento, tramite il quale sarà possibile accedere alla documentazione. In caso contrario C.a.R. accede alla documentazione presente sulla pagina Web dell'autore del programma. È inoltre possibile configurare i comandi del browser tramite il menu della Guida.
+
+Su Yahoo groups sono aperti due gruppi di discussione su C.a.R., uno in Tedesco e l'altro in Inglese: nella home page di C.a.R. è disponibile un collegamento al gruppo di discussione in Inglese. È inoltre disponibile un Wiki su C.a.R., attraverso il quale è possibile partecipare attivamente allo sviluppo del programma.
+
+L'autore può essere contattato via __posta§elettronica__: l'indirizzo è disponibile nella home page dell'autore, a cui si ha accesso tramite un collegamento presente nella home page di C.a.R. "http//www.z-u-l.de".
+
+.license
+.related online start
+__Licenza__ di C.a.R.
+
+C.a.R. è un __software§libero__ prodotto sotto licenza GPL (Gnu General Public License) ed è possibile utilizzarlo liberamente. Per la distribuzione è necessario includere almeno un collegamento alle pagine dell'autore.
+
+I file sorgente possono essere scaricati dalla home page di C.a.R. Tuttavia i file sorgente e tutte le loro eventuali modifiche devono rimanere disponibili. Dovranno essere resi disponibili tutti i file sorgente modificati assieme al programma, oltre ad un collegamento ai file sorgente originali.
+
+La stessa licenza si applica alla documentazione.
+
+Chi desiderasse ottenere un compenso in termini economici da questo programma, può farlo fornendo servizi aggiuntivi come libri, istruzioni, esercitazioni e così via. Il programma può essere incluso in una distribuzione commerciale, come ad esempio una distribuzione __Linux__ . Nel caso si verificasse questa eventualità, si prega di informare l'autore del programma e inviare allo stesso, se possibile, una copia del materiale distribuito.
+
+.gui
+.related iconbar macrobar mouse zoom online keyboard
+Interfaccia Utente
+
+//images image/Gui.jpg
+
+L'area più ampia nella finestra principale di C.a.R. contiene e visualizza la costruzione geometrica. È possibile muoversi all'interno dell'area utilizzando i __tasti§freccia__, e ingrandire la visuale con __+/-__, od effettuare uno __zoom__ e muovere la costruzione con uno strumento apposito per il mouse. È inoltre possibile fare lo zoom con la __rotellina§del§mouse__ e trascinare la costruzione a piacimento con il __pulsante§destro§del§mouse__.
+
+La __barra§delle§icone__ si trova sopra la costruzione. Se il puntatore del mouse si ferma per più di due secondi su un'icona, viene visualizzata la __descrizione§del§comando__ relativo. Le icone possono essere visualizzate su una singola barra o su una barra di due righe. In quest'ultimo caso la riga inferiore contiene gli strumenti di costruzione e quella superiore gli strumenti standard e gli strumenti di visualizzazione.
+
+La barra delle icone può inoltre comprendere una __barra§delle§macro__.
+
+Sotto la costruzione è presente la __barra§di§stato__, nella quale vengono visualizzate importanti informazioni di tipo testuale. In __modalità§non§visuale__, la barra di stato viene sostituita dalla riga di input.
+
+A sinistra della costruzione è possibile visualizzare un __elenco§degli§oggetti__ opzionale, che può essere configurato per mostrare solo determinate categorie di oggetti. Fare clic con il __pulsante§destro§del§mouse__ per accedere alle ulteriori opzioni dell'elenco. Facendo doppio clic sul nome di un oggetto è possibile modificarne le proprietà; per modificare contemporaneamente le proprietà di più oggetti, selezionarli tenendo premuto il tasto __CTRL__ (oppure __MAIUSC__), quindi fare doppio clic con il mouse.
+
+L'elenco degli oggetti può essere dimensionato facendo clic sul bordo a destra della barra di scorrimento e trascinandolo con il mouse a destra o a sinistra, fino a raggiungere la dimensione desiderata.
+
+Il menu contiene ulteriori comandi e opzioni, come ad esempio quelli per l'apertura e il salvataggio dei file. Inoltre il menu visualizza i __tasti§di§scelta§rapida__ per l'accesso agli strumenti.
+
+Vedere: Elenco oggetti, Mouse, Barra delle icone, Tastiera.
+
+.iconbar
+.related restricted gui settings
+Barra delle Icone
+
+Per selezionare un'icona nella __barra§delle§icone__, fare clic con il pulsante sinistro del mouse su di essa. Per conoscere il comando associato all'icona basta lasciare per qualche istante il puntatore del mouse su di essa: verrà visualizzata una breve descrizione testuale dello strumento (__descrizione§del§comando__).
+
+Sono disponibili diversi tipi di icone:
+
+Icone in attesa di input del mouse: ad esempio gli strumenti punto o segmento, la selezione dei parametri di una macro o lo zoom.
+
+Icone per la modifica delle impostazioni predefinite: ad esempio del colore predefinito o dello stile del punto.
+
+Icone che modificano la visualizzazione: ad esempio l'icona della griglia o l'icona per mostrare gli elementi nascosti.
+
+Icone collegate ad azioni: ad esempio quelle per modificare i commenti o per eliminare l'ultimo oggetto.
+
+//image images/Configure.jpg
+
+Per personalizzare la __barra§delle§icone__, aprire la finestra di dialogo con la corrispondente voce nel menù Impostazioni. È inoltre possibile selezionare o deselezionare ciascuna icona, come pure scegliere di mostrare gli strumenti su una singola riga, in modo tale che la barra delle icone contenga solo gli strumenti più utili.
+
+La barra delle icone può essere impostata in modo da essere visualizzata sotto la costruzione (vedere le __impostazioni§avanzate__).
+
+.restricted beginner
+.related iconbar
+Barra delle icone limitata
+
+È disponibile una versione limitata della barra delle icone, che viene salvata con la costruzione e visualizzata quando l'utente carica la costruzione.
+
+Per impostare la __barra§delle§icone§limitata__, selezionare la corrispondente voce nel menù Impostazioni. Quindi modificare a piacimento la barra rimuovendo tutti gli strumenti non necessari.
+
+Disattivando la barra delle icone limitata o caricando una nuova costruzione, si ottiene nuovamente la barra delle icone completa.
+
+È inoltre disponibile una speciale __barra§delle§icone§per§principianti__ nella quale non sono presenti alcuni strumenti che potrebbero creare confusione. Questa modalità è particolarmente raccomandata per i principianti.
+
+.mouse
+.related gui settings hide point circle move keyboard edit
+Il mouse
+
+Il __pulsante§sinistro§del mouse__ viene utilizzato per creare gli oggetti della costruzione corrispondenti allo strumento attivo.
+
+Molti strumenti necessitano della scelta di più oggetti. In questo caso, il primo punto viene evidenziato in rosso, e lo strumento rimane in attesa del secondo punto.
+
+Se gli oggetti disponibili possono essere utilizzati con lo strumento attivo, al passaggio del mouse verranno evidenziati in giallo. Ciò facilita la selezione degli oggetti appropriati.
+
+//image images/Select.jpg
+
+Se la scelta dell'oggetto non è univocamente determinata, verrà visualizzato un elenco di oggetti validi, dal quale è possibile scegliere l'oggetto desiderato con un doppio clic, oppure selezionandolo e facendo clic su "OK". I punti vengono visualizzati in nero, le rette in rosso, gli angoli (e altri oggetti) in verde e le circonferenze in blu. La finestra di dialogo di selezione può essere disattivata tramite le __Impostazioni§avanzate__: in tal caso verrà utilizzato automaticamente l'oggetto più vicino.
+
+Un'altra caratteristica significativa del programma è che i __punti__ vengono creati automaticamente quando l'utente fa clic in un area libera della zona grafica. Allo stesso modo vengono create le __intersezioni__ se l'utente fa clic su un'intersezione, oppure punti vincolati a rette, circonferenze o altre curve se l'utente fa clic su questi oggetti.
+
+Tenendo premuto il __tasto§MAIUSC__ durante la costruzione di una circonferenza, un segmento o un angolo, tale oggetto viene assunto come fissato e viene visualizzata la relativa finestra di dialogo, nella quale è possibile inserire un valore per fissare l'oggetto, o semplicemente chiudere la finestra per utilizzare il valore corrente.
+
+Il __pulsante§destro§del§mouse__ serve per muovere gli oggetti (in alternativa allo strumento __Muovi__) e le relative etichette, e consente l'apertura della finestra di dialogo per l'impostazione delle proprietà degli oggetti. Facendo clic col pulsante destro su un'etichetta senza muoverla, questa ritornerà nella posizione predefinita. Tenendo premuto il tasto MAIUSC mentre si seleziona un'etichetta, è possibile spostarla in una posizione qualsiasi all'interno della costruzione. In caso contario l'etichetta viene posizionata automaticamente a fianco del relativo oggetto.
+
+È possibile modificare le condizioni relative alle proprietà degli oggetti tenendo premuto il __tasto§CTRL__ assieme al __pulsante§destro§del§mouse__.
+
+Per nascondere un oggetto utilizzare la combinazione di tasti __CTRL__+__MAIUSC__ e il pulsante destro del mouse. Le circonferenze e le rette prima diventano parziali, quindi vengono nascoste.
+
+.background
+.related gui move htmlexport
+Immagini di sfondo
+
+È possibile visualizzare un'immagine sullo sfondo della costruzione corrente. Tale immagine può essere uno stato della costruzione oppure un'immagine caricata da un file.
+
+//image images/Background.jpg
+
+Un immagine da file può essere affiancata, centrata o estesa per adattarsi alla finestra della costruzione, oppure è possibile adattare la finestra del programma alle dimensioni dell'immagine caricata.
+
+Se l'immagine si adatta esattamente alle dimensioni della finestra, ne verrà salvato il collegamento quando si effettua l'esportazione in HTML. In questo caso le dimensioni dell'applet corrisponderanno a quelle dell'immagine. Il file contenente l'immagine dovrà essere presente nella stessa cartella dell'applet.
+
+
+.properties
+.related edit conditions colors hide mouse transparent point fixedangle replay animatebreak expressionsyntax latex
+Proprietà degli oggetti
+
+//image images/PointDialog.jpg
+
+Per aprire la finestra di dialogo delle __proprietà__ di un oggetto fare clic con il pulsante destro del mouse o scegliere lo strumento "Modifica". Molte impostazioni sono comuni a tutti gli oggetti.
+ - nome
+ - descrizione
+ - unità
+ - colore
+ - spessore
+ - visibile/nascosto
+ - mostra nome
+ - mostra valore
+ - carattere grande o grassetto
+ - stato con sfondo
+ - stato trasparente
+ - punto di interruzione
+
+I nomi possono contenere quasi tutti i caratteri. Se contengono il carattere "~", viene visualizzato solo il testo precedente la tilde, in modo da consentire la visualizzazione di nomi uguali per più oggetti. Il nome deve essere unico. Le descrizioni vengono generate automaticamente, ma possono essere modificate. In caso di modifica, è possibile tornare alla descrizione automatica, inserendo una riga vuota.
+
+Gli oggetti posso utilizzare un altro nome (un __alias__) da visualizzare al posto del nome interno. Ciò è particolarmente utile quando si scrive del codice LaTeX, contenuto tra $....$.
+L'alias può contenere espressioni tra %...% che vengono valutate al momento dell'esecuzione.
+Le stringhe della forma %=s% restituiscono il nome dell'oggetto "s", mentre le stringhe della forma %~s% restituiscono l'equazione di s.
+
+Alcuni oggetti hanno una dimensione e la relativa unità di misura. La modifica della dimensione è applicabile solo agli oggetti fissati. L'unità di misura può essere espressa da un testo qualsiasi: per gli angoli, utilizzare il simbolo di grado "°".
+
+Lo spessore è applicabile in modo diverso a seconda degli oggetti. Scegliendo l'icona col trattino bianco l'oggetto diventa invisibile, ma non la relativa etichetta. Gli oggetti possono essere nascosti o completamente nascosti. In quest'ultimo caso è possibile accedere ad essi esclusivamente attraverso la descrizione della costruzione.
+
+La visualizzazione del nome e del valore di un oggetto può essere combinata con una scrittura del tipo "s=2". Se il nome termina con un carattere di sottolineatura come ad esempio "P_", il "_"  e il carattere "=" non verranno visualizzati.
+
+//image- images/filled.png
+Alcuni oggetti hanno uno stato "pieno", come ad esempio le circonferenze e gli angoli. Per tali oggetti può essere attivata o meno la trasparenza. In generale ha senso portare sullo sfondo solo gli oggetti pieni, ma è comunque possibile portare sullo sfondo qualsiasi oggetto. L'assegnazione di un formato condizionato consente di attribuire agli oggetti l'ordine di visualizzazione.
+ 
+//image- images/animatebreak.png
+I punti di interruzione sono importanti per la __riproduzione__ e per le animazioni con interruzioni. I punti di interruzione possono essere impostati nella finestra di dialogo della riproduzione, oppure nella finestra di dialogo delle proprietà degli oggetti.
+
+I pulsanti presenti nella parte inferiore della finestra di dialogo delle proprietà consentono la scelta rapida di alcune proprietà. Ad esempio per i punti è disponibile un pulsante per scegliere un oggetto a cui vincolarli (__punti§vincolati__), per gli __angoli§fissati__ e le __circonferenze§fissate__ è disponibile un pulsante per definirne le __dimensioni__. Quando si fa clic su tali pulsanti la finestra di dialogo viene chiusa e l'utente deve selezionare i relativi oggetti o dimensioni dalla costruzione.
+
+.latex
+.related properties text
+Codice LaTeX
+
+C.a.R. utilizza HotEqn per visualizzare le equazioni in forma __LaTeX__. Per utilizzare codice Latex, racchiudere il testo tra $....$. Il codice LaTeX può essere inserito negli oggetti testo, nelle etichette delle espressioni e nel nome degli oggetti. In quest'ultimo caso è comodo utilizzare un nome specifico per la visualizzazione (un __alias__) come ad esempio $P_1$.
+
+HotEqn è in grado di visualizzare una buona parte del codice LaTeX. Sono supportati:
+le lettere greche (\alpha, \beta, ...), molti simboli LaTeX specifici (\nabla), i pedici (x_n), gli apici (x^2), le frazioni(\frac{1}{x} o \dfrac), gli operatori principali di integrazione e sommatoria (\int_a^b), i limiti e gli infiniti(\lim_{x \to \infty}). Vengono correttamente visualizzati anche i codici \percent e \dollar, normalmente non supportati da LaTeX.
+
+Sono inoltre supportate le parentesi quadrate (\left[ e \right]), le matrici (\begin{array}{cc}2&3\\3&4\end{array}), il coefficiente binomiale, con i comandi choose e atop ({2 \atop 3}).
+
+.transparent
+.related colors reorder properties
+Trasparenza
+
+La trasparenza degli oggetti è supportata solo se si utilizza Java 1.2 o superiore. Inoltre l'esportazione nei formati __EPS__ e __PDF__ non supporta la __trasparenza__.
+
+Gli oggetti pieni vengono tracciati per primi, sullo sfondo. Tale condizione può essere attivata o disattivata nella finestra delle proprietà degli oggetti: quindi gli oggetti verranno tracciati seguendo l'ordine di costruzione.
+
+Per attivare o disattivare la trasparenza dei singoli oggetti utilizzare la finestra di dialogo delle __proprietà__.
+
+.point
+.related boundedpoint intersection settings mouse properties selfreference
+Punti
+
+//image- images/point.png
+Un punto può essere creato utilizzando diversi strumenti. Lo strumento Punto genera un __punto§libero__ (che si può muovere). Il punto può essere fissato premendo il __tasto§MAIUSC__, inserendo un'espressione nella finestra di dialogo delle proprietà del punto. È possibile fissare un punto nella posizione di un altro punto, tenendo premuto il tasto MAIUSC e facendo clic sullo strumento Punto. 
+
+Facendo clic sull'intersezione di due oggetti viene creato automaticamente il punto di intersezione. La __conferma__ all'operazione automatica di creazione delle __intersezioni__ è disattivata per impostazione predefinita. Viene visualizzata anche un'__anteprima__ degli oggetti che si intersecano e del punto di intersezione, per impostazione predefinita. I punti di intersezione non sono liberi, ma dipendono ovviamente dagli oggetti che si intersecano.
+
+I punti possono essere vincolati a circonferenze, rette o ad altri oggetti come tracce, coniche e funzioni (__punti§vincolati__), facendo clic su tali vincoli dopo avere selezionato lo strumento Punto. È possibile attivare la richiesta di __conferma__ dell'operazione da eseguire.
+
+I punti fissati possono comunque essere mossi, se l'espressione si riferisce esclusivamente al punto stesso e non ad un altro oggetto (__autoreferenzialità__). In questo caso le __@-referenze__ non contano. La posizione del punto viene ricalcolata utilizzando l'espressione. Tale operazione è utile per limitare il movimento dei punti.
+
+È possibile mantenere i punti vincolati ad una __griglia__, scegliendo nella finestra di dialogo un incremento della griglia maggiore di 0. Per una griglia a valori interi, utilizzare 1. In alternativa sono disponibili metodi più avanzati di autoreferenzialità degli oggetti, che ne consentono la limitazione all'interno di determinati insiemi. Si noti che i punti possono facilmente essere mantenuti all'interno dei __poligoni__, poichè possono essere vincolati a tali oggetti.
+
+Come altri oggetti, i punti liberi possono essere trascinati subito dopo essere stati creati. Durante il trascinamento vengono visualizzati i relativi nomi e valori, se tale impostazione non è stata precedentemente disattivata (Impostazioni>Impostazioni avanzate). 
+
+Vedere: Autoreferenzialità, intersezioni, punti vincolati ad oggetti
+
+.boundedpoint
+.related point line mouse properties
+Punti vincolati ad oggetti
+
+I punti possono essere vincolati a una retta, a una circonferenza, a tracce automatiche, a poligoni, a grafici di funzioni o a curve parametriche (__punti§vincolati__). Se l'oggetto a cui sono vincolati viene mosso, i punti si sposteranno con continuità. Un punto può essere __rilasciato__ e vincolato ad un nuovo oggetto in qualsiasi momento, utilizzando la finestra delle __proprietà__ del punto.
+
+I punti possono essere vincolati al perimetro degli oggetti, o all'__interno__ degli oggetti, se il vincolo è una circonferenza, un angolo o un poligono. Per creare un punto all'interno di un oggetto, basta crearlo sulla frontiera dell'oggetto e modificare le proprietà dell'oggetto, selezionando la casella di spunta "Dentro all'oggetto". In alternativa è possibile utilizzare il pulsante "Vincola a" nella finestra di dialogo di qualsiasi punto libero e premendo successivamente il __tasto§CTRL__ mentre si seleziona l'oggetto vincolo.
+
+Quindi è possibile creare i punti vincolati sia utilizzando il puntatore e facendo clic sull'oggetto che li contiene, che utilizzando uno strumento apposito. Inoltre, qualsiasi punto può essere vincolato ad un oggetto in un secondo tempo, utilizzando la relativa finestra delle __proprietà__. Uscire dalla finestra di dialogo contenente il pulsante per vincolare il punto, quindi selezionare l'oggetto vincolo.
+
+I punti possono essere vincolati in due modi. Il punto può essere proiettato ogni volta che l'oggetto si muove, oppure può mantenere la sua posizione relativa rispetto all'oggetto. Tali modalità possono essere selezionate modificando le proprietà dell'oggetto. La modalità di posizione del punto relativa all'oggetto vincolo è l'impostazione predefinita.
+
+I punti vincolati non sono liberi. Ma se un segmento giace con entrambi gli estremi su una retta, e uno di essi è un punto vincolato (alla retta), il segmento può essere fissato.
+
+.line ray
+.related point parallel properties segment
+Rette e semirette
+
+È possibile tracciare __rette__ passanti per due punti, __parallele__ o __perpendicolari__, come pure le semirette che formano i lati di un __angolo§fissato__.  Per le semirette è necessario definire prima il punto iniziale, quindi un secondo punto che ne indica la direzione.
+
+Le differenze tra rette e semirette non si limitano alla loro visualizzazione. Le rette perpendicolari e le intersezioni si comportano in modo diverso per tali oggetti. Ad esempio, l'__intersezione__ tra semirette non viene determinata se il punto di intersezione giace sul prolungamento di una di esse. La perpendicolare ad una semiretta non viene determinata se il piede della perpendicolare non cade all'interno della semiretta. Per le rette perpendicolari è possibile modificare questa limitazione utilizzando la finestra di dialogo delle __proprietà__ della perpendicolare.
+
+Vedere: Segmenti
+
+.segment fixedsegment
+.related expressionsyntax point parallel properties line
+Segmenti
+
+I __segmenti__ sono parti di retta limitate da due punti. Per impostazione predefinita le __intersezioni__  con i segmenti vengono calcolate solo se il punto di intersezione è compreso tra gli estremi del segmento.
+
+La lunghezza di un segmento può essere fissata se questo ha solo un estremo libero (__segmento§fissato__). Per generare un tale segmento, tenere premuto il tasto MAIUSC mentre si seleziona il secondo estremo, oppure utilizzare l'icona specifica (in questo caso il secondo estremo viene sempre creato come punto libero), oppure fissare il segmento utilizzando la finestra di dialogo delle __proprietà__.
+
+//image images/SegmentDialog.jpg
+
+
+Vedere: Rette e semirette
+
+.circle circle3
+.related properties point transparency fixedcircle
+Circonferenze
+
+//image- images/circle.png
+Sono disponibili tre tipi di circonferenze. Circonferenza di centro M e passante per un punto A, circonferenza di centro M e raggio AB e circonferenza fissata.
+Ciascun tipo ha una propria icona. Il primo tipo richiede due punti, il secondo tre e l'ultimo uno solo.
+
+Il grafico di una circonferenza può essere limitato all'arco sotteso tra due punti. In questo caso è possibile mantenere l'arco minore di 180 gradi (connettendo gli estremi dell'arco verrà sempre tracciato l'arco minore). Per selezionare gli estremi dell'arco utilizzare l'apposito pulsante nella finestra delle proprietà della circonferenza.
+
+Le circonferenze possono essere riempite. Le zone di cerchio sottese dagli archi possono essere riempite in due modi: come settore circolare o come segmento circolare.
+
+Le circonferenze possono essere limitate alle sole parti necessarie. Tali circonferenze parziali verranno visualizzate sotto forma di archi che collegano i punti precedentemente definiti.
+
+Vedere: Circonferenze fissate
+
+.fixedcircle
+.related circle reorder expressionsyntax properties point transparent
+Circonferenze fissate
+
+//image- images/fixedcircle.png
+Le circonferenze fissate non necessitano di un secondo estremo del raggio. Per generare questo tipo di circonferenze tenere premuto il tasto MAIUSC mentre si definisce il raggio, oppure utilizzare l'apposita icona. Si aprirà la finestra delle proprietà, dove è possibile inserire un'espressione qualsiasi per definire il raggio. Se la circonferenza viene trascinata immediatamente dopo essere stata generata, non si aprirà la finestra delle proprietà e verrà utilizzata la dimensione corrente.
+
+Le circonferenze fissate possono essere dimensionate alla distanza tra due punti, utilizzando un'espressione. Invece di scrivere l'espressione nella finestra di dialogo delle __proprietà__, il valore può essere estratto direttamente dalla costruzione. È possibile utilizzare un'altra espressione, oppure due punti, o un'altra circonferenza. Basta utilizzare il pulsante "Imposta dimensione..." nella finestra di dialogo delle proprietà.
+
+//image images/CircleDialog.jpg
+
+La dimensione delle circonferenze fissate può essere modificata trascinando la circonferenza con il mouse, se è stato precedentemente disattivato lo stato "fissato" nella finestra delle __proprietà__. Se lo stato "fissato" è attivo e il centro della circonferenza è un punto libero, l'operazione di trascinamento muoverà solo il centro della circonferenza.
+
+
+.intersection
+.related point properties segment selectintersection
+Intersezioni
+
+//image- images/intersection.png
+Le __intersezioni__ possono essere create sia utilizzando lo strumento Punto, facendo clic su un punto di intersezione, che tramite uno strumento apposito. Lo strumento per l'intersezione è nascosto per impostazione predefinita, poichè lo strumento Punto è in grado di determinare le intersezioni nella gran parte dei casi.
+
+Il programma consente la determinazione delle intersezioni tra rette, circonferenze, grafici di funzioni, curve parametriche e tracce automatiche. Nelle costruzioni con carta e matita questa operazione è automatica. Ma un computer non è in grado di calcolare tutte le possibili intersezioni, in quanto deve deve costruire le intersezioni esplicitamente, con un procedimento passo-passo.
+
+È inoltre possibile creare intersezioni tra __coniche__, __tracce__ e __funzioni__. Si noti che la determinazione delle intersezioni richiede tempo di calcolo. La creazione di troppe intersezioni di tipo complesso renderà lenta la costruzione. Inoltre solo uno dei punti di intersezione verrà calcolato e aggiornato in modo continuo. L'utente può trascinare manualmente tale punto in modo da farlo coincidere ad altri punti di intersezione.
+
+Vedere: Selezione delle intersezioni
+
+.selectintersection
+.related intersection point
+Selezione delle intersezioni
+
+Le circonferenze si intersecano in due punti: il programma crea contemporaneamente entrambe le __intersezioni__ solamente se le due circonferenze vengono selezionate come parametri dello strumento intersezione. Se è necessario visualizzare solo un'intersezione, nascondere l'altra. Per le intersezioni create automaticamente, la seconda intersezione non viene generata.
+
+//image images/Intersections.jpg
+
+La modalità con cui C.a.R. ordina le intersezioni di due circonferenze (o di una circonferenza e una retta) è un problema delicato. Contrariamente agli altri programmi, questo tipo di operazione è prevedibile. Per le circonferenze l'ordine cambia se le circonferenze vengono scambiate. Le intersezioni tra una retta e una circonferenza dipendono dalla direzione della retta (cioè dall'ordine definito selezionandone due suoi punti). Muovendo la retta in modo da non intersecare la circonferenza, e facendola tornare indietro, l'ordine delle intersezioni rimarrà lo stesso.
+
+A volte è necessario specificare le intersezioni, definendo uno dei punti di intersezione _diverso§da_ un altro determinato punto. Le intersezioni verranno quindi ordinate in modo tale che l'intersezione scelta sia il più lontano possibile dall'altro punto. La finestra di dialogo delle intersezioni contiene una campo apposito per specificare tale punto, oltre a un pulsante per scegliere il punto interattivamente.
+
+Questo tipo di intersezione viene creato automaticamente se l'altro punto di intersezione è un punto appartenente ad entrambe le circonferenze e se il punto è visibile. 
+
+È inoltre possibile specificare se l'intersezione deve essere __vicino§a__ un punto dato.
+
+La selezione delle circonferenze può essere impostata in modo tale da scambiarne l'ordine automaticamente ogniqualvolta ne risulterebbe un'intersezione non valida. La costruzione esegue tutti i relativi stati, proprio come nel caso delle tracce automatiche. 
+
+.parallel plumb midpoint
+.related line point properties
+Rette parallele e perpendicolari, punti medi
+
+//image- images/parallel.png
+Per le costruzioni classiche sono disponibili delle scelte rapide. I primi due strumenti creano rette. Il punto medio è naturalmente un punto. Tali strumenti possono essere sostituiti dalle costruzioni classiche con "riga e compasso", o dalle macro.
+
+Le rette perpendicolari ai segmenti non vengono definite se il piede della perpendicolare è esterno al segmento. È possibile disattivare questa caratteristica nella finestra delle proprietà.
+
+.move
+.related circle angle background mouse
+Muovere oggetti
+
+//image- images/move.png
+Questo strumento può essere utilizzato per muovere i punti, in alternativa al pulsante destro del mouse. Inoltre consente il trascinamento di circonferenze di dimensioni fissate o di angoli di misura fissata, a meno che le proprietà di tali oggetti non lo consentano. Per sbloccare gli oggetti e consentirne il trascinamento, tenere premuto il __tasto§CTRL__ durante il trascinamento.
+
+Anche le rette, le circonferenze, i poligoni e le coniche che sono state create utilizzando punti liberi possono essere trascinate nel piano.
+
+Quando viene selezionato lo strumento Muovi, o quando viene premuto il tasto ESC per reimpostare, tutti gli oggetti che possono essere mossi lampeggiano in rosso. Questa modalità consente l'identificazione dei __punti§liberi__; inoltre gli oggetti liberi vengono evidenziati all'interno dell'__elenco§degli§oggetti__ dal simbolo ">".
+
+È possibile muovere contemporaneamente più punti, tenendo premuto il __tasto§MAIUSC__ mentre si selezionano i punti, e rilasciandolo dopo aver selezionato l'ultimo punto.
+
+Tenendo premuto il tasto MAIUSC durante il movimento, questo risulterà limitato fino al punto in cui un'intersezione diventa non valida. Questa caratteristica è applicabile per impostazione predefinita nelle applet, utilizzando il parametro "restrictedmove".
+
+Tenendo premuto il __tasto§CTRL__ durante il movimento, la vecchia costruzione rimane visibile sullo sfondo.
+
+.tracker
+.related point animate background mouse objecttracker
+Tracciamento manuale di punti e rette
+
+//image- images/tracker.png
+Questo strumento disegna __tracce__ di punti o rette in movimento. Verranno tracciate le traiettorie dei punti, mentre per le rette viene generata la curva le cui tangenti sono le rette tracciate (__curva§inviluppo__).
+
+//image images/Track.jpg
+
+Selezionare innanzitutto il punto o la retta traccianti; per selezionare contemporaneamente più oggetti da tracciare, tenere premuto il __tasto§MAIUSC__ durante la selezione. Quindi trascinare un punto, uno slider o qualsiasi altro oggetto che può essere mosso tenendo premuto il pulsante sinistro del mouse. Il movimento dell'oggetto genera la relativa traccia.
+
+I colori utilizzati per le tracce sono gli stessi degli oggetti che le generano: la traccia rimane visualizzata fino alla selezione di un altro strumento di costruzione, o fino a quando lo strumento traccia non viene reimpostato premendo il __tasto§ESC__ .
+
+Le tracce di punti e linee possono coesistere. Le tracce di linee possono essere generate a partire da rette, segmenti o semirette.
+
+Per trasformare una traccia in un oggetto permanente della costruzione utilizzare lo strumento per il tracciamento automatico. 
+
+Vedere: Tracciamento automatico di punti e rette  
+
+.objecttracker
+.related tracker point animate
+Tracciamento automatico di punti e rette
+
+//image- images/objecttracker.png
+Questo strumento disegna __tracce__ di punti e rette (come lo strumento di tracciamento manuale) tramite l'animazione del movimento di un singolo punto lungo una retta o una circonferenza. Selezionare innanzitutto uno o più punti o rette traccianti. Per selezionare più oggetti tenere premuto il __tasto§MAIUSC__. Quindi selezionare un punto sulla retta o sulla circonferenza, uno slider, un'espressione, oppure una retta o una circonferenza. In quest'ultimo caso è necessario selezionare anche il punto che si muoverà sulla retta o sulla circonferenza. Il punto si muoverà, o lo slider o l'espressione si modificheranno, e verranno create le tracce degli oggetti selezionati.
+
+Se il primo oggetto tracciante diventa indefinito a causa di un'intersezione non valida, il movimento viene automaticamente invertito. Se il primo punto tracciante diventa indefinito a causa della mancata intersezione tra due circonferenze, l'altro punto di intersezione diventerà il nuovo riferimento dopo l'inversione del movimento. In questo modo la costruzione esegue tutti gli __stati__ possibili.
+
+La __velocità§di§animazione__ può essere ridotta o aumentata premendo il tasto MAIUSC e i __tasti§freccia__ destra o sinistra. Facendo clic ripetutamente con il pulsante sinistro del mouse si cicla attraverso tre modalità di visualizzazione: animazione con traccia, animazione con traccia nascosta, traccia visibile senza animazione. Nell'ultima modalità il punto in movimento può essere trascinato tenendo premuto il pulsante sinistro del mouse. È possibile muovere ulteriori punti in qualsiasi istante, trascinandoli tenendo premuto il pulsante destro del mouse, ma durante questa operazione la traccia viene nascosta e viene interrotta l'animazione.
+
+Se un file costruzione viene salvato con questo strumento attivo, l'impostazione verrà conservata alla successiva riapertura del file.
+
+Per interrompere l'animazione ed eliminare le tracce, selezionare uno strumento qualsiasi o premere il tasto ESC.
+
+__Tracce Permanenti__
+
+Per rendere la prima traccia disegnata un oggetto permanente nella costruzione, premere <MAIUSC + ENTER> oppure selezionare lo strumento di traccia automatica tenendo premuto il tasto CTRL: verrà creato un nuovo oggetto avente lo stesso colore e spessore delle linee correntemente selezionati. La traccia può essere modificata esattamente come qualsiasi altro oggetto. È possibile creare le __intersezioni__ tra la traccia ed altri oggetti, come pure vincolare punti alla traccia.      
+
+Le tracce salvate in questo modo vengono ricalcolate ad ogni modifica della figura: ciò può rallentare il programma nei computer meno recenti. In ogni caso è saggio limitare il numero di tracce visualizzate e limitarne la lunghezza in modo da ridurre il tempo di calcolo. È inoltre possibile attivare o meno il ricalcolo di una traccia, utilizzando la casella di spunta "Fissato" nella finestra delle __proprietà__. 
+
+Vedere: Tracciamento manuale di punti e rette
+
+.animate
+.related circle line
+Animazione
+
+//image- images/animate.png
+Questo strumento esegue l'animazione di un singolo punto che si muove su uno o più segmenti o circonferenze. Per avviare l'animazione, selezionare un punto, quindi i segmenti o le circonferenze; terminare selezionando l'ultimo punto con un doppio clic. 
+
+Per interrompere l'__animazione__ fare clic sulla costruzione. Per invertire l'animazione tenere premuto il tasto SHIFT. Premendo il tasto SHIFT e i __tasti§freccia__ destra o sinistra è possibile modificare la velocità dell'animazione.
+
+Le animazioni vengono salvate nel file della costruzione. Nelle applet le animazioni non consentono l'interazione da parte dell'utente.
+
+Per muoversi avanti e indietro sui segmenti e sugli archi fare _MAIUSC§+§clic__ sulla costruzione. In questo modo è inoltre possibile invertire la direzione nelle circonferenze.
+
+.angle
+.related circle properties fixedangle
+Angoli
+
+//image- images/angle.png
+Gli angoli normali sono elementi grafici decorativi e non possono essere utilizzati per ulteriori costruzioni, tranne per la possibilità di __vincolare__ punti all'interno dell'angolo. L'ordine di immissione per tali angoli è A, B, C, dove B è il vertice.
+
+L'ampiezza angolare può essere visualizzata in tre dimensioni diverse. La più grande è con un arco circolare con punto iniziale in A.
+
+I nomi degli angoli possono contenere lettere greche. Per ottenere alfa,
+digitare \a, \A etc. Si possono utilizzare tutti i caratteri Unicode del tipo \0XXXX, dove
+XXXX è un numero esadecimale. Gli angoli di 90° o che hanno un nome che inizia con "." vengono etichettati con un punto, se è stata attivata la visualizzazione della misura. Gli angoli possono essere riempiti. In generale è conveniente utilizzare un __alias__ per gli angoli.
+
+Non sono consentiti __angoli§concavi__ per impostazione predefinita. L'ordine di A e C non ha importanza. Tuttavia tale impostazione può essere modificata nella finestra delle proprietà dell'angolo.
+
+Come per altri oggetti, se si sceglie uno spessore invisibile verrà visualizzata solo l'etichetta, ma non l'angolo.
+
+Vedere: Angoli di misura fissata
+
+.fixedangle
+.related circle reorder expressionsyntax properties angle
+Angoli di misura fissata
+
+//image- images/fixedangle.png
+Gli angoli di misura fissata non vengono definiti utilizzando tre punti, ma hanno una misura fissata. Questo tipo di angolo si comporta in modo più simile a quello di una semiretta, piuttosto che a un angolo. È possibile l'intersezione con una semiretta, come pure posizionare dei punti al suo interno.
+
+Gli __angoli§di§misura§fissata__ vengono generati tenendo premuto il __tasto§MAIUSC__ mentre si fa clic sul terzo punto, oppure utilizzando lo strumento apposito per gli angoli fissati. In questo modo si apre la finestra delle proprietà, dove è possibile inserire l'espressione che definisce la misura dell'angolo. Se l'angolo viene trascinato immediatamente dopo essere stato generato, non si aprirà la finestra delle proprietà.
+
+Gli angoli fissati possono essere dimensionati utilizzando tre punti dati, oppure un'espressione o un altro angolo. Selezionare il pulsante "Imposta misura ..." nella finestra delle proprietà e selezionare tre punti A, B, C, dove B è il vertice. L'angolo avrà la stessa misura dell'angolo ABC. È inoltre possibile utilizzare qualsiasi altra espressione o angolo per definirne la dimensione.
+
+Gli angoli fissati possono essere __invertiti__. In questo modo non si è obbligati ad utilizzare una orientazione positiva. Inoltre, se un angolo fissato è limitato a 180° (che è l'impostazione predefinita), e se tale angolo viene costruito in modo tale da risultare matematicamente negativo, verrà invertito. È disponibile un'icona per il controllo dell'inversione nella finestra delle proprietà.
+
+Vedere: Angoli
+
+.area
+.related point properties background
+Poligoni pieni
+
+//image- images/area.png
+Con questo strumento è possibile generare __poligoni__ pieni, dati i vertici. Selezionare i vertici che delimitano l'area, quindi fare __doppio§click__ sull'ultimo punto. Se nella finestra delle proprietà del poligono è stato selezionato lo spessore sottile, i lati risulteranno nascosti.
+
+Il valore associato a un poligono pieno è la misura dell'area. Il segno di tale valore dipende dall'orientazione dei vertici.
+
+.expression
+.related angle circle properties reorder expressionsyntax
+Espressioni
+
+In C.a.R. è possibile utilizzare espressioni aritmetiche per impostare:
+
+ - coordinate di punti 
+ - lunghezze di segmenti
+ - raggi di circonferenze
+ - misure di angoli
+
+//image- images/expression.png
+I valori delle espressioni possono essere visualizzati nelle costruzioni: utilizzare lo strumento espressione per posizionare le espressioni sullo schermo (per muoverle tenere premuto il pulsante destro del mouse). Nella finestra delle proprietà deve essere inserita un'espressione valida. Le espressioni possono contenere un testo esplicativo e possono mostrare o meno il valore calcolato. Il testo esplicativo può contenere codice __LaTeX__.
+
+Le espressioni nascoste sono utili per il calcolo e per il successivo utilizzo nella costruzione dei valori ottenuti.
+
+Il valore di un'espressione può essere visualizzato graficamente con uno __slider__. L'utente potrà variarne il valore facendo scorrere il punto cursore a destra o a sinistra. I valori visualizzabili con uno slider hanno un limite minimo e massimo.
+
+Vedere: Sintassi delle espressioni
+
+.expressionsyntax
+.related fixedangle fixedcircle point properties reorder function
+Sintassi delle espressioni
+
+Nome
+ Esempio
+ Descrizione
+ 
++, -, *, /,^ o ** 
+ 3.5*3+3/(4-5^2) 
+ Operatori matematici elementari.
+ 
+Nome di un oggetto 
+ AB/CD
+ Il nome di un segmento, di una circonferenza, di un angolo o di un'altra espressione. L'oggetto non deve dipendere da quello corrente. Per fare riferimento agli oggetti utilizzando i nomi la sintassi è @nome o @"nome", tranne che per le macro. Se l'oggetto non viene trovato, viene visualizzato un messaggio di errore.
+ 
+Funzione
+ sin(a) 
+ Le funzioni abs, sign, sin, cos, tan, arcsin, arccos, arctan, sqrt,
+exp, log, round, ceil, floor, deg, rad, sinhyp, coshyp, angle180 e angle360. Le funzioni trigonometriche utilizzano i gradi. Per la conversione utilizzare deg(x), oppure le funzioni rsin, rcos, rtan, rarcsin, rarccos, rarctan.
+ 
+__Funzioni__ definite dall'utente
+ f(a)
+ Valore di un oggetto funzione definito dall'utente nel punto a. 
+
+__Pi__
+ pi 
+ La costante Pi-greco.
+ 
+__x__, __y__, __z__ 
+ x(P), y(P) , z(P)
+ Coordinate x e y di un punto, o il valore z del punto.
+ 
+__d__ 
+ d(P,Q) 
+ Distanza tra due punti.
+ 
+__d__ 
+ d(x) 
+ Calcola le variazioni dell'espressione x. Se x è un punto, ne valuta lo spostamento.
+ 
+__sum__
+ sum(x,f)
+ Somma su x. Se f è negativo o indefinito, la somma vale 0.
+ 
+__a__ 
+ a(P,Q,Z) 
+ Misura dell'angolo PQZ. 
+
+__scale__ 
+ scale(x,a,b) 
+ Posizione relativa di x in [a,b), se x appartiene all'intervallo, altrimenti l'espressione non è valida.
+
+__if__ 
+ if(e,e1,e2)
+ Restituisce e1, se e è vero, altrimenti e2. 
+
+__invalid__
+ invalid 
+ Restituisce un'espressione non valida. 
+
+&&,||,! ! 
+ (x<4 && y<4) 
+ Espressioni logiche. 1 è vero, 0 è falso. 
+
+<, >, <=, >=, ==, ~= 
+ x<y 
+ Operatori di confronto. ~= significa "circa uguale". 
+
+__integrate__
+ integrate(f,a,b)
+ integrate(f)
+ Integra la funzione f da a a b con il metodo Romberg. f deve essere un oggetto funzione (anche nascosto). Viene utilizzata la parte y di f. Se f non è continua, viene calcolata la somma di Riemann. Se f è parametrica, viene approssimata l'area delimitata dalla curva o la sua lunghezza, se non è piena.
+
+__zero__
+ zero(f,a,b)
+ Calcola uno zero di f nell'intervallo a,b. f(a) e f(b) devono essere discordi. La procedura utilizza il metodo delle secanti o di bisezione.
+
+__diff__
+ diff(f,a)
+ Differenziale numerico di f in a: è l'usuale approssimazione(f(h)-f(-h))/(2h)
+
+__min__, __max__
+ min(f,a,b)
+ Calcola il minimo (massimo) di f tra a e b.
+min(a,b) e max(a,b) determina il minimo o il massimo tra i valori a e b.
+
+__this__
+ x(this)
+ Riferimento all'oggetto contenente l'espressione.
+ 
+__windoww__, __windowh__, __windowcx__, __windowcy__
+ Restituisce le dimensioni e le coordinate del centro della schermata corrente.
+
+__simulate__
+ simulate(e,x,f)
+ Imposta l'espressione e al valore x, ricalcola la costruzione con questo nuovo valore e restituisce il valore di f. Può essere effettuata una sola simulazione alla volta, quindi non è possibile effettuare simulazioni nidificate. Ad e possono essere attribuiti un'espressione, un angolo di misura fissata o una circonferenza di dimensione fissata.
+
+
+__inside__
+ inside(P,A)
+ Verifica se il punto P è all'interno dell'oggetto A. Restituisce 1/2 se il punto sta sul perimetro di A. A può essere un poligono, una circonferenza o un angolo.
+
+.text
+.related replay comment properties latex
+Testo
+
+//image- images/text.png
+Questo strumento visualizza un __testo__ multilinea nella costruzione. Il testo può essere modificato con l'editor interno. L'editor contiene il pulsante per aprire la finestra delle __proprietà__ dell'oggetto. 
+
+Per creare una riga in __grassetto__ o con __caratteri§grandi__, o entrambi, far precedere la riga da *, **, o ***. Per utilizzare i comandi __LaTeX__, racchiudere tutta la riga o le sue parti tra $..$. Inoltre è possibile utilizzare le espressioni, racchiudendole tra %..%. Le espressioni vengono calcolate e il testo visualizza il risultato. Le stringhe nella forma %=s% restituiscono il nome corrente dell'oggetto "s", e le stringhe della forma %~s% restituiscono  l'equazione di s.
+
+Il __testo§nascosto__ viene visualizzato in modalità riproduzione. In questo modo è possibile  visualizzare commenti mirati ai passi della costruzione.
+
+.quadric
+.related properties point transparent
+Coniche
+
+//image- images/quadric.png
+Le __coniche__ sono gli insiemi delle soluzioni delle equazioni formate da combinazioni lineari di x^2, y^2, x, y, xy e 1 (funzioni quadratiche in due variabili). Le coniche sono determinate da 5 punti. Selezionare 5 punti per creare la conica passante per questi.
+
+Per modificare le __proprietà__ della curva, fare clic su di essa e utilizzare la finestra delle proprietà. Il valore visualizzato per le coniche è la relativa equazione.
+
+È possibile __vincolare__ punti alle coniche e creare __intersezioni__ delle coniche con altri oggetti.
+
+.hide
+.related construction properties mouse
+Nascondere oggetti
+
+//image- images/hide.png
+Questo strumento __nasconde__ gli oggetti o li rende __visibili__. Per rendere visibile un oggetto nascosto, attivare l'icona per visualizzare gli oggetto nascosti. Gli oggetti possono anche essere nascosti anche tenendo premuto il __tasto§CTRL__ e facendo clic sull'oggetto con il pulsante destro del mouse. In questo caso, circonferenze e rette passano prima allo stato parziale, quindi vengono nascoste interamente con un secondo clic.
+
+Tenendo premuto il __tasto§SHIFT__ mentre si seleziona un oggetto, questo verrà nascosto completamente. In questo caso è possibile rendere nuovamente l'oggetto visibile solo utilizzando l'__elenco§degli§oggetti__.
+
+Tutti gli __oggetti§duplicati__ possono essere nascosti utilizzando l'apposita voce del menu. Rimarranno visibili solo gli oggetti più recenti. In alternativa, premere il __tasto§CTRL__ mentre si seleziona lo strumento per nascondere.
+
+.rename
+.related properties
+Rinomina alfabeticamente
+
+//image- images/rename.png
+È possibile __rinominare__ le rette in a,b,c, i punti in A,B,C e gli angoli in \a,\b,\c utilizzando questo strumento e facendo clic con il mouse. Verrà utilizzata la prima lettera libera.
+
+Se è necessario utilizzare la lettera "a" per due oggetti differenti, usare "a~1" e "a~2". I nomi vengono visualizzati solo fino alla "~". In alternativa, utilizzare un __alias__.
+
+Si può forzare l'ordine A, B, C premendo il tasto MAIUSC mentre si fa clic su un punto. Se le lettere si trovano già nella costruzione, verranno scambiate. Per interrompere premere ESC.
+
+.delete undo back
+.related construction
+Eliminare oggetti
+
+//image- images/back.png
+Questo strumento elimina gli ultimi oggetti costruiti, anche se nascosti. In alternativa utilizzare il tasto __BACKSPACE__.
+
+//image- images/delete.png
+È disponibile un altro strumento per eliminare un oggetto qualsiasi e tutti quelli da esso dipendenti. Naturalmente l'uso di questo strumento può determinare effetti collaterali indesiderati, specialmente nel caso in cui gli oggetti utilizzano interdipendenze complesse.
+
+//image- images/undo.png
+Annulla eliminazione ripristina tutti gli oggetti precentemente eliminati.
+
+.function
+.related expressionsyntax properties
+Funzioni e curve
+
+//image- images/function.png
+Il programma può tracciare i grafici di __funzioni__ e __curve__ parametriche all'interno della costruzione, o utilizzare __funzioni§definite§dall'utente__ oppure uno o più parametri nelle altre espressioni.
+
+Innanzitutto è necessario descrivere il tipo di funzione da visualizzare nella finestra della costruzione. Nella finestra di dialogo, immettere i valori iniziale e finale del parametro e la misura del passo. È possibile utilizzare una stringa qualsiasi non contenente spazi, come nome del parametro. Il nome attribuito al parametro per impostazione predefinita è "x".
+
+//image images/Function.jpg
+
+Per una funzione esplicita lasciare vuoto il campo relativo alla X o impostarlo come "x", quindi digitare un'espressione dipendente dalla x nel campo relativo alla Y. Per una curva parametrica sono necessarie due espressioni, una per la X ed una per la Y.
+
+Il programma incrementa il parametro dal valore iniziale a quello finale utilizzando il passo impostato. Se la funzione è definita tra due passi del parametro, viene disegnato il segmento definito dalle coordinate della costruzione.
+
+Questo tipo di funzioni possono essere utilizzate in altre funzioni. Verrà valutato il valore di Y.
+
+Le funzioni e le curve possono essere riempite. Il centro di una curva parametrica è 0, ma può essere modificato facendo clic sul pulsante "Seleziona centro" nella finestra delle __proprietà__. Le funzioni possono essere ridotte a successioni di punti. Se poi la funzione è riempita verrà disegnato l'integrale di Riemann.
+
+Le funzioni e le curve visualizzate possono avere intersezioni con altri oggetti, ed è inoltre possibile vincolare dei punti ai grafici delle funzioni. Geometricamente tali funzioni si comportano come curve.
+
+Non è possibile tracciare il grafico di funzioni a più variabili definite dall'utente. Lo scopo di tali funzioni è solo per l'utilizzo nel calcolo di altre espressioni.Di conseguenza la finestra di dialogo relativa a tali funzioni è molto essenziale, e può essere richiamata tenendo premuto il __tasto§CTRL__ mentre si seleziona l'icona della funzione. È necessario dichiarare in questa finestra tutte le variabili, separate da spazi. Tali variabili potranno quindi essere utilizzate nell'espressione. Naturalmente è possibile definire una sola espressione. La funzione verrà visualizzata come espressione, se non è stata impostata come nascosta. È possibile modificare la posizione dell'espressione visualizzata.
+
+.defaults
+.related line angle colors
+Impostazioni predefinite
+
+È possibile definire le __impostazioni§predefinite__ per il colore, la visualizzazione ed altre proprietà dei nuovi oggetti.
+
+ - colore degli oggetti
+ - spessore degli oggetti
+ - stile dei punti
+ - circonferenze parziali
+ - rette parziali
+ - vettori
+ - mostra nome
+ - mostra valore
+ - usa nomi estesi
+ - carattere grassetto e grande
+ - angoli concavi
+ - oggetti non-trasparenti
+
+Queste impostazioni predefinite sono disponibili sia nel menu che come icone della barra degli strumenti.
+
+.edit
+.related mouse properties conditions
+Modificare oggetti
+
+//image- images/edit.png
+Questo strumento modifica le proprietà di uno o più oggetti. Per selezionare più oggetti tenere premuto il __tasto§MAIUSC__. La finestra delle proprietà relativa a più oggetti presenta alcuni  campi non attivi. Solo i campi attivi potranno essere utilizzati per aggiornare gli oggetti.
+
+Se lo strumento è selezionato e si tiene premuto il __tasto§CTRL__ verrà modificato l'ultimo oggetto.
+
+  Vedere: Formattazione condizionata
+
+.conditions
+.related edit properties
+Formattazione condizionata
+
+Tenendo premuto il __tasto§CTRL__ mentre si seleziona un oggetto con il pulsante destro del mouse si accede ad un editor per la __formattazione§condizionata__ dell'oggetto. È possibile inoltre aprire l'editor dalla finestra delle __proprietà__, tenendo premuto il __tasto§CTRL__ mentre si fa clic sul pulsante OK, oppure tramite un pulsante apposito, se l'opzione è stata attivata nelle __impostazioni§avanzate__.
+
+//image images/Conditions.jpg
+
+È possibile definire le condizioni per l'applicazione del colore, dello spessore e di altre proprietà. Ciò è utile per ottenere effetti particolari quando le condizioni sono verificate, ossia quando assumono un qualsiasi valore diverso da zero.
+
+Una condizione speciale è il valore del buffer-z, che determina l'ordine di coloritura. Gli oggetti con un buffer-z maggiore vengono colorati per primi. Tutti gli oggetti che hanno un valore di buffer-z vengono colorati dopo gli oggetti dello sfondo, ma prima di ogni altro oggetto.
+
+È possibile impostare contemporaneamente le proprietà di più oggetti. All'oggetto corrente ci si può riferire con "this".
+
+.show
+.related hide
+Nascondere per colore
+
+//image- images/showcolor.png
+Mostra o nasconde oggetti di uno specifico colore, in modo da rendere più chiara la costruzione.
+
+.grid
+.related zoom move mouse
+Griglia
+
+//image- images/grid.png
+Questo strumento consente di attivare e disattivare la visualizzazione del sistema di coordinate e degli assi cartesiani. È disponibile una finestra di dialogo per la scelta del __colore__ e dello __spessore__ del sistema di coordinate e del __carattere__ per le etichette. 
+
+Se la griglia è attiva, i nuovi punti e i punti che vengono spostati con il pulsante destro del mouse si __bloccano__ sulla griglia. Oppure è possibile bloccare i punti con lo strumento muovi e il __pulsante§sinistro§del§mouse__, modificando un'__impostazione§avanzata__. Ciò può essere utile per le costruzioni su pagine Web con griglie.
+
+Se la griglia è attiva mentre si salva la costruzione, rimarrà attiva al successivo caricamento della costruzione.
+
+.replay
+.related htmlexport text animatebreak
+Revisione delle costruzioni
+
+//image- images/replay.png
+Questo strumento apre una piccola finestra di dialogo per la navigazione, contenente gli usuali pulsanti per la riproduzione (avanti, indietro, avanti veloce, ecc...). Questo strumento consente inoltre l'impostazione di __punti§di§interruzione__ e a questo scopo è disponibile un pulsante per passare al punto di interruzione successivo. I punti di interruzione sono importanti per l'esportazione in HTML in stile riproduzione. 
+
+//image images/Replay.jpg
+
+Per impostare un __punto§di§interruzione§nascosto__ tenere premuto il tasto MAIUSC mentre si imposta il punto di interruzione. Nascondendo i punti di interruzione, vengono nascosti anche tutti gli oggetti che li precedono, fino al precedente punto di interruzione. La costruzione verrà divisa in diverse parti.
+
+È inoltre possibile impostare nella finestra delle proprietà i punti di interruzione e i punti di interruzione nascosti.
+
+Durante la riproduzione vengono visualizzati i testi nascosti.
+
+.animatebreak
+.related replay
+Animazione dei punti di interruzione
+
+Questo strumento consente di passare automaticamente da un punto di interruzione all'altro. Per aumentare o diminuire la velocità, premere __MAIUSC__+ il __tasto§freccia__ destra/sinistra.
+
+.draw
+.related mouse
+Disegnare con il mouse
+
+//image- images/draw.png
+Questo strumento consente il disegno libero con il mouse, nel __colore__ correntemente selezionato; per cancellare il disegno premere __ESC__ o utilizzare il corrispondente comando nel menu. Il disegno viene salvato con la costruzione.
+
+.zoom
+.related mouse grid
+Zoom con il mouse
+
+//image- images/zoom.png
+Con questo strumento è possibile effettuare uno zoom avanti o indietro della costruzione, facendo clic sulla costruzione e trascinandola con il mouse verso la regione esterna alla costruzione o viceversa. È inoltre possibile muovere l'intera costruzione.
+
+Si può effettuare lo zoom anche utilizzando la __rotellina§del§mouse__, oppure muovere la costruzione trascinandola in una posizione libera dell'area grafica tenendo premuto il __pulsante§destro§del§mouse__. Da tastiera, lo zoom si ottiene premendo i __tasti§+/-__ e lo spostamento della costruzione con i __tasti§freccia__.
+
+La vista corrente viene salvata con il file della costruzione, e viene visualizzata alla successiva riaperture dal file.
+
+.parameter
+.related runmacro parametertypes target macro
+Oggetti iniziali delle macro
+
+//image- images/macro.png
+Le __macro__ sono un importante strumento per le costruzioni più complicate.
+Senza le macro sarebbero possibili solo semplici costruzioni. Infatti le macro riuniscono molti passi di costruzione in uno solo. Si comportano come i sottoprogrammi di un linguaggio di programmazione. Le macro sono i nuovi strumenti definiti dall'utente.
+
+Una macro necessita di oggetti iniziali (parametri) e di oggetti finali (destinazioni), proprio come lo strumento segmento richiede due punti come __parametri__ e ha un segmento come __destinazione__.
+
+Le macro in C.a.R. si definiscono in modo semplice. È necessario "istruire" la macro sulla parte della costruzione che dovrà apprendere: questo processo è chiamato "costruzione del modello". Per costruire il modello, è necessario costruire alcuni oggetti (destinazioni) a partire da alcuni oggetti iniziali (parametri). Ad esempio per costruire l'asse di un segmento si parte dai suoi due estremi.
+
+//image- images/macro1.png
+Il primo passo per la costruzione di una macro consiste nell'istruzione dei relativi oggetti iniziali. Quindi premere nuovamente lo strumento macro e definire gli oggetti destinazione. Infine viene visualizzata la finestra di dialogo della macro e la definizione della macro è terminata.
+
+Vedere: Oggetti finali
+
+.target
+.related parameter runmacro parametertypes macro
+Oggetti finali
+
+//image- images/macro2.png
+Dopo aver selezionato gli oggetti iniziali, fare clic nuovamente sullo strumento macro per scegliere gli __oggetti§finali__ (destinazione). In questo stadio saranno __visibili__ solo gli oggetti che possono essere costruiti a partire dagli oggetti iniziali selezionati. Ad esempio se sono stati scelti come oggetti iniziali due punti, sarà visibile l'asse del segmento da essi limitato. Saranno inoltre visibili tutti i passi intermedi della costruzione, a meno che non siano stati nascosti.
+
+Quindi selezionare gli oggetti finali. Relativamente all'esempio precedente, selezionare l'asse.
+
+È necessario definire almeno un oggetto finale, altrimenti la macro costruisce tutti gli oggetti visibili. Gli oggetti finali della macro assumeranno __colore__ e stile predefiniti. Tutti gli altri oggetti assumeranno lo stile del modello in uso, con l'eccezione degli oggetti neri che assumeranno il colore predefinito. In particolare, tutti gli oggetti __nascosti__ verranno costruiti come nascosti. È disponibile un'opzione per nascondere automaticamente tutti gli oggetti che non sono quelli finali, anche se visibili all'interno della costruzione. Se la macro viene utilizzata in modalità descrittiva, l'utente può assegnare i nomi solo agli oggetti finali.
+
+Facendo nuovamente clic sullo strumento macro è possibile completare la definizione della macro attraverso una finestra di dialogo.
+
+Vedere: Definizione macro
+
+.macro
+.related runmacro parametertypes parameter target expression fixedcircle fixedangle hintparameters selfreference defaultmacros macroerror
+Definizione macro
+
+//image images/DefineMacro.jpg
+
+Dopo aver selezionato gli __oggetti§iniziali__ e quelli __finali__, facendo clic sullo strumento macro è possibile definire la macro attraverso una finestra di dialogo.
+
+Nella finestra è possibile inserire il nome della macro, un __commento__, ed inoltre modificare i __prompt__ dell'utente per ogni parametro. I commenti e i prompt dell'utente sono importanti per capire l'esecuzione e i requisiti della macro. I prompt vengono visualizzati sulla riga di stato mentre la macro è in attesa dei parametri.
+
+È possibile __assegnare§un§parametro__ ad un oggetto A, utilizzando "=A" nel prompt del
+parametro. Il parametro non sarà automaticamente richiesto: verrà utilizzato l'oggetto "A", se esistente e del tipo corretto.
+
+Le macro nascondono tutti gli oggetti __duplicati__ di oggetti esistenti per impostazione predefinita. Tale caratteristica può essere disattivata qui.
+
+Mentre la macro è in esecuzione è possibile richiedere all'utente un valore per una circonferenza fissata, per un angolo fissato o per un'espressione (__richiesta§valore__). A tale scopo, immettere nell'ultima riga della casella il nome della circonferenza, dell'angolo o dell'espressione. Verrà visualizzata una finestra di dialogo, nella quale è possibile immettere qualsiasi espressione aritmetica. È possibile immettere anche più oggetti, separandoli tra loro con delle virgole.
+
+Vedere: Parametri suggerimento, Autoreferenzialità
+
+.macrobar
+.related macro
+La barra delle macro
+
+È possibile selezionare ed utilizzare una barra lineare per le icone delle macro, utilizzando la relativa opzione del menu Macro. Nelle applet, includere il parametro "macrobar" nel parametro "options".
+
+Le macro vengono visualizzate esclusivamente quando il loro nome termina con un testo racchiuso tra parentesi. Il programma e l'applet provano a caricare un'icona avente tale nome da una sottodirectory denominata "icons".  Se non viene trovata alcuna icona, verrà visualizzato un testo.  Le icone devono essere di dimensione 32x32 in formato PNG a sfondo trasparente, e l'aliasing deve essere ottimizzato per il grigio chiaro.
+
+L'archivio del programma contiene le seguenti utili icone:
+
+//image- icons/1.png
+1 - Asse di un segmento
+
+//image- icons/2.png
+2 - Proiezione ortogonale
+
+//image- icons/3.png
+3 - Circonferenza inscritta
+
+//image- icons/4.png
+4 - Circonferenza circoscritta
+
+//image- icons/5.png
+5 - Simmetria assiale
+
+//image- icons/6.png
+6 - Simmetria rispetto ad una circonferenza
+
+//image- icons/7.png
+7 - Simmetria centrale
+
+//image- icons/8.png
+8 - Retta bisettrice
+
+//image- icons/9.png
+9 - Semiretta bisettrice
+
+//image- icons/10.png
+10 - Rotazione, dati 5 punti
+
+//image- icons/11.png
+11 - Rotazione, dati un angolo e 2 punti
+
+//image- icons/12.png
+12 - Traslazione
+
+//image- icons/13.png
+13 - Punto
+
+//image- icons/14.png
+14 - Angolo
+
+//image- icons/15.png
+15 - Poligono
+
+//image- icons/16.png
+16 - Vettore
+
+//image- icons/17.png
+17 - Punto su una retta
+
+//image- icons/18.png
+18 - Arco
+
+//image- icons/19.png
+19 - Circonferenza
+
+//image- icons/20.png
+20 - Circonferenza, dati 3 punti
+
+//image- icons/21.png
+21 - Angolo fissato
+
+//image- icons/22.png
+22 - Circonferenza fissata
+
+//image- icons/23.png
+23 - Segmento fissato
+
+//image- icons/24.png
+24 - Funzione
+
+//image- icons/25.png
+25 - Assi
+
+//image- icons/26.png
+26 - Intersezione
+
+//image- icons/27.png
+27 - Retta
+
+//image- icons/28.png
+28 - Punto medio, dati 2 punti
+
+//image- icons/29.png
+29 - Parallela
+
+//image- icons/30.png
+30 - Conica
+
+//image- icons/31.png
+31 - Semiretta
+
+//image- icons/32.png
+32 - Segmento
+
+//image- icons/33.png
+33 - Perpendicolare
+
+.hintparameters
+.related macro
+Parametri suggerimento
+
+È possibile __nascondere__ i punti iniziali. Se, mentre si genera una macro, viene scelto un punto nascosto come parametro della macro e se, mentre la macro è in esecuzione, tale punto è associato ad un punto generato durante la selezione dei parametri, il nuovo punto verrà nascosto al termine dell'esecuzione.
+
+Questa caratteristica permette di utilizzare i punti come __parametri§suggerimento__. Ad esempio, con una macro che genera un triangolo equilatero a partire da un segmento, il suggerimento potrebbe essere un terzo clic, che indica il semipiano di appartenenza del triangolo. In questo caso è necessario utilizzare un'espressione relativa ad uno degli angoli di 60° individuati dal terzo punto, come ad esempio "60*sign(180-a(P,A,B))".
+
+.selectmacro
+.related runmacro macro
+La finestra di dialogo Selezione macro
+
+//image images/MacroSelection.jpg
+La finestra di dialogo per la selezione di una macro contiene un elenco di tutte le __macro__. Le macro possono essere organizzate in __cartelle§macro__. Per passare ad una cartella, fare  doppio clic su di essa. Per tornare alla cartella superiore, fare doppio clic su "..". Per mettere una macro in una sottocartella, rinominarla utilizzando la sintassi "sottocartella/nomemacro". Le __macro§predefinite__ sono visualizzate in rosso.
+
+Se la finestra di dialogo consente selezioni multiple, è possibile selezionare le sottocartelle.
+In questo caso, tutte le macro presenti nelle sottocartelle della cartella selezionata verranno selezionate contemporaneamente.
+
+.runmacro
+.related parameter parametertypes mouse expressionsyntax fixparameters selectmacro
+Esecuzione di una macro
+
+//image- images/runmacro.png
+Tenendo premuto il tasto MAIUSC quando lo strumento di esecuzione macro è selezionato, le macro precedentemente utilizzate verranno selezionate automaticamente. In caso contrario, se sono disponibili più macro, si aprirà la finestra di dialogo per la selezione delle macro. Dopo la scelta della macro da parte dell'utente, il programma visualizza il __prompt__ per ciascun parametro, quindi il tipo di oggetto atteso e il relativo prompt nella __riga§di§stato__.
+
+È possibile selezionare le macro anche con il __pulsante§destro§del§mouse__, scegliendo la macro dall'elenco visualizzato nella finestra popup.
+
+Se nella riga di stato viene visualizzato "SPAZIO seleziona ...", l'oggetto parametro indicato può essere scelto semplicemente premendo la __barra§spaziatrice__. Ciò si rivela utile per le macro che vengono utilizzate più volte.
+
+Infine la macro verrà eseguita. Se la macro necessita di un valore per una circonferenza  o per un angolo fissati (__richiesta§valore__), verrà visualizzata una finestra di dialogo con il relativo prompt, nel quale è possibile inserire qualsiasi espressione aritmetica.
+
+Se è stata attivata l'__anteprima__ completa è possibile visualizzare il risultato dell'operazione prima della selezione dell'ultimo punto iniziale.
+
+Vedere: Finestra di dialogo Selezione macro, Definizione macro
+
+.defaultmacros
+.related runmacro save
+Macro predefinite
+
+All'avvio, C.a.R. ricerca nella cartella corrente un file di nome ".default.mcr". Se tale file viene trovato, le macro in esso contenute vengono caricate come __macro§predefinite__. L'archivio del programma contiene comunque un file di macro predefinite, che viene utilizzato se non viene trovato alcun altro file.
+
+Le macro predefinite sono protette: non vengono cancellate quando viene caricato un nuovo file e non vengono salvate con le costruzioni. Per eliminare le macro protette utilizzare la relativa voce nel menù macro ed effettuare la selezione delle macro.
+
+È possibile creare le proprie macro predefinite. Basta salvare un file con nome
+".default.mcr" nella cartella corrente. Se si necessita di una versione localizzata in una determinata lingua, salvare il file utilizzando la sintassi ".la_default.mcr", dove "la" è l'abbreviazione che identifica la lingua, oppure semplicemente sovrascrivere il file  ".default.mcr". Le abbreviazioni che identificano le varie lingue sono elencate nella finestra di dialogo "Informazioni". (__lingue__)
+
+.macroerror
+.related macro
+Avviso: Oggetto in uso, ma non nella macro
+
+Si ha questo avviso se un oggetto della macro si riferisce ad un oggetto che non è contenuto nella macro. Di solito la causa è un riferimento __@...__ in un'espressione, o la formattazione condizionata degli oggetti. Questi riferimenti non rendono gli oggetti dipendenti dagli oggetti riferiti e quindi sono ancora costruibili. Tuttavia potrebbero funzionare in modo inatteso oppure, se utilizzati, fare riferimento ad oggetti non corretti.
+
+Un altro tipo di riferimento è dato dai limiti degli __archi__ di circonferenza. Per eliminare dipendenze dalla circonferenza, dal momento che tali vincoli dipendono quasi sempre da questa, l'arco non dovrà dipendere dai limiti. Se l'avviso viene ignorato, l'arco sarà determinato da oggetti aventi lo stesso nome.
+
+Una terza ragione possono essere le __intersezioni__ tra circonferenze. Per scegliere l'intersezione, questa deve essere tenuta __lontana§da__ un determinato punto. Questa situazione si verifica automaticamente se l'altra intersezione è già esistente. Se l'avviso viene ignorato, l'intersezione verrà mantenuta lontana da un punto avente lo stesso nome o diventerà un'intersezione senza limitazioni.
+
+Per evitare l'avviso, aggiungere l'oggetto mancante ai parametri, in modo da includerlo nella macro.
+
+.localize
+.related defaultmacros
+Localizzazione della Guida attiva
+
+C.a.R. è disponibile in varie __lingue__. Se vuoi localizzare il programma nella tua lingua, devi tradurre i file:
+
+ - ZirkelProperties.properties
+ - info.txt
+
+Il file delle __proprietà__ deve essere tradotto utilizzando una rappresentazione Unicode interna, basata su "native2ascii": lascia che lo faccia io per te. Mandami semplicemente il file, includerò la tua traduzione nella distribuzione corrente.
+
+Il file della guida deve rispettare la __codifica__ locale; è comunque possibile specificare qualsiasi codifica nel file delle proprietà.
+
+.fixparameters
+.related runmacro parameter
+Parametri fissati
+
+È possibile fissare la selezione degli __oggetti§iniziali__ di una macro, premendo il __tasto§MAIUSC__ durante la selezione. In questo modo verrà creata una copia della macro, avente gli oggetti iniziali fissati. Naturalmente non è possibile fissare tutti gli oggetti iniziali.
+
+Un parametro può essere fissato durante la definizione della macro. Basta immettere "=A" al prompt del parametro. Il parametro verrà fissato all'oggetto di nome "A".
+
+.parametertypes
+.related parameter
+Tipi di oggetti iniziali
+
+La scelta di __punti__ come oggetti iniziali di una macro semplifica la comprensione delle dipendenze ed evita molti problemi. È comunque possibile utilizzare anche altri tipi di oggetti.
+
+Rette, semirette, segmenti e circonferenze generano __parametri§secondari__, che sono in pratica i secondi punti nella definizione di rette e semirette o il centro delle circonferenze. Ciò semplifica l'utilizzo delle macro, tuttavia è necessario fare attenzione nell'utilizzo di tali parametri in una stessa configurazione. Due circonferenze concentriche devono essere concentriche. Se i segmenti AB e BC sono parametri di una macro, è necessario scegliere i segmenti EF e FG. In tali casi, è meglio utilizzare i punti, quali parametri.
+
+Le rette e le semirette sono di due tipi: definite da due punti o da un punto (ad esempio le rette parallele). Nelle macro, rette, semirette e segmenti vengono memorizzati come linee senza punti, se i punti che definiscono tali oggetti non sono utilizzati come punti finali della costruzione o se gli oggetti sono definiti da un solo punto. È possibile scegliere qualsiasi retta come parametro. Se l'oggetto è definito da un solo punto è necessario scegliere una retta, semiretta o segmento dello stesso tipo. Anche questo tipo di selezione è complicata, si raccomanda l'utilizzo di soli punti.
+
+.htmlexport
+.related runningdemo save comment exportdialog jobexport
+Esportazione in HTML
+
+C.a.R. può generare pagine __HTML__ delle costruzioni, contenenti un'__applet__ per la visualizzazione.
+
+Per impostare una pagina HTML è necessario creare un file della costruzione e, se si definisce un problema con le relative soluzioni, è necessario creare anche un file delle soluzioni.
+La pubblicazione deve comprendere:
+
+ - la pagina HTML appena generata
+ - una pagina delle soluzioni, se presente
+ - fogli di stile, se presenti
+ - l'archivio delle applet zirkel.jar
+ - il file della costruzione
+
+Le __tracce__ e le __animazioni__ vengono salvate con la costruzione. Queste verranno caricate automaticamente nelle costruzioni visualizzate nelle applet. In questo caso non c'è interazione con l'utente. È consigliabile utilizzare per queste applet lo stile semplice o con bordo.
+
+Si consiglia di includere una sola applet in ogni pagina HTML.
+
+Vedere: Finestra di dialogo esportazione in HTML
+
+.htmlexporttemplate
+.related htmlexport save comment settings
+Esportazione in HTML con modelli
+
+I __modelli__ semplificano l'esportazione di una costruzione in __HTML__. Il
+programma carica un modello per la pagina HTML e compila le informazioni necessarie nei segnaposto del modello. La finestra di dialogo è molto semplificata, in quanto la maggior parte delle informazioni è contenuta nel file del modello, incluse le dimensioni dell'__applet__, i colori dell'applet e della pagina, i fogli di stile e la posizione dell'archivio.
+
+La __documentazione__ di C.a.R. contiene alcuni modelli esemplificativi. I file dei modelli hanno l'estensione "*.template". Questo tipo di file può essere modificato con un comune editor di testo o con un editor HTML. Gli utenti di lingua straniera devono disattivare __UTF-8__ nelle impostazioni, oppure utilizzare un editor che supporta UTF (ad esempio JE, l'editor HTML di Mozilla, oppure MS Frontpage). È possibile basare i modelli personali su quelli compresi nella documentazione.
+
+Nei file dei modelli vengono riconosciuti i seguenti segnaposto:
+
+#title
+  Sostituito dal titolo della costruzione come mostrato nella finestra di dialogo di esportazione.
+
+#comment1,#comment2,...
+  Vengono sostituiti dalla sezione di commento alla costruzione avente il numero corrispondente. Le sezioni di commento sono separate da linee di "~". Ciascun paragrafo della sezione di commento viene delimitato da <p>...</p>.
+
+#comment
+  Funziona come testo, ma non ricerca sezioni di commento.
+
+#text1,#text2,...
+  Funziona come #comment1,... ma non genera paragrafi <p>...</p>. L'utente può utilizzare qualsiasi tag HTML.
+
+#text
+  Funziona come #text1,... ma non ricerca sezioni di commento.
+
+#parameter
+  Inserisce i parametri dell'applet: file o processo, stile, strumenti e opzioni.
+
+#color
+  Inserisce i parametri dell'applet relativi ai colori.
+
+#font
+  Inserisce i parametri dell'applet relativi a caratteri e cifre.
+
+#codebase
+  Il codice estratto dalla finestra di dialogo di esportazione.
+
+Ecco un file di modello molto semplice.
+
+  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+  <HTML>
+  <HEAD>
+  <META HTTP-EQUIV="Content-Type" CONTENT="text/html; CHARSET=utf-8">
+  <TITLE>
+  #title
+  </TITLE>
+  </HEAD>
+  <BODY BGCOLOR=#F0F0F0>
+  <H1>
+  #title
+  </H1>
+  <CENTER>
+  <P>
+  <APPLET CODE="rene.zirkel.ZirkelApplet.class" #codebase WIDTH="400" 
+  HEIGHT="400" ALIGN="CENTER">
+  <PARAM NAME="color" VALUE="240,240,240">
+  #parameter
+  </APPLET>
+  </P>
+  </CENTER>
+  #comment
+  </BODY>
+  </HTML>
+
+Vedere: Impostazioni di esportazione
+
+.exportdialog
+.related htmlexport jobexport
+Impostazioni di esportazione
+
+//image images/Export.jpg
+
+Le applet possono avere diversi stili.
+
+- Semplice: l'__applet__ non ha bordo. È possibile solo visualizzare gli elementi nascosti e muovere i punti. In questo caso si consiglia di utilizzare lo stesso colore per la pagina e per l'applet.
+
+- Bordo: l'applet ha un bordo. 
+
+- Bordo e icone: l'applet ha un bordo e le icone. L'utente può costruire oggetti.
+
+- Bordo, icone e stato: l'applet ha una riga di stato. Il testo di stato viene visualizzato anche nella barra di stato del browser.
+
+- Bordo, icone e riga di input: eseguire la costruzione in modalità descrittiva (non-visuale).
+
+- Riproduci con punti di interruzione: vengono visualizzati tre pulsanti per consentire la navigazione tra i punti di interruzione. Per impostare i punti di interruzione, utilizzare lo strumento riproduzione.
+
+Titolo della pagina: è il titolo della pagina nello stile <H1>.
+
+File di stile CSS: i Cascading Style Sheets sono utili per dare un uguale aspetto a più pagine. Se non vengono utilizzati, lasciare vuoto l'input. Utilizzare un percorso relativo a quello dell'archivio del programma.
+
+Larghezza, Altezza: le dimensioni per la visualizzazione dell'applet.
+
+File della costruzione: il nome del file contenente la costruzione, di solito presente nella stessa cartella del file HTML. Il nome del file deve essere relativo all'archivio del programma. URL e percorsi assoluti non sono consentiti.
+
+File Jar: questo è l'archivio del programma. Il percorso deve essere relativo alla pagina HTML.
+
+Colori: è possibile scegliere un colore per lo sfondo della pagina e per quello dell'applet. Il colore può essere scelto con il pulsante sottostante.
+
+Salva cifre: salva le impostazioni per il numero di cifre. È consigliabile lasciare questa impostazione abilitata.
+
+Mostra Commento: il __commento__ verrà visualizzato sotto l'applet. Tutti i browser dovrebbero essere in grado di gestire la codifica UTF-8 predefinita. In caso contrario scegliere nelle impostazioni avanzate la codifica Windows.
+
+È inoltre possibile attivare il salvataggio dei colori definiti per gli elementi e lo sfondo della costruzione. Lo sfondo della costruzione può essere diverso da quello dell'applet e da quello della pagina.
+
+Menu popup: è possibile impedire la visualizzazione del menu popup.
+
+Zoom con il mouse: è possibile attivare lo zoom e la panoramica utilizzando il pulsante e la rotellina del mouse.
+
+Movimento limitato: consente esclusivamente i movimenti che non rendono i punti non validi. Funziona come lo strumento di traccia automatica.
+
+Strumenti: queste due barre di icone consentono la scelta degli __strumenti__ da visualizzare. Si consiglia di includere sempre lo strumento Annulla eliminazioni. Utilizzando la speciale icona è possibile disporre di due righe di strumenti.
+
+L'utente potrà definire macro solo se è presente lo strumento relativo, e potrà eseguire macro solo se lo strumento relativo è stato reso disponibile.
+
+Le icone con il punto di domanda sono pulsanti di scelta per la finestra di dialogo per la selezione degli oggetti, la richiesta di punti vincolati ad oggetti e intersezioni.
+Tutte queste finestre di dialogo e richieste sono disattivate nelle applet, per impostazione predefinita.
+
+Nella modalità __non§visuale__, le icone rappresentano un aiuto per la sintassi. In questa modalità funzionano tutti gli strumenti di costruzione.
+
+.jobexport
+.related htmlexport exportdialog
+Esportazione di problemi
+
+La finestra di dialogo per l'esportazione dispone di caratteristiche dedicate ai __problemi__:
+
+Visualizza come problema: spuntare questa scelta per salvare la costruzione come problema.
+
+File soluzione - Passa a – Salva - Collega: queste impostazioni consentono la generazione automatica di una pagina soluzione, una pagina separata che visualizza la soluzione. Al termine della risoluzione di un problema, il browser può passare direttamente alla pagina soluzione. È inoltre possibile impostare un collegamento a questa pagina, sotto la costruzione.
+
+Commento: esporta il commento al problema. Il commento alla costruzione viene visualizzato solo nella pagina della soluzione.
+
+.runningdemo
+.related htmlexport online
+Creare una dimostazione eseguibile
+
+È possibile creare un'__applet__ per caricare una serie di costruzioni e mostrarle all'utente secondo una determinata sequenza (__dimostrazione__). La sintassi dell'applet è abbastanza diversa e non c'è esportazione automatica.
+
+Un esempio di codice per l'applet è il seguente:
+
+ <APPLET ARCHIVE="zirkel.jar" CODE="rene.zirkel.ZirkelApplet.class" 
+       WIDTH="500" HEIGHT="565" ALIGN="center">
+ <PARAM NAME="demo" VALUE="demo.xml">
+ <PARAM NAME="color" VALUE="244,244,242">
+ </APPLET>
+
+Il file "demo.xml" contiene l'elenco dei file; è un file XML con una semplice sintassi. Ecco un esempio:
+
+ <?xml version="1.0" encoding="utf-8"?>
+ <Demo delay="30">
+ <File name="Uhr.zir" delay="20">Clockwork</File>
+ <File name="Cindarella-Machine.zir">Cindarella machine</File>
+   ...
+ </Demo>
+
+I parametri per la temporizzazione sono espressi in secondi.
+
+.visual
+.related expressionsyntax runmacro
+Costruzioni descrittive
+
+In questa modalità __non§visuale__, è presente una riga di input sotto la costruzione. Vengono applicate le seguenti differenze:
+
+ - La scelta di uno strumento visualizza solo un modello di input 
+ - I parametri necessari alla costruzione devono essere immessi per nome 
+ - Il nome dell'oggetto costruito deve essere assegnato alla sinistra di un segno di uguale =
+ - La costruzione si conclude premendo INVIO
+
+La __sintassi__ di input è fissata:
+
+ nome=funzione(parametro,...)
+ nome1,nome2=funzione(parametro,...)
+
+La seconda riga si applica all'intersezione e alle macro con più punti finali.
+
+Se il nome viene omesso, all'oggetto verrà attribuito il nome predefinito. 
+
+Segue una breve descrizione della sintassi. Si noti che le __espressioni__ possono essere utilizzate in qualsiasi posizione in cui è atteso un valore. Le parentesi senza contenuto  possono essere omesse.
+
+Sintassi
+ Comando esteso 
+ Descrizione 
+ 
+A=P() 
+ punto 
+ Genera un punto in una posizione casuale. 
+ 
+A=P(0,1) 
+  Un punto fissato. 
+ 
+a=s(B,C) 
+ segmento
+ Un segmento da B a C. 
+ 
+a=s(B,2) 
+  Un segmento di lunghezza fissata. 
+ 
+a=g(B,C) 
+ retta 
+ Una retta tra B e C. 
+ 
+a=r(B,C) 
+ semiretta 
+ Una semiretta da B a C. 
+ 
+k=c(A,B) 
+ circonferenza 
+ Una circonferenza di centro A per B. 
+ 
+k=c(A,2)
+  Una circonferenza di raggio fissato. 
+ 
+k=c(A,B,C)
+  Una circonferenza di centro A di raggio BC. 
+ 
+A=I(g,g)
+ intersezione
+ Una intersezione tra due rette. 
+ 
+A,B=I(k,k)
+ Entrambe le intersezioni tra due circonferenze, o tra una circonferenza e una retta. 
+ 
+lontano(A,P)
+ lontano  
+ Mantiene l'intersezione A distante dal punto P. 
+ 
+M=M(A,B)
+ medio 
+ Il punto medio di AB. 
+ 
+g=pl(g,A) 
+ parallela
+ La parallela per A a g. 
+ 
+g=p(g,A) 
+ perpendicolare
+ La perpendicolare per A a g. 
+ 
+a=a(A,B,C) 
+ angolo 
+ L'angolo A,B,C 
+ 
+a=a(A,B,90) 
+  Un angolo di misura fissata. 
+ 
+A=pol(P1,P2,P3) 
+ poligono
+ Crea un poligono con questi vertici. 
+
+Q=conica(P1,P2,P3,P4,P5)
+ Crea la conica per questi punti.
+
+F=f(a,b,d,t,xt,yt)
+ funzione
+ Crea una funzione su [a,b] con passo d, che traccia xt,yt,
+ che sono espressioni dipendenti dalla variabile t.
+
+valore(P,0,1) 
+ valore
+ Fissa le coordinate del punto. 
+ 
+valore(s,2) 
+  Fissa la lunghezza di un segmento. 
+ 
+valore(c,2) 
+  Fissa il raggio di una circonferenza.
+ 
+valore(a,90) 
+  Fissa la misura di un angolo. 
+ 
+valore(true,o) 
+  Imposta la visualizzazione del valore di o. 
+ 
+valore(o) 
+  Imposta la visualizzazione del valore di o ad on. 
+ 
+valore(true) 
+  Imposta la visualizzazione predefinita dei valori. 
+ 
+nome(o,p) 
+ nome 
+ Imposta il nome di o in p. 
+ 
+nome(true,o) 
+  Imposta la visualizzazione del nome di o. 
+ 
+nome(o) 
+  Imposta la visualizzazione del nome di o ad on. 
+ 
+nome(true) 
+  Imposta la visualizzazione predefinita dei nomi. 
+ 
+nascondi(true,o) 
+ nascondi 
+ Nasconde o mostra o. 
+ 
+nascondi(o) 
+  Nasconde o. 
+ 
+nascondi(true) 
+  Imposta lo stato nascosto per gli oggetti come predefinito.
+ 
+col(verde,o) 
+ colore
+ Imposta il colore di o a rosso, verde, blu o marrone. 
+ 
+col(verde) 
+  Imposta il colore predefinito. 
+ 
+sp(spesso,o) 
+ spessore
+ Imposta lo spessore di o in spesso, normale o sottile. 
+ 
+sp(spesso) 
+  Imposta lo spessore predefinito.
+ 
+stile(quadrato,P) 
+ stile 
+ Imposta il tipo di punto a quadrato, cerchio, rombo o punto. 
+ 
+stile(quadrato) 
+  Imposta il tipo di punto predefinito. 
+ 
+parz(k) 
+parz(true,k) 
+ parziale
+ Imposta la visualizzazione parziale o completa dell'oggetto k. 
+ 
+parz(true) 
+  Imposta lo stato parziale come predefinito. 
+ 
+pieno(o) 
+pieno(true,o) 
+ pieno 
+ Imposta l'oggetto o allo stato pieno oppure vuoto. 
+ 
+sfondo(o) 
+sfondo(true,o) 
+ sfondo 
+ Porta in secondo o primo piano l'oggetto o. 
+ 
+finestra(0,0,5) 
+ finestra
+ Imposta la finestra alla larghezza 2*5 e centro (0,0). 
+
+valido(o)
+valido(true,o)
+ Tratta segmenti e semirette come rette per le intersezioni e le perpendicolari. o è l'intersezione o la perpendicolare.
+
+concavo(a)
+concavo(true,a)
+ Imposta gli angoli in modo che possano essere concavi.
+
+solido(a)
+solido(true,a)
+ Imposta l'oggetto allo stato non trasparente.
+
+arco(c,A,B)
+ arco
+ Limita una circonferenza ad un arco da A a B.
+
+valido(o)
+valido(true,o)
+ Rimuove le limitazioni dalle perpendicolari e dalle intersezioni. Tali oggetti saranno validi anche se l'intersezione è esterna ad un segmento o ad un arco.
+
+rinomina(A,B)
+ Rinomina un oggetto A in B.
+ 
+Possono essere utilizzate anche le __macro__. I nomi a sinistra del simbolo di = verranno assegnati agli oggetti finali. Se ci sono più oggetti finali, i nomi devono essere separati da virgole. È possibile utilizzare un ulteriore parametro, che verrà richiesto in modo interattivo, per assegnare un valore ad un oggetto.
+
+.descritivefiles run
+.related visual save
+Costruzioni descrittive nei file
+
+È possibile caricare da un file le __costruzioni§descrittive__; in alternativa modificare la descrizione e quindi caricare la costruzione. 
+
+La sintassi è orientata alle righe e utilizza i comandi sopradescritti.
+È possibile utilizzare righe di commento, premettendo //. I file possono contenere __macro__ nel seguente formato:
+
+ macro U 
+ // Costruisce una circonferenza per tre punti
+    parameter A=point // Seleziona il primo punto
+    parameter B=point // Seleziona il secondo punto
+    parameter C=point // Seleziona il terzo punto
+    g1=MS(A,B)
+    g2=MS(A,C)
+    U=intersection(g1,g2)
+    target k=circle(U,A)
+ end
+
+Le identazioni sono opzionali. I __commenti__ nelle righe dei parametri vengono utilizzati come prompt, se la macro è utilizzata interattivamente. Questa macro richiama la macro MS, con due parametri.
+
+ macro MS
+  param A=point
+  param B=point
+  partial(true)
+  k1=circle(A,B)
+  k2=circle(B,A)
+  partial(false)
+  P1,P2=intersection(k1,k2)
+  target g=line(P1,P2)
+ end
+
+Se il comando che costruisce l'oggetto finale genera due oggetti, l'oggetto finale può essere definito separatamente.
+
+ A,B=intersection(g,k)
+ target B
+
+Se una macro ha più di un oggetto finale, ciascuno di questi deve essere assegnato.
+
+ A,B=test(...)
+
+I prompt vengono definiti dalla parola chiave “prompt”, a fianco del nome di un oggetto.
+
+ k=circle(A,5)
+ prompt k
+
+Questo è un esempio di macro che utilizza come parametro (oggetto iniziale) un segmento.
+
+ macro MS
+ // Mittelsenkrechte
+  A=point
+  B=point
+    parameter s=segment(A,B)
+    ...
+ end
+
+È disponibile una speciale sintassi nel caso in cui le circonferenze vengono utilizzate come parametri.
+
+ M=point
+ parameter circle(M)
+
+Questo tipo di circonferenza può essere utilizzata esclusivamente come parametro.
+
+Lo speciale comando “Mostra tutto” mostra tutti gli oggetti intermedi. In caso contrario saranno visibili solo gli oggetti finali. Il comando "invisibile" nasconde completamente tutti gli oggetti che non sono finali.
+
+.assignments
+.related save restricted colors comment
+Problemi
+
+I problemi (job) sono costruzioni visualizzate solo parzialmente, che devono essere completate dall'utente. Il computer controlla solo l'oggetto finale costruito, mentre la costruzione può essere diversa da quella assegnata. L'utente riceverà un messaggio non appena avrà completato la costruzione. Gli oggetti finali verranno visualizzati di colore chiaro, a meno che non siano stati nascosti prima del salvataggio della costruzione.
+
+Per generare un problema è necessario scegliere l'ultimo oggetto da visualizzare all'utente. Inoltre devono essere definiti gli oggetti finali, obiettivo della costruzione. Se, generando gli oggetti finali, si tiene premuto il tasto MAIUSC, tali oggetti non verranno verificati.
+
+Per effettuare un test del problema basta fare clic sulla relativa voce nel menu Speciale. Si avrà a disposizione l'insieme completo degli strumenti, diversamente dall'utente. Per salvare il problema è possibile utilizzare la barra delle icone limitata.
+
+Si consiglia di definire con il minor numero possibile di vertici i poligoni impostati come oggetti da costruire. Se l'utente che dà la soluzione crea ulteriori punti sui lati dei poligoni, tali punti non verranno considerati.
+
+.browser
+.related online
+Avviare la Guida nel browser
+
+Per avviare la Guida __HTML__ nel __browser__, è necessario configurarlo. Inserire la riga di comando del browser nella finestra di dialogo. Se il percorso contiene spazi, racchiudere la stringa tra virgolette doppie.
+
+Inoltre è necessario aggiungere il percorso relativo al file della guida index.html. Questa informazione dovrebbe essere già preconfigurata. Se non viene trovata alcuna guida la finestra di configurazione utilizzerà la pagina web.
+
+Il browser predefinito è Explorer sui sistemi Windows, e Netscape sugli altri.
+
+.comment
+.related assignments parameter htmlexport
+Commenti
+
+//image- images/comment.png
+Ciascuna costruzione può avere un commento dedicato. I __commenti__ vengono visualizzati all'utente all'apertura della costruzione. I commenti possono essere esportati in __HTML__.
+
+I problemi dispongono di uno speciale commento, visualizzato all'utente al momento della presentazione del problema.
+
+Anche le __macro__ dovrebbero disporre di un commento, che ne spiega l'utilizzo e lo scopo. Il commento della macro viene visualizzato nella finestra di dialogo per la selezione delle macro.
+
+.fonts
+.related zoom save sizes
+Caratteri
+
+I __caratteri__ possono essere impostati globalmente o relativamente a ciascun oggetto. Le impostazioni globali hanno la precedenza. I caratteri vengono scalati secondo le dimensioni dello schermo, a partire da un valore minimo predefinito.
+
+È possibile utilizzare caratteri in due dimensioni e due stili; comunque i caratteri e i punti vengono scalati con la costruzione. Questo comporta caratteri e punti molto piccoli nelle  finestre piccole o nelle applet; per questo motivo viene assegnata una dimensione minima per i punti e per i caratteri. Si raccomanda l'utilizzo dei caratteri in stile grassetto per schermi piccoli e risoluzioni grafiche elevate. 
+
+I caratteri per l'__esportazione§grafica__ possono essere scalati ad una dimensione esatta. L'anteprima dell'esportazione grafica scala i caratteri in modo da visualizzare l'effetto risultante della costruzione. Tale impostazione non considera le impostazioni globali relative alla dimensione dei caratteri, compresa la dimensione minima.
+
+.sizes
+.related fonts
+Dimensioni
+
+In questa finestra di dialogo è possibile impostare lo spessore minimo delle linee e le dimensioni minime di punti e caratteri.
+Per mantenere una certa omogeneità nella visualizzazione su schermi di dimensioni diverse, tali oggetti vengono scalati rispetto all'altezza dello schermo.  In questo caso è possibile impostare le __dimensioni§minime__.
+
+Inoltre è possibile impostare la dimensione delle frecce dei vettori e la dimensione della zona di selezione, per la selezione degli oggetti col cursore.
+
+Per le esportazioni grafiche è consigliabile impostare esattamente tali valori, indipendentemente dalla dimensione dell'output. Questa impostazione ignora qualsiasi altra impostazione predefinita.
+
+Le dimensioni minime possono essere esportate nelle __applet__.
+
+.save
+.related assignments parameter visual print defaultmacros filedialog
+Salvare e caricare i file
+
+Le costruzioni vengono salvate in formato __XML__. Questo formato è "umanamente" leggibile. Le costruzioni normali hanno l'estensione ".zir", mentre i problemi hanno l'estensione ".job". Le macro utilizzano ".mcr".
+
+Le costruzioni possono contenere __macro__. Il menu File contiene un'opzione per scegliere se  salvare le macro correnti (a parte le __macro§predefinite__) insieme alla costruzione. Si consiglia di eliminare tutte le macro prima di caricare una nuova costruzione, in modo da  evitare l'accumulo di macro precedentemente create nelle nuove costruzioni. Nel menu File è disponibile la scelta di questa opzione.
+
+I file possono essere __compressi__ aggiungendo "z" alla loro estensione. Questa non è un'operazione necessaria, a meno che non si desideri minimizzare il tempo di download qualora il file fosse ospitato su un server.
+
+Nel menu File sono disponibili le voci relative al caricamento di __problemi__, di __macro__ e di __costruzioni§descrittive__.
+
+Vedere: Finestra di dialogo File
+
+.filedialog
+.related save settings
+Finestra di dialogo File
+
+C.a.R. implementa una propria __finestra§di§dialogo§File__, in quanto quelle di Windows
+e Linux presentano alcuni difetti, se utilizzate con Java. Se si desidera utilizzare la finestra di dialogo di sistema basta configurare le relative __impostazioni§avanzate__.
+
+//image images/FileDialog.jpg
+
+La finestra di dialogo File di C.a.R. dispone di una __cronologia__ per file, cartelle e filtri. La cronologia di file e cartelle dispone di un proprio menu di scelta a discesa; i dati relativi alla cronologia e alle caratteristiche dei file vengono visualizzati quando vengono premuti i __tasti§freccia__ su/giù con il cursore posizionato nei relativi campi.
+
+Per navigare tra le cartelle basta fare __doppio§clic__ sul nome della cartella, nell'elenco a sinistra. Il pulsante "Indietro" apre le cartelle precedenti. Per scegliere un file, è possibile fare doppio clic sul relativo nome nell'elenco a destra, oppure selezionarlo e quindi fare clic sul pulsante "Apri".
+
+È possibile inserire file aventi __nomi§ed§estensioni__ diverse, separandoli con spazi. È possibile utilizzare uno o più caratteri jolly, come "?" per i singoli caratteri e "*" per le stringhe.
+
+Per creare una nuova cartella, inserirne il nome nell'apposito campo, quindi premere il pulsante. In questa finestra di dialogo non è possibile cancellare file o cartelle.
+
+Il pulsante Home è collegato alla __cartella§principale__ di C.a.R., che contiene i file di C.a.R., se il programma è stato installato con le impostazioni predefinite. Il nome inglese della cartella è "CaR Files". Se la cartella non è presente, il pulsante effettua il collegamento alla cartella principale dell'utente: in Windows, è "Documenti" e in __Linux__ è "home" . È possibile cambiare il collegamento alla cartella principale, premendo contemporaneamente il pulsante Home e i __tasti§MAIUSC§e§CTRL__: la cartella corrente diventerà la nuova cartella home di C.a.R. Facendo nuovamente clic con la stessa combinazione di tasti si ripristinano le impostazioni precedenti.
+
+.print
+.related exportsettings print
+Stampare ed esportare le costruzioni
+
+È possibile __esportare§le§costruzioni__ in altri programmi o visualizzarle esternamente in vari modi.
+
+Per __stampare__ le costruzioni, è disponibile un'opzione per stampare in __dimensione§esatta__, in modalità 1:1 con unità di misura in centimetri.
+
+Inoltre è possibile esportare in vari formati grafici e vettoriali (__esportazione§grafica__). Nei programmi di elaborazione testi si consiglia l'utilizzo del formato PNG, ridimensionando opportunamente l'immagine in riferimento alle dimensioni finali. Non c'è senso nell'utilizzare i formati PDF o PS per la stampa, in quando gli spessori delle linee, i caratteri e le dimensioni dei punti devono essere ridimensionati alle dimensioni esatte dell'output.
+
+Per l'esportazione PNG viene visualizzata una finestra di dialogo, in cui è possibile impostare le dimensioni finali o utilizzare un valore relativo alla dimensione dello schermo. È inoltre possibile definire la dimensione di output immettendo larghezza e altezza in cm e scegliendo la risoluzione in __dpi__. I formati disponibili sono visualizzati in una casella di scelta a discesa. Scegliendo "scala 1:1", si ottiene una versione scalata (1 unità = 1 cm) con risoluzione di 300 dpi. Assicurarsi che l'output sia adatto alle dimensioni del foglio.
+
+Dal momento che linee, caratteri e punti possono diventare troppo piccoli nelle immagini di piccole dimensioni, è possibile __scalare__ le loro dimensioni in cm. Utilizzare l'__anteprima__ per visualizzarne l'effetto sullo schermo.
+
+Per l'utilizzo con __LaTeX__, C.a.R. può generare una coppia di file, il file delle dimensioni del disegno (bounding box) e il file per il disegno dell'immagine. Quest'ultimo ha lo stesso nome del file PNG ma estensione "ztx" (zirkel tex). È possibile fare in modo che sia LaTeX a disegnare le stringhe e le equazioni della costruzione. Nella finestra di dialogo selezionare i tipi di stringhe creati da LaTeX. L'esportazione grafica genera i comandi LaTeX necessari. Questo tipo di esportazione LaTeX è valido con pdflatex e latex. È necessario importare nel sorgente LaTeX il pacchetto "__graphicx__", quindi caricare il file dell'immagine con un comando di input, come nell'esempio che segue:
+
+ \begin{figure}
+ \centering
+ \input{image.ztx}
+ \end{figure}
+
+È inoltre possibile copiare i grafici negli __appunti__. Viene applicata la stessa scala dell'esportazione PNG. Scegliendo "scala relativa allo schermo" nella finestra di dialogo si ottiene una copia della schermata della costruzione.
+
+Per l'esportazione __PDF__ impostare solo le dimensioni dell'immagine in cm. Il formato PDF può scalare anche linee, caratteri e punti; in questo caso è necessario impostare anche le dimensioni di stampa dell'output.
+
+.construction
+.related hide reorder
+Elenco degli oggetti
+
+//image images/Gui.jpg
+
+È possibile visualizzare un __elenco§degli§oggetti__ della costruzione, utilizzando il corrispondente comando nel menù Impostazioni. L'elenco viene sempre visualizzato per impostazione predefinita. L'elenco consente inoltre la modifica degli oggetti invisibili, ed è l'unico strumento per accedere ai passi completamente nascosti della costruzione. Le righe dell'elenco hanno lo stesso colore dell'oggetto a cui si riferiscono. Gli oggetti completamente nascosti sono tra parentesi.
+
+Premere ? o il pulsante destro del mouse per accedere al menu popup contenente ulteriori scelte.
+
+Fare clic su un oggetto per selezionarlo.  Per selezionare o deselezionare più oggetti fare clic tenendo premuto il __tasto§CTRL__.  Per selezionare più oggetti consecutivi premere il __tasto§MAIUSC__.
+
+La visualizzazione può essere limitata a determinati tipi di oggetti, utilizzando la casella di scelta a discesa nella prima riga della finestra.
+
+L'elenco può essere ordinato secondo l'ordine di creazione degli oggetti oppure secondo l'ordine di memorizzazione degli stessi. Il programma può modificare l'ordine degli oggetti in modo tale da garantire che nessun oggetto si riferisca a un oggetto costruito successivamente.
+
+È possibile visualizzare vicino ad ogni oggetto la relativa descrizione, il valore o la formula. Sono inoltre disponibili alcuni stili speciali per la visualizzazione degli oggetti nascosti, completamente nascosti, non validi e di base (__mobili__).
+
+L'elenco degli oggetti può essere copiato negli __Appunti__.
+
+.colors
+.related htmlexport
+Impostare i colori
+
+In C.a.R. è possibile impostare i colori secondo le preferenze dell'utente. I colori non vengono salvati con la costruzione, ma vengono esportati in HTML.
+
+I colori sono composti nel modello rosso, verde, blu. Per una migliore compatibilità utilizzare i colori predefiniti.
+
+.settings
+.related restricted iconbar tips beginner
+Impostazioni Avanzate
+
+Questa finestra di dialogo contiene alcune __impostazioni§avanzate__ per gli utenti esperti, anche se alcune di queste impostazioni riguardano anche la modalità principiante.
+
+Innanzitutto è possibile consentire la visualizzazione delle etichette degli oggetti durante il trascinamento. Questa opzione può essere di disturbo, ma in alcuni casi può risultare utile. Il programma può limitare automaticamente tale opzione agli oggetti fissati.
+
+Quindi è possibile consentire la visualizzazione di alcune domande che il programma pone prima dell'esecuzione di azioni critiche.
+
+Disattivando la finestra di dialogo per la scelta di oggetti, verrà selezionato sempre il primo oggetto, anche se la selezione non può essere determinata univocamente dalla posizione del mouse.
+
+È inoltre possibile disattivare l'anteprima della costruzione, o limitarla ai soli punti. La maggior parte degli strumenti visualizza un'anteprima del risultato prima della selezione del punto finale, come impostazione predefinita. Nella modalità principiante vengono visualizzati nell'anteprima solo i punti, poiché la presenza di altri oggetti tende a confondere l'utente.
+
+La barra delle icone può essere posizionata nella parte inferiore della finestra ed è possibile disattivare la descrizione degli strumenti.
+
+Alcuni utenti preferiscono utilizzare la __finestra§di§dialogo§File__ di sistema: io preferisco la mia e effettivamente questo offre alcuni vantaggi. Tuttavia con quest'ultima non è possibile  cancellare o rinominare i file.
+
+È consigliabile l'utilizzo della codifica __UTF-8__, ma è possibile scegliere di utilizzare la propria codifica locale per i file della costruzione. Questa scelta influenza i commenti e le descrizioni nei file. Utilizzare le impostazioni locali solo per le costruzioni personali, e se non si dispone di un editor UTF-8.
+
+In modalità __smartboard__, il trascinamento con il mouse si comporta in maniera diversa. In questa modalità non vengono tracciati i movimenti del mouse, così questi vengono sostituiti dal trascinamento; per completare la costruzione è necessario fare clic ancora una volta. Tale operazione è importante solo per l'anteprima delle fasi della costruzione.
+
+Per impostazione predefinita vengono creati dei __backup__ dei file prima di sovrascriverli. Se questa caratteristica non è utile, basta disattivare il backup.
+
+La finestra di dialogo per le macro può essere visualizzata con un clic singolo oppure con un  __doppio§clic__ del pulsante destro del mouse.
+
+È possibile disattivare la grafica ad alta definizione, selezionando __anti-aliasing__.
+
+
+.exportsettings
+.related settings print
+Impostazioni per l'esportazione grafica
+
+Normalmente i punti e i caratteri vengono scalati.  Le dimensioni minime vengono rispettate se si attiva la relativa opzione in questa finestra. Per ottenere caratteri grandi in stampe di piccole dimensioni, utilizzare la caratteristica di "scala" nell'__esportazione§grafica__.
+
+I bitmap vengono di norma generati su __sfondo__ bianco. È possibile comunque scegliere di utilizzare altri colori di sfondo.
+
+.reorder
+.related circle angle expressionsyntax
+Riordinare i punti
+
+È possibile modificare  manualmente l'__ordine__ della costruzione, tramite uno strumento apposito. Selezionando un oggetto con questo strumento, tale oggetto verrà spostato il più lontano possibile dall'inizio della costruzione. Ciò può essere utile per il controllo della sequenza degli oggetti disegnati.
+
+Comunque questa caratteristica è ora obsoleta. C.a.R. riordina automaticamente la costruzione, se alcuni oggetti fanno riferimento a oggetti costruiti successivamente. È inoltre possibile controllare la sequenza di disegno utilizzando la __formattazione§condizionata__.
+
+.tips
+.related online browser start move intersection expression reorder
+Suggerimenti
+
+Questa sezione della Guida contiene alcuni suggerimenti relativi alla risoluzione dei problemi più comuni.
+
+Costruzioni non valide. Per verificare una costruzione, muovere uno dei punti base. Se la costruzione rimane non valida, generalmente è a causa di una scelta non corretta di un'intersezione, oppure può essere stata definita una retta passante per il punto di intersezione, solo per caso.
+
+Intersezione sbagliata. Se una costruzione diventa non valida quando viene modificato l'ordine dei punti base o un punto viene spostato, è necessario scegliere con attenzione i punti di intersezione. Se si desidera che la costruzione rimanga sempre valida, assicurarsi di aver scelto propriamente tutte le intersezioni. Se la selezione automatica di C.a.R. non funziona, è possibile selezionare manualmente l'intersezione. Aprire la finestra delle proprietà e scegliere “Vicino a” o “Lontano da”. Quindi scegliere il punto che dovrebbe essere vicino o lontano dal punto di intersezione. In questo modo l'intersezione sarà sempre valida.
+
+.keyboard
+.related gui delete zoom mouse iconbar
+Uso della tastiera
+
+La maggior parte dei comandi in C.a.R. sono associati a dei __tasti§di§scelta§rapida__. Nei menu sono visualizzati i tasti di scelta rapida di ogni comando. I tasti di scelta rapida sono localizzati nella lingua del programma.
+
+I tasti di scelta rapida più utili sono il __tasto§BACKSPACE__ per eliminare l'ultima azione compiuta, i tasti __+/-__ per lo zoom avanti e indietro, e i tasti freccia per muovere la costruzione. Inoltre __F1__ apre la Guida attiva.
+
+Il tasto __ESC__ reimposta lo strumento corrente.
+
+Notare che la pressione del __tasto§CTRL__ e del __tasto§MAIUSC__ modifica l'effetto di alcuni strumenti.
+
+In alcune versioni di Java e Windows la __BARRA§SPAZIATRICE__ sostituisce la pressione dei pulsanti. Altri sistemi utilizzano invece il __tasto§INVIO__.
+
+.image
+.related background
+Immagini
+
+È possibile aggiungere __immagini__, come oggetti della costruzione. Le immagini necessitano di due o tre __punti§di§ancoraggio__. Nel primo caso l'immagine viene ruotata e scalata, nel secondo viene utilizzata una trasformazione affine. Se sono necessari solo due punti, fare doppio clic sul secondo punto.
+
+Le immagini devono essere memorizzate nella stessa cartella della costruzione.
+
+Vedere: Immagini di sfondo
+
+.language
+Impostare la lingua
+
+C.a.R. si avvia per impostazione predefinita nella lingua del sistema su cui è installato, ma può essere impostato in modo da utilizzare una qualsiasi delle __lingue__ in cui è stato localizzato. Utilizzare le seguenti abbreviazioni per le lingue al momento disponibili:
+
+ Inglese - en
+ Tedesco - de
+ Francese - fr
+ Olandese - nl
+ Italiano - it
+ Spagnolo - es
+ Portoghese - pt
+ Brasiliano - br
+ Sloveno - sl
+ Danese - da
+ Norvegese - no
+ Polacco - pl
+ Russo - ru
+ Coreano - co
+
+È possibile utilizzare il comando da menù per impostare la lingua, oppure inserire  il relativo parametro nella linea di comando (ad esempio "-l it" per l'italiano).
+
+.selfreference
+.related macro point
+Autoreferenzialità
+
+Un punto può contenere dei riferimenti a se stesso, che ne fissano le coordinate oppure ne impostano le modalità di visualizzazione nella __formattazione§condizionata__. Se un punto fa riferimento esclusivamente a se stesso (non valgono i __riferimenti @__) si dice oggetto __auto§referente__. Tale oggetto potrà essere spostato dall'utente. Verrà aggiornata innanzitutto il resto della costruzione, e quindi il punto.
+
+Questa caratteristica consente di attribuire ad un punto un comportamento speciale, quando esso viene spostato nel piano. Ad esempio è possibile in questo modo limitare i movimenti del punto. Notare che questa caratteristica risulta necessaria solo in situazioni molto particolari, poichè i punti possono essere __vincolati__ alle zone interne di un angolo, di poligoni e circonferenze, oltre che al contorno di molti altri oggetti. È inoltre disponibile un'impostazione della __griglia__ per limitare i punti alle sole coordinate intere. Tutti i punti di questo tipo possono essere spostati, ma sono fissati.
+
+Questo tipo di punti fissati, ma mobili può essere creato anche con le __macro__. Il punto deve essere il punto iniziale della macro, e deve essere selezionato con il tasto MAIUSC al momento della creazione della macro. Quando la macro viene eseguita, i punti scelti come oggetti iniziali (parametri) diventano a coordinate fisse.

@@ -1,0 +1,12 @@
+﻿Benvenuto in C.a.R.!
+
+L'home page di C.a.R. e il mio indirizzo e-mail si trovano qui:
+
+http://www.z-u-l.de/
+
+L'home page di C.a.R. contiene inoltre la documentazione storica delle versioni e delle ultime modifiche al programma.
+
+Abbiamo aperto un forum su Yahoo groups: il link al forum è nella documentazione del programma. Inoltre è disponibile un Wiki per gli utenti, con molte informazioni e le ultime novità su C.a.R.
+
+Grazie per aver scelto questo programma!
+Il programma può essere liberamente utilizzato e può essere distribuito secondo i termini della Licenza Gnu GPL.

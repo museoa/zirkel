@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="C:/java/zirkel/doc/Download/zirkel.zip"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/ZuL/makejar-source.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{TextDisplay.java"/>
+        <javaElement handleIdentifier="=ZuL"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{Wheel.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.gui"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{SearchFileDialog.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{Warning.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util.list"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{InfoDialog.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util.ftp"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util.sort"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util.xml"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{Question.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{FontEditor.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{TextPosition.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemPanel.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{WheelListener.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util.parser"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{GetParameter.java"/>
+        <javaElement handleIdentifier="=HotEqn/&lt;atp"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.util"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{Viewer.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.lister"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{SystemViewer.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{ColorEditor.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{Line.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.viewer{ExtendedViewer.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemEditor.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemEditorElement.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.dialogs{MyFileDialog.java"/>
+    </selectedElements>
+</jardesc>
