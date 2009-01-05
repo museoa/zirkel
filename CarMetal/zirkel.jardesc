@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="c:/java/zirkel/doc/zirkel.jar"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/ZuL/zirkel.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+<manifest generateManifest="true" mainClassHandleIdentifier="=ZuL/&lt;{Zirkel.java[Zirkel" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+<sealing sealJar="false">
+<packagesToSeal/>
+<packagesToUnSeal/>
+</sealing>
+</manifest>
+<selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+<javaElement handleIdentifier="=rene/&lt;rene.gui{HistoryTextField.java"/>
+<javaElement handleIdentifier="=ZuL"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{HistoryTextFieldChoice.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{InfoDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyTextField.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{SearchFileDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MenuItemAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{DoActionListener.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{IconBarListener.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{ActionTranslator.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CheckboxMenu.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyChoice.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{FontEditor.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{SimplePanel.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CheckboxAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{IntField.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.lister"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{TextFieldAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyMenu.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyMenuItem.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{MyFileDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.mail"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.list"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{Warning.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{IconBar.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyLabel.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyPopupMenu.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.parser"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.sort"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{ColorEditor.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CheckboxMenuItemAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.xml"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyPanel.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{IconBarPanel.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{Question.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CloseListener.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{FormTextField.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.viewer"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CloseFrame.java"/>
+<javaElement handleIdentifier="=HotEqn/&lt;"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyList.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{MyCheckboxMenuItem.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{Global.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{GetParameter.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{ButtonAction.java"/>
+<javaElement handleIdentifier="=HotEqn/&lt;atp"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{ListAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{ChoiceAction.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{TextFieldActionListener.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{Panel3D.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui{CloseDialog.java"/>
+</selectedElements>
+</jardesc>

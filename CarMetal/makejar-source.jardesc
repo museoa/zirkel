@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jardesc>
+<jar path="C:/java/zirkel/doc/Download/zirkel.zip"/>
+<options buildIfNeeded="true" compress="true" descriptionLocation="/ZuL/makejar-source.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" useSourceFolders="false"/>
+<selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="false">
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{ColorEditor.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemEditorElement.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemPanel.java"/>
+<javaElement handleIdentifier="=ZuL"/>
+<javaElement handleIdentifier="=rene/&lt;rene.lister"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{InfoDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.xml"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{GetParameter.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{SearchFileDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{ItemEditor.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{MyFileDialog.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.gui"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.list"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{Question.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{Warning.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.dialogs{FontEditor.java"/>
+<javaElement handleIdentifier="=rene/&lt;rene.viewer"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.ftp"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.parser"/>
+<javaElement handleIdentifier="=rene/&lt;rene.util.sort"/>
+</selectedElements>
+</jardesc>

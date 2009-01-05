@@ -1,0 +1,127 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<META NAME="GENERATOR" Content="CaRMetal">
+<TITLE>CaRMetal slideshow</TITLE>
+		<script type="text/javascript"><!--
+
+// [FR] Pour les liens de la colonne de gauche, vous pouvez remplacer
+// les noms de fichiers par d'autres noms :
+// [EN] For the left colomn links, you can replace file names by
+// other names :
+var names=['null.zir'];
+var next='next';
+var previous='previous';
+var download='download file';
+var signature='Slideshow made with';
+var applettools=[];
+
+var appletoptions=[];
+
+// **** DO NOT MODIFY AFTER THIS LINE **** :     
+var zirfiles=['null.zir'];
+var appletmodes=['file'];
+var appletdims=['800,600'];
+var appletcomments=['comment<br>'];
+
+
+var aobj,cobj,lobj,nobj,sobj;
+
+function Init(){
+// applet tag :
+aobj=document.getElementById("aobj");
+// comment tag :
+cobj=document.getElementById("cobj");
+// navigation tag :
+nobj=document.getElementById("nobj");
+// left 'frame' tag :
+lobj=document.getElementById("lobj");
+// signature tag :
+sobj=document.getElementById("sobj");
+// build left 'frame' links :
+txt="";
+for (i=0;i<zirfiles.length;i++) txt=txt+'<p><a class="liengauche" href="javascript:changefig('+i+')">'+names[i]+'</a></p>';
+lobj.innerHTML=txt;
+sobj.innerHTML=signature;
+
+changefig(0);
+}
+
+function splitfilename(s){
+s=s.split(".");
+return s[0];
+}
+
+function changefig(i){
+dims=appletdims[i].split(",");
+consigne=(appletcomments[i]=="")?"":"<DIV class='consigne' style='width:"+(dims[0]-10)+";'>"+appletcomments[i]+"</DIV>";
+tools=((applettools.length>0)&&(applettools[i]!=""))?"<PARAM NAME='tools' VALUE='"+applettools[i]+"'>":"";
+options=((appletoptions.length>0)&&(appletoptions[i]!=""))?"<PARAM NAME='options' VALUE='"+appletoptions[i]+"'>":"";
+styl=((applettools.length>0)&&(applettools[i]!=""))?"icons":"plain";
+myapplettag="**APPLET**";
+aobj.innerHTML=consigne+myapplettag+"<br><a class='lienmain' href='"+zirfiles[i]+"'>"+download+" "+zirfiles[i]+"</a>";
+cobj.innerHTML=(i+1)+' : '+splitfilename(zirfiles[i]);
+
+// remplacer les liens de navigation :
+txt=(i==0)?previous:'<a class="lientopright" href="javascript:changefig('+(i-1)+')">'+previous+'</a>';
+txt+=' | ';
+txt+=(i==(zirfiles.length-1))?next:'<a class="lientopright" href="javascript:changefig('+(i+1)+')">'+next+'</a>';
+
+nobj.innerHTML=txt;
+}
+//-->
+</script>
+
+
+		<style type="text/css" media="screen"><!--
+.gauche    { font-size: 12px; font-family: Verdana; background-color: #708090; text-align: center; padding-top: 40px; padding-left: 5px; vertical-align: top }
+.liengauche  { color: #dfdfdf }
+.top    { font-size: 14px; font-family: Verdana; font-weight: bold; background-color: #a5bcd4; padding-left: 15px }
+.main  { font-size: 10px; font-family: Verdana; background-color: #efefef }
+.lienmain { color: #808080 }
+.lientop { color: #000 }
+.bottom   { color: #454545; font-size: 11px; font-family: Verdana; background-color: #dcdcdc; text-align: right; padding-right: 15px; padding-bottom: 5px; vertical-align: bottom }
+.lienbottom  { color: #313131 }
+.topright     { color: #696969; font-size: 12px; font-family: Verdana; background-color: #a5bcd4; text-align: right; padding-right: 15px }
+.lientopright  { color: #2f2f2f }
+.consigne {
+	background-color: #a5bcd4;
+	font-family: Verdana;
+	font-size: 14px;
+	color: #333333;
+	font-weight: normal;
+	text-align: justify;
+	vertical-align: middle;
+	padding-top: 5px;
+         padding-left: 5px;
+         padding-right: 5px;
+	padding-bottom: 5px;
+	margin-bottom: 1px;
+}
+--></style>
+	</HEAD>
+<BODY BGCOLOR=#FFFFFF  onload="Init()" leftmargin="0" marginheight="0" marginwidth="0" topmargin="0">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" height="100%">
+			<tr height="30">
+				<td id="lobj" class="gauche" rowspan="3" width="150">
+					<p><a class="liengauche" href="(EmptyReference!)">Lien 1</a></p>
+					<p></p>
+				</td>
+				<td class="top" width="250" height="30">Figure n°<span id="cobj"> </span></td>
+				<td class="topright" align="right" height="30"><span id="nobj">Navigation</span></td>
+				</div></tr>
+			<tr>
+				<td id="aobj" class="main" colspan="2" align="center" valign="middle">télécharger</td>
+			</tr>
+			<tr height="25">
+				<td class="bottom" colspan="2" height="25"><span id="sobj">Activité réalisée avec</span> <a class="lienbottom" href="http://db-maths.nuxit.net/CaRMetal/" target="_blank">CaRMetal</a></td>
+			</tr>
+		</table>
+		<CENTER>
+			
+
+
+		</CENTER>
+	</BODY>
+</HTML>
