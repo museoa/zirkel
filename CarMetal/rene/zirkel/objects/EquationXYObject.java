@@ -5,7 +5,6 @@
 package rene.zirkel.objects;
 
 import java.util.Enumeration;
-import java.util.StringTokenizer;
 import java.util.Vector;
 import rene.gui.Global;
 import rene.util.xml.XmlWriter;
