@@ -19,7 +19,7 @@ This file is part of C.a.R. software.
  
  */
 
-public class CarMetalZirkel {
+public class Zirkel {
     
     
     static public void main(String[] args) {
@@ -56,7 +56,6 @@ public class CarMetalZirkel {
         
         final String FILES=filename;
         
-        /*
         eric.JUniqueInstance uniqueInstance = new eric.JUniqueInstance(PORT,FILES);
        
         if(uniqueInstance.launch()) {
@@ -64,7 +63,6 @@ public class CarMetalZirkel {
                 eric.JMacOShandler app=new eric.JMacOShandler();
             };
         }
-        */
             
             rene.zirkel.Zirkel.main(args);
         }
