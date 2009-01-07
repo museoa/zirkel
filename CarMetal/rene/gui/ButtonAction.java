@@ -21,8 +21,8 @@ This file is part of C.a.R. software.
  
  package rene.gui;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.event.ActionEvent;
 
 /**
 A text Button with a midifyable Font. The button

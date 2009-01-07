@@ -23,7 +23,6 @@ This file is part of C.a.R. software.
 
 // file: SegmentObject.java
 
-import eric.JGlobals;
 import rene.gui.Global;
 import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
@@ -33,6 +32,7 @@ import rene.zirkel.construction.Count;
 import rene.zirkel.graphics.MyGraphics;
 import rene.zirkel.graphics.MyGraphics13;
 import rene.zirkel.structures.Coordinates;
+import eric.JGlobals;
 
 public class RayObject extends TwoPointLineObject
 {	static Count N=new Count();

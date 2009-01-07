@@ -28,8 +28,12 @@ import java.awt.event.MouseEvent;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FixedAngleObject;
+import rene.zirkel.objects.PointObject;
 
 public class SetFixedAngle extends ObjectConstructor
 	implements Selector

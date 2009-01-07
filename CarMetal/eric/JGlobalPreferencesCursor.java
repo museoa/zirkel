@@ -21,8 +21,14 @@ This file is part of C.a.R. software.
  
  package eric;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Font;
+
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+
 import rene.gui.Global;
 
 /**

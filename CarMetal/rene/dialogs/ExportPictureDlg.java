@@ -6,12 +6,14 @@
 
 package rene.dialogs;
 
-import eric.ImageFilter;
-import eric.JGlobals;
 import java.io.File;
+
 import javax.swing.JFileChooser;
 import javax.swing.border.TitledBorder;
 import javax.swing.filechooser.FileSystemView;
+
+import eric.ImageFilter;
+import eric.JGlobals;
 
 /**
  *

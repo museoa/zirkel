@@ -23,14 +23,18 @@ This file is part of the HotEqn package.
 
 package atp;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.MediaTracker;
+import java.awt.Polygon;
+import java.awt.event.ActionListener;
 import java.util.Hashtable;
 
-// Referenced classes of package atp:
 import javax.swing.JComponent;
-//            f, b, a, c, 
-//            e
 
 public class sHotEqn
 {

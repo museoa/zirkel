@@ -16,9 +16,21 @@ package rene.zirkel.expression;
 import java.util.Enumeration;
 
 import rene.util.MyVector;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.construction.DepList;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.EquationXYObject;
+import rene.zirkel.objects.Evaluator;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.InsideObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveLineObject;
+import rene.zirkel.objects.SimulationObject;
+import rene.zirkel.objects.TrackObject;
+import rene.zirkel.objects.UserFunctionObject;
 
 /*
 This file contains classes for computing arithmetic expression. Those

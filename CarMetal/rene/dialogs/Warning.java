@@ -21,11 +21,18 @@ This file is part of C.a.R. software.
  
  package rene.dialogs;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CloseDialog;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
 
 /**
 This is a simple warning dialog. May be used as modal or non-modal

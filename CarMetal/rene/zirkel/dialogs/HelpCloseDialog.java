@@ -21,7 +21,7 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
+import java.awt.Frame;
 
 import rene.gui.CloseDialog;
 

@@ -21,9 +21,11 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
-import rene.gui.*;
-import rene.dialogs.*;
+import java.awt.Frame;
+
+import rene.dialogs.Question;
+import rene.gui.CloseFrame;
+import rene.gui.Global;
 
 public class Sure extends Question
 {	public Sure (Frame f, String question)

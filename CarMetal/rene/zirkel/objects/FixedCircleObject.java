@@ -23,15 +23,20 @@ This file is part of C.a.R. software.
 
 // file: CircleObject.java
 
-import java.awt.*;
-import java.util.*;
+import java.awt.Frame;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.expression.*;
-import rene.dialogs.*;
+import rene.dialogs.Warning;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.dialogs.CircleEditDialog;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.expression.InvalidException;
 
 public class FixedCircleObject extends PrimitiveCircleObject
         implements MoveableObject, SimulationObject {

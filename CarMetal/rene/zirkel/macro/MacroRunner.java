@@ -22,21 +22,37 @@ package rene.zirkel.macro;
 /**
  * This is an ObjectConstructor, which can run a macro.
  */
-import eric.JLocusTrackObject;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.StringTokenizer;
-
 import java.util.Vector;
+
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
 import rene.zirkel.construction.ConstructionException;
 import rene.zirkel.construction.DepList;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.AreaObject;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FixedAngleObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.LineObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
+import rene.zirkel.objects.QuadricObject;
+import rene.zirkel.objects.RayObject;
+import rene.zirkel.objects.SegmentObject;
+import rene.zirkel.objects.TwoPointLineObject;
+import rene.zirkel.objects.UserFunctionObject;
+import eric.JLocusTrackObject;
 
 public class MacroRunner extends ObjectConstructor
         implements Selector {

@@ -23,11 +23,11 @@ This file is part of C.a.R. software.
 
 // file: Hider.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.constructors.*;
+import rene.zirkel.constructors.ObjectConstructor;
 import rene.zirkel.objects.ConstructionObject;
 
 public class HiderTool extends ObjectConstructor

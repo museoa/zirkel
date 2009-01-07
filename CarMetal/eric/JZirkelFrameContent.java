@@ -23,24 +23,26 @@ This file is part of C.a.R. software.
 
 
 
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
-import javax.swing.JPanel;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.SwingConstants;
+
 import rene.gui.ChoiceAction;
 import rene.zirkel.Zirkel;
 import rene.zirkel.construction.ConstructionDisplayPanel;

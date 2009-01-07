@@ -14,9 +14,11 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.zip.GZIPInputStream;
+
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JPanel;
+
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.ZirkelFrame;
 

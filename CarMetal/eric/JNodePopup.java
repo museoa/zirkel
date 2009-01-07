@@ -38,6 +38,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Vector;
 import java.util.zip.GZIPOutputStream;
+
 import javax.swing.JComponent;
 import javax.swing.JFileChooser;
 import javax.swing.JMenuItem;
@@ -49,6 +50,7 @@ import javax.swing.plaf.SeparatorUI;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
+
 import rene.dialogs.Warning;
 import rene.gui.Global;
 import rene.util.FileName;

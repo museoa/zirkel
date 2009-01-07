@@ -23,8 +23,9 @@ This file is part of C.a.R. software.
 
 import java.awt.FlowLayout;
 import java.awt.Frame;
-import javax.swing.JPanel;
 import java.awt.event.ActionListener;
+
+import javax.swing.JPanel;
 
 import rene.gui.ButtonAction;
 import rene.gui.CloseDialog;

@@ -22,7 +22,7 @@ This file is part of C.a.R. software.
  package rene.zirkel.listener;
 
 import rene.zirkel.construction.Construction;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public interface AddEventListener
 {	public void added (Construction c, ConstructionObject o);

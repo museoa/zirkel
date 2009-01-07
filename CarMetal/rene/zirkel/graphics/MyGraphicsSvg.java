@@ -19,14 +19,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package rene.zirkel.graphics;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.io.PrintWriter;
 
-import rene.util.xml.*;
-import rene.zirkel.ZirkelFrame;
-import rene.zirkel.objects.*;
 import rene.gui.Global;
+import rene.util.xml.SVGWriter;
+import rene.zirkel.ZirkelFrame;
+import rene.zirkel.objects.ConstructionObject;
 
 class SvgFontMetrics extends FontMetrics {
 

@@ -25,8 +25,10 @@ import java.awt.Frame;
 import java.awt.MouseInfo;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
+
 import javax.swing.JDialog;
 import javax.swing.JPanel;
+
 import rene.util.MyVector;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ConstructionObject;
@@ -36,7 +38,7 @@ import rene.zirkel.objects.ConstructionObject;
 // JDialog for MODAL popup
 // It is a "modal" popup for ZirkelCanvas "select" methods. Popup menu appear
 // in a 1 pixel w/h modal JDialog : it seems it's in ZirkelCanvas, but it's not...
-// It replaces the RenŽ Dialog box which appears when you click on more than one object
+// It replaces the Renï¿½ Dialog box which appears when you click on more than one object
 // It must be modal because it have to interrupt the code, waiting a user choice
 public class JSelectPopupDialog extends JDialog implements WindowListener{
     MyVector V;

@@ -21,9 +21,12 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.macro;
 
-import java.awt.*;
-import java.util.*;
-import rene.gui.*;
+import java.awt.Menu;
+import java.util.Enumeration;
+import java.util.Vector;
+
+import rene.gui.MyMenu;
+import rene.gui.MyMenuItem;
 
 public class MacroMenu 
 {	Vector V; // Vector of MacroMenu or MacroItem

@@ -23,14 +23,29 @@ This file is part of C.a.R. software.
 
 // file: PrimitiveCircleObject.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.MyTextField;
+import rene.gui.TextFieldAction;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.ZirkelFrame;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
 
 public class CircleEditDialog extends ObjectEditDialog
 {	TextField Length,BoundA,BoundB;

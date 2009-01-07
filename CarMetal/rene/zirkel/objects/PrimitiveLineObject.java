@@ -17,10 +17,11 @@ package rene.zirkel.objects;
 import java.awt.Checkbox;
 import java.awt.Color;
 import java.awt.Frame;
-import javax.swing.JPanel;
 import java.awt.TextField;
 import java.awt.event.FocusEvent;
 import java.util.Enumeration;
+
+import javax.swing.JPanel;
 
 import rene.gui.Global;
 import rene.gui.IconBar;

@@ -21,13 +21,27 @@ This file is part of C.a.R. software.
  
  package rene.viewer;
 
-import java.io.*;
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
+import java.awt.Canvas;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.RenderingHints;
+import java.awt.SystemColor;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.awt.event.ComponentEvent;
+import java.awt.event.ComponentListener;
+import java.io.PrintWriter;
 
-import rene.util.list.*;
-import rene.gui.*;
+import rene.gui.Global;
+import rene.util.list.ListClass;
+import rene.util.list.ListElement;
 
 class ClipboardCopy extends Thread
 {	String S;

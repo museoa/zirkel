@@ -21,19 +21,20 @@ This file is part of C.a.R. software.
  
  package eric.textfieldpopup;
 
-import eric.JGlobals;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
-import javax.swing.JTextField;
 import javax.swing.text.JTextComponent;
+
+import eric.JGlobals;
 
 /**
  *

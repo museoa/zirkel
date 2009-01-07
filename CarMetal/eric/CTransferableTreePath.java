@@ -20,7 +20,10 @@ This file is part of C.a.R. software.
  
  
  package eric;
-import java.awt.datatransfer.*;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+
 import javax.swing.tree.TreePath;
 
 

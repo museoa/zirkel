@@ -4,9 +4,6 @@
  */
 package eric.controls;
 
-import eric.JGlobals;
-import eric.JMacrosTools;
-import eric.JPaletteManager;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Image;
@@ -16,13 +13,18 @@ import java.awt.image.BufferedImage;
 import java.awt.image.FilteredImageSource;
 import java.awt.image.ImageFilter;
 import java.util.ArrayList;
+
 import javax.swing.GrayFilter;
 import javax.swing.ImageIcon;
+
 import rene.util.xml.XmlTag;
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;
 import rene.zirkel.objects.TextObject;
+import eric.JGlobals;
+import eric.JMacrosTools;
+import eric.JPaletteManager;
 
 /**
  *

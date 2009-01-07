@@ -17,13 +17,9 @@ package rene.zirkel.objects;
 import java.util.Enumeration;
 
 import rene.util.xml.XmlWriter;
-import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
-import rene.zirkel.construction.Count;
 import rene.zirkel.graphics.MyGraphics;
-import rene.zirkel.graphics.MyGraphics13;
-import rene.zirkel.structures.Coordinates;
 
 public class AxisObject extends PrimitiveLineObject {
 

@@ -23,9 +23,9 @@ This file is part of C.a.R. software.
 
 // file: Circle3Object.java
 
-import java.util.*;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.construction.Construction;
 import rene.zirkel.construction.ConstructionException;

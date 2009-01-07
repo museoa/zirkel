@@ -6,7 +6,9 @@ package eric.controls;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.JButton;
+
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;

@@ -32,11 +32,10 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.GraphicsEnvironment;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 import java.awt.TextField;
-import java.awt.Toolkit;
 
 import javax.swing.JPanel;
+
 import rene.gui.ButtonAction;
 import rene.gui.CheckboxAction;
 import rene.gui.ChoiceAction;

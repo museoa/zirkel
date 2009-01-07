@@ -21,7 +21,8 @@ This file is part of C.a.R. software.
  
  package rene.lister;
 
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.MouseEvent;
 
 public class ListerMouseEvent
 	extends ActionEvent

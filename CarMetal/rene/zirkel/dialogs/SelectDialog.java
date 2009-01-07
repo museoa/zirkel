@@ -21,15 +21,23 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.util.*;
-import rene.lister.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.lister.Lister;
+import rene.util.MyVector;
 import rene.zirkel.Zirkel;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
 
 /**
  * @author Rene

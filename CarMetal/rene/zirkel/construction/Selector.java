@@ -22,7 +22,7 @@ This file is part of C.a.R. software.
  package rene.zirkel.construction;
 
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public interface Selector
 {	public boolean isAdmissible (ZirkelCanvas zc, ConstructionObject o);

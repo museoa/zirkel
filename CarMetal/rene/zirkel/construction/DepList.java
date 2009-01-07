@@ -23,9 +23,9 @@ This file is part of C.a.R. software.
 
 // file: ConstructionObject.java
 
-import java.util.*;
+import java.util.Enumeration;
 
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public class DepList implements Enumeration
 {	ConstructionObject E[]=new ConstructionObject[8];

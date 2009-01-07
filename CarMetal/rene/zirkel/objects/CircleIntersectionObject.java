@@ -23,9 +23,9 @@ This file is part of C.a.R. software.
 
 // file: CircleIntersectionObject.java
 
-import rene.util.xml.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.structures.*;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.structures.Coordinates;
 
 public class CircleIntersectionObject extends IntersectionObject
 {	public CircleIntersectionObject (

@@ -21,9 +21,11 @@ This file is part of C.a.R. software.
  
  package rene.util.sort;
 
-import java.io.*;
-
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Enumeration;
+import java.util.Vector;
 
 /**
 Quick sort implementation. Sorts an array or a vector of SortObject.

@@ -13,15 +13,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package rene.zirkel.graphics;
 
-import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.image.*;
-import java.io.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.io.IOException;
+import java.io.OutputStream;
 
-import rene.gui.*;
+import rene.gui.Global;
 import rene.zirkel.ZirkelFrame;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public class MyGraphicsEPS extends MyGraphics {
 

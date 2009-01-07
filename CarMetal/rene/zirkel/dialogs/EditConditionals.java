@@ -23,18 +23,26 @@ This file is part of C.a.R. software.
 
 // file: ZirkelFrame.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.event.ActionListener;
 import java.util.Enumeration;
 import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.zirkel.*;
-import rene.zirkel.objects.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.construction.*;
-import rene.gui.*;
+
 import rene.dialogs.Warning;
+import rene.gui.ButtonAction;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.MyTextField;
+import rene.gui.Panel3D;
+import rene.zirkel.Zirkel;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.objects.ConstructionObject;
 
 public class EditConditionals extends HelpCloseDialog 
     implements ActionListener

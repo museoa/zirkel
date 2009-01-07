@@ -33,8 +33,8 @@ import java.util.Locale;
 import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.StringTokenizer;
-
 import java.util.Vector;
+
 import rene.dialogs.Warning;
 import rene.util.FileName;
 import rene.util.parser.StringParser;

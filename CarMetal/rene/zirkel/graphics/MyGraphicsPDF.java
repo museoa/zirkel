@@ -21,15 +21,20 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.graphics;
 
-import java.io.*;
-
-import java.awt.*;
-import java.awt.image.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 
 import rene.gui.Global;
 import rene.zirkel.ZirkelFrame;
 import rene.zirkel.construction.Construction;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
 
 class PdfFontMetrics extends FontMetrics
 {	int Size;

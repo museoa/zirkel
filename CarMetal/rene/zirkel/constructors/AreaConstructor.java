@@ -14,10 +14,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.constructors;
 
 // file: PointConstructor.java
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import rene.util.xml.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;

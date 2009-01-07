@@ -23,11 +23,22 @@ This file is part of C.a.R. software.
 
 // file: AboutDialog.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.Label;
+import java.awt.event.ActionEvent;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.CloseDialog;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
 import rene.zirkel.Zirkel;
 
 public class AboutDialog extends CloseDialog

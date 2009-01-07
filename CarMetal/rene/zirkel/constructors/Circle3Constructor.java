@@ -23,12 +23,16 @@ This file is part of C.a.R. software.
 
 // file: Cicle3Constructor.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.objects.Circle3Object;
+import rene.zirkel.objects.PointObject;
 
 public class Circle3Constructor extends ObjectConstructor
 {	PointObject P1=null,P2=null,P3=null;

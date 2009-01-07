@@ -21,7 +21,7 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.graphics;
 
-import java.awt.*;
+import java.awt.Font;
 
 /**
  * @author Rene

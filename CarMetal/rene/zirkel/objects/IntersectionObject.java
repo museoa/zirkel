@@ -23,12 +23,14 @@ This file is part of C.a.R. software.
 
 // file: IntersectionObject.java
 
-import java.util.*;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.expression.*;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.Count;
+import rene.zirkel.expression.Expression;
 
 /**
  * This is the parent class of various intersection objects.

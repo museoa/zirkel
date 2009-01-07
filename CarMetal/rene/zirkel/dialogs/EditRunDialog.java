@@ -21,14 +21,26 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
-import java.io.*;
+import java.awt.BorderLayout;
+import java.awt.TextArea;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.dialogs.Warning;
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelFrame;
-import rene.dialogs.*;
 
 public class EditRunDialog extends HelpCloseDialog
 {	String Filename;

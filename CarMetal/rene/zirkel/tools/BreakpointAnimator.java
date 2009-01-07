@@ -21,15 +21,15 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.tools;
 
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
-import rene.util.*;
+import rene.util.MyVector;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.ConstructionObject;
 
 public class BreakpointAnimator extends ObjectConstructor
 	implements Runnable

@@ -21,8 +21,12 @@ This file is part of C.a.R. software.
  
  package eric;
 
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Point;
+import java.awt.Toolkit;
+
+import javax.swing.BoxLayout;
+import javax.swing.JDialog;
+import javax.swing.JPanel;
 
 public class JPalette extends JDialog {
     private rene.zirkel.ZirkelFrame ZF;

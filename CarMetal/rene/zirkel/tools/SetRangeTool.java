@@ -27,7 +27,7 @@ import java.awt.event.MouseEvent;
 
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.constructors.*;
+import rene.zirkel.constructors.ObjectConstructor;
 import rene.zirkel.objects.PointObject;
 import rene.zirkel.objects.PrimitiveCircleObject;
 

@@ -21,9 +21,16 @@ This file is part of C.a.R. software.
  
  package eric;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.GraphicsEnvironment;
+import java.awt.Point;
+import java.awt.Rectangle;
 import java.util.Vector;
-import javax.swing.*;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 import rene.gui.Global;
 
 

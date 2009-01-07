@@ -21,7 +21,8 @@ This file is part of C.a.R. software.
  
  package rene.viewer;
 
-import java.awt.*;
+import java.awt.Color;
+import java.awt.Graphics;
 
 public class Line
 {   TextDisplay TD;

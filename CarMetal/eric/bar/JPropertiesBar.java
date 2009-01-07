@@ -13,22 +13,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package eric.bar;
 
-import eric.JGlobals;
-import eric.JIcon;
-import eric.JMacrosTools;
-import eric.JZirkelFrame;
-import eric.controls.JCanvasPanel;
 import java.awt.Color;
 import java.awt.Dimension;
-import java.awt.GraphicsEnvironment;
 import java.awt.Point;
-import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -36,9 +30,14 @@ import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+
 import rene.gui.Global;
 import rene.zirkel.Zirkel;
 import rene.zirkel.objects.ConstructionObject;
+import eric.JGlobals;
+import eric.JMacrosTools;
+import eric.JZirkelFrame;
+import eric.controls.JCanvasPanel;
 
 /**
  *

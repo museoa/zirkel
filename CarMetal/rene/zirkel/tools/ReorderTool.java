@@ -23,14 +23,22 @@ This file is part of C.a.R. software.
 
 // file: Hider.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CloseDialog;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.gui.TextFieldAction;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.constructors.*;
+import rene.zirkel.constructors.ObjectConstructor;
 import rene.zirkel.objects.ConstructionObject;
 
 class ReorderDialog extends CloseDialog

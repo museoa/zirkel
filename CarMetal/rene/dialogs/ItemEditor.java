@@ -25,12 +25,12 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.Vector;
 
 import javax.swing.JPanel;
+
 import rene.gui.ButtonAction;
 import rene.gui.CloseDialog;
 import rene.gui.Global;

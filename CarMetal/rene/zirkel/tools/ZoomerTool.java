@@ -22,12 +22,12 @@ package rene.zirkel.tools;
 // file: Hider.java
 import java.awt.Cursor;
 import java.awt.event.MouseEvent;
-
 import java.util.Enumeration;
+
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
-import rene.zirkel.constructors.*;
+import rene.zirkel.constructors.ObjectConstructor;
 import rene.zirkel.objects.ConstructionObject;
 import rene.zirkel.objects.ExpressionObject;
 import rene.zirkel.objects.MoveableObject;

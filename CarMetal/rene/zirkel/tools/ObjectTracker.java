@@ -23,7 +23,6 @@ This file is part of C.a.R. software.
 
 // file: ObjectTracker.java
 
-import eric.JLocusTrackObject;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
 import java.util.Enumeration;
@@ -37,10 +36,25 @@ import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
 import rene.zirkel.construction.ConstructionException;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.graphics.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.PolygonDrawer;
+import rene.zirkel.graphics.TrackPainter;
+import rene.zirkel.objects.AreaObject;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.MoveableObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
+import rene.zirkel.objects.QuadricObject;
+import rene.zirkel.objects.RayObject;
+import rene.zirkel.objects.SegmentObject;
+import rene.zirkel.objects.TrackObject;
 import rene.zirkel.structures.Coordinates;
+import eric.JLocusTrackObject;
 
 public class ObjectTracker extends ObjectConstructor
 	implements TrackPainter, Runnable, Selector

@@ -25,9 +25,14 @@ This file is part of C.a.R. software.
 
 import rene.util.xml.XmlTag;
 import rene.util.xml.XmlTree;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PlumbObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveLineObject;
 
 public class PlumbConstructor extends ParallelConstructor
 {	public PrimitiveLineObject create (Construction c, PrimitiveLineObject l, PointObject p)

@@ -23,7 +23,7 @@ This file is part of C.a.R. software.
 
 // file: ZirkelCanvas.java
 
-import java.awt.*;
+import java.awt.MenuItem;
 
 import rene.util.sort.SortObject;
 

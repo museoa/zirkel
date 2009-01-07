@@ -25,12 +25,13 @@ import java.awt.BorderLayout;
 import java.awt.Checkbox;
 import java.awt.Choice;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 import java.awt.TextField;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.util.Enumeration;
 import java.util.Vector;
+
+import javax.swing.JPanel;
 
 import rene.dialogs.ItemEditor;
 import rene.dialogs.ItemEditorElement;

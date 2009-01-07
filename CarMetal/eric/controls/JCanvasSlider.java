@@ -7,6 +7,7 @@ package eric.controls;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;

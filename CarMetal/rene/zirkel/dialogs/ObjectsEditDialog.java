@@ -23,14 +23,25 @@ This file is part of C.a.R. software.
 
 // file: PointObject.java
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.zirkel.*;
-import rene.zirkel.objects.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.IconBar;
+import rene.gui.IconBarListener;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.zirkel.Zirkel;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
 
 /**
  * @author Rene

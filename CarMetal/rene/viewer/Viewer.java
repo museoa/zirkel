@@ -27,7 +27,6 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Frame;
 import java.awt.MenuItem;
-import javax.swing.JPanel;
 import java.awt.PopupMenu;
 import java.awt.Scrollbar;
 import java.awt.event.ActionEvent;
@@ -40,6 +39,8 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.io.PrintWriter;
+
+import javax.swing.JPanel;
 
 import rene.gui.Global;
 import rene.gui.Panel3D;

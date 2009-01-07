@@ -20,13 +20,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.objects;
 
 // file: LineObject.java
-import eric.JGlobals;
-import java.awt.*;
-import java.util.*;
+import java.awt.Color;
+import java.awt.Frame;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.util.xml.*;
+
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyTextField;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
@@ -37,6 +41,7 @@ import rene.zirkel.dialogs.ObjectEditDialog;
 import rene.zirkel.expression.InvalidException;
 import rene.zirkel.graphics.MyGraphics;
 import rene.zirkel.graphics.MyGraphics13;
+import eric.JGlobals;
 
 class AreaObjectDialog extends ObjectEditDialog {
 

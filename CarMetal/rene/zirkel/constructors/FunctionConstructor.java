@@ -23,11 +23,14 @@ This file is part of C.a.R. software.
 
 // file: QuadricConstructor.java
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.zirkel.Zirkel;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
 import rene.zirkel.expression.Expression;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.UserFunctionObject;
 
 public class FunctionConstructor extends ObjectConstructor
 {	

@@ -21,7 +21,8 @@ This file is part of C.a.R. software.
  
  package rene.gui;
 
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Dimension;
 
 /**
  * @author Rene

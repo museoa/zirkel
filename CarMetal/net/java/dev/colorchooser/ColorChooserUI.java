@@ -33,9 +33,9 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.JColorChooser;
 import javax.swing.JComponent;
-import javax.swing.SwingUtilities;
 import javax.swing.plaf.ComponentUI;
 
 /**
@@ -153,9 +153,9 @@ public abstract class ColorChooserUI extends ComponentUI {
      */
     protected int paletteIndexFromModifiers (InputEvent me) {
         int mods = me.getModifiersEx();
-        int result = ((mods & me.SHIFT_DOWN_MASK) != 0) ? 1 : 0;
-        result += ((mods & me.CTRL_DOWN_MASK) != 0) ? 2 : 0;
-        result += ((mods & me.ALT_DOWN_MASK) != 0) ? 4 : 0;
+        int result = ((mods & InputEvent.SHIFT_DOWN_MASK) != 0) ? 1 : 0;
+        result += ((mods & InputEvent.CTRL_DOWN_MASK) != 0) ? 2 : 0;
+        result += ((mods & InputEvent.ALT_DOWN_MASK) != 0) ? 4 : 0;
         return result;
     }
 
@@ -175,7 +175,7 @@ public abstract class ColorChooserUI extends ComponentUI {
 	    return;
 	}
         jchooser.setColor(colorChooser.getColor());
-        Color nue = jchooser.showDialog(
+        Color nue = JColorChooser.showDialog(
                 colorChooser, 
                 ColorChooser.getString("chooseColor"), //NOI18N
                 colorChooser.getColor());
@@ -346,11 +346,11 @@ public abstract class ColorChooserUI extends ComponentUI {
         protected void processKeyEvent (KeyEvent ke, boolean pressed) {
             ColorChooser chooser = (ColorChooser) ke.getSource();
             updatePaletteIndex(chooser, paletteIndexFromKeyCode(ke), pressed);
-            if (ke.getKeyCode() == ke.VK_ALT || ke.getKeyCode() == ke.VK_CONTROL ||
-                    ke.getKeyCode() == ke.VK_SHIFT) {
+            if (ke.getKeyCode() == KeyEvent.VK_ALT || ke.getKeyCode() == KeyEvent.VK_CONTROL ||
+                    ke.getKeyCode() == KeyEvent.VK_SHIFT) {
                 ke.consume();
-            } else if ((ke.getKeyCode() == ke.VK_SPACE || ke.getKeyCode() ==
-                    ke.VK_ENTER) && ke.getID() == KeyEvent.KEY_RELEASED) {
+            } else if ((ke.getKeyCode() == KeyEvent.VK_SPACE || ke.getKeyCode() ==
+                    KeyEvent.VK_ENTER) && ke.getID() == KeyEvent.KEY_RELEASED) {
                 keyboardInvoke(chooser);
             }
         }

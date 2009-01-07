@@ -21,10 +21,10 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.graphics;
 
-import rene.util.*;
-import rene.zirkel.structures.CoordinatesXY;
+import java.util.Enumeration;
 
-import java.util.*;
+import rene.util.MyVector;
+import rene.zirkel.structures.CoordinatesXY;
 
 // file: Drawing.java
 

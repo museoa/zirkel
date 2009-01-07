@@ -30,9 +30,13 @@ import java.util.Vector;
 import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.constructors.*;
-import rene.zirkel.graphics.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.TrackPainter;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.MoveableObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveLineObject;
 import rene.zirkel.structures.Coordinates;
 
 public class Tracker extends ObjectConstructor

@@ -23,13 +23,16 @@ This file is part of C.a.R. software.
 
 // file: PointConstructor.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.objects.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.objects.TextObject;
 
 public class TextConstructor extends ObjectConstructor
 {	public void mousePressed (MouseEvent e, ZirkelCanvas zc)

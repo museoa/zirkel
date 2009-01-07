@@ -22,6 +22,7 @@ This file is part of C.a.R. software.
  package eric;
 
 import javax.swing.SwingUtilities;
+
 import rene.zirkel.ZirkelFrame;
 import rene.zirkel.construction.ChangedListener;
 import rene.zirkel.construction.Construction;

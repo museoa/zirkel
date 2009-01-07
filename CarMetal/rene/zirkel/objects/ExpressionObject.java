@@ -22,21 +22,36 @@ This file is part of C.a.R. software.
  package rene.zirkel.objects;
 
 // file: PointObject.java
-import eric.JGlobals;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.util.Enumeration;
 
 import javax.swing.JPanel;
-import rene.gui.*;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.graphics.*;
-import rene.dialogs.*;
+import rene.dialogs.Warning;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.MyTextField;
+import rene.gui.TextFieldAction;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.construction.Count;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.expression.InvalidException;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
+import eric.JGlobals;
 
 class ExpressionEditDialog extends ObjectEditDialog {
 

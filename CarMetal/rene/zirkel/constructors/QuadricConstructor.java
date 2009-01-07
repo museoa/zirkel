@@ -23,12 +23,17 @@ This file is part of C.a.R. software.
 
 // file: QuadricConstructor.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.QuadricObject;
 
 public class QuadricConstructor extends ObjectConstructor {
     PointObject P[];

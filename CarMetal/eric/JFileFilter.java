@@ -22,22 +22,23 @@ This file is part of C.a.R. software.
  package eric;
 
 import java.io.File;
+
 import javax.swing.filechooser.FileFilter;
 
 public class JFileFilter extends FileFilter{
-    //Description et extension acceptée par le filtre
+    //Description et extension acceptÔøΩe par le filtre
     public String description;
     public String extension;
-    //Constructeur à partir de la description et de l'extension acceptée
+    //Constructeur ÔøΩ partir de la description et de l'extension acceptÔøΩe
     public JFileFilter(String description, String extension){
         if(description == null || extension ==null){
-            throw new NullPointerException("La description (ou extension) ne peut être null.");
+            throw new NullPointerException("La description (ou extension) ne peut ÔøΩtre null.");
         }
         this.description = description;
         this.extension = extension;
         
     }
-    //Implémentation de FileFilter
+    //ImplÔøΩmentation de FileFilter
     public boolean accept(File file){
         if(file.isDirectory()) {
             return true;

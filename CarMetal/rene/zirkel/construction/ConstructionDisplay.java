@@ -21,18 +21,43 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.construction;
 
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.util.*;
-import java.io.*;
+import java.awt.BorderLayout;
+import java.awt.Checkbox;
+import java.awt.Choice;
+import java.awt.Dimension;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.datatransfer.Clipboard;
+import java.awt.datatransfer.ClipboardOwner;
+import java.awt.datatransfer.StringSelection;
+import java.awt.datatransfer.Transferable;
+import java.io.ByteArrayOutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.lister.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CheckboxAction;
+import rene.gui.ChoiceAction;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.lister.Lister;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.dialogs.HelpCloseDialog;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FixedAngleObject;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
 
 /**
  * @author Rene

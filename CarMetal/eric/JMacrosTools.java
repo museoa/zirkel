@@ -13,7 +13,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package eric;
 
-import eric.controls.SliderSnap;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -29,10 +28,12 @@ import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Vector;
 import java.util.zip.GZIPInputStream;
+
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.filechooser.FileSystemView;
+
 import rene.gui.Global;
 import rene.util.FileName;
 import rene.util.xml.XmlReader;
@@ -46,6 +47,7 @@ import rene.zirkel.construction.Count;
 import rene.zirkel.macro.Macro;
 import rene.zirkel.macro.MacroItem;
 import rene.zirkel.objects.PointObject;
+import eric.controls.SliderSnap;
 
 /**
  *

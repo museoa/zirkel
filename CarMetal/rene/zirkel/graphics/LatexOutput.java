@@ -21,9 +21,9 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.graphics;
 
-import java.io.*;
+import java.io.PrintWriter;
 
-import rene.gui.*;
+import rene.gui.Global;
 
 public class LatexOutput 
 {	PrintWriter Out;

@@ -22,12 +22,14 @@ This file is part of C.a.R. software.
  package rene.zirkel.tools;
 
 // file: Hider.java
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.util.Vector;
 
-import rene.zirkel.*;
-import rene.zirkel.constructors.*;
-import rene.zirkel.dialogs.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectsEditDialog;
 import rene.zirkel.objects.ConstructionObject;
 
 public class EditTool extends ObjectConstructor {

@@ -21,7 +21,8 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.construction;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
 /**
 This is used to generate unique numbers for construction objects.

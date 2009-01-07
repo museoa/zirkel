@@ -21,9 +21,11 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.construction;
 
-import java.util.*;
+import java.util.Vector;
 
-import rene.zirkel.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.ZirkelFrame;
 import rene.zirkel.constructors.AngleConstructor;
 import rene.zirkel.constructors.AreaConstructor;
 import rene.zirkel.constructors.CircleConstructor;
@@ -41,7 +43,19 @@ import rene.zirkel.constructors.RayConstructor;
 import rene.zirkel.constructors.SegmentConstructor;
 import rene.zirkel.macro.Macro;
 import rene.zirkel.macro.MacroRunner;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FixedAngleObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.IntersectionObject;
+import rene.zirkel.objects.LineObject;
+import rene.zirkel.objects.PlumbObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.SegmentObject;
+import rene.zirkel.objects.TwoPointLineObject;
 
 public class Interpreter 
 {	Construction C;

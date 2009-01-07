@@ -21,20 +21,21 @@ This file is part of C.a.R. software.
  
  package eric.textfieldpopup;
 
-import atp.sHotEqn;
-import eric.JGlobals;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
-import javax.swing.JTextField;
 import javax.swing.text.JTextComponent;
+
+import atp.sHotEqn;
+import eric.JGlobals;
 
 /**
  *

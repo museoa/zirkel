@@ -6,6 +6,7 @@ package eric;
 
 import java.util.Enumeration;
 import java.util.Vector;
+
 import rene.gui.Global;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;

@@ -23,11 +23,19 @@ This file is part of C.a.R. software.
 
 // file: ZirkelFrame.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.event.FocusEvent;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.DoActionListener;
+import rene.gui.Global;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
 import rene.zirkel.Zirkel;
 
 public class CommentDialog extends HelpCloseDialog implements DoActionListener

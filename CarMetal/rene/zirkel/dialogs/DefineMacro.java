@@ -21,15 +21,29 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Checkbox;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.WindowEvent;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CheckboxAction;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.gui.TextFieldAction;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public class DefineMacro extends HelpCloseDialog
 {	TextField Name,PromptFor;

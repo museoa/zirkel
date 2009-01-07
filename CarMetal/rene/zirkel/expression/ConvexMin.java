@@ -4,8 +4,8 @@
  */
 package rene.zirkel.expression;
 
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.objects.Evaluator;
 
 public class ConvexMin
 {

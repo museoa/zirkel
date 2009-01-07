@@ -21,16 +21,28 @@ This file is part of C.a.R. software.
  
  package rene.zirkel;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.io.*;
-import java.net.*;
-import java.util.*;
+import java.awt.Label;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.io.InputStream;
+import java.net.URL;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.objects.*;
-import rene.zirkel.tools.*;
+import rene.util.xml.XmlReader;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTagPI;
+import rene.util.xml.XmlTagText;
+import rene.util.xml.XmlTree;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
+import rene.zirkel.objects.SegmentObject;
+import rene.zirkel.tools.AnimatorTool;
+import rene.zirkel.tools.ObjectTracker;
+import rene.zirkel.tools.Tracker;
 
 public class DemoRunner
 	implements Runnable, MouseListener

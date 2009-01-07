@@ -22,17 +22,23 @@ This file is part of C.a.R. software.
  package rene.zirkel.tools;
 
 
-import eric.JGlobals;
-import eric.JMacrosTools;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.Cursor;
+import java.awt.Graphics;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
 
 import rene.gui.Global;
-import rene.util.*;
-import rene.zirkel.*;
-import rene.zirkel.objects.*;
-import rene.zirkel.constructors.*;
+import rene.util.MyVector;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.FixedAngleObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.MoveableObject;
+import rene.zirkel.objects.PointObject;
+import eric.JGlobals;
+import eric.JMacrosTools;
 
 /**
  * @author Rene

@@ -21,10 +21,13 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.graphics;
 
-import java.awt.*;
-import java.awt.image.*;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
 
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 public abstract class MyGraphics
 {	double W=1000,H=1000;

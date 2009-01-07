@@ -21,7 +21,6 @@ This file is part of C.a.R. software.
  
  package eric;
 
-import eric.bar.JProperties;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Frame;
@@ -32,6 +31,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -41,10 +41,12 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
+
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.expression.Expression;
 import rene.zirkel.objects.ConstructionObject;
+import eric.bar.JProperties;
 
 /**
  *

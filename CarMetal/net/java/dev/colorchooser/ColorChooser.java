@@ -21,16 +21,13 @@ package net.java.dev.colorchooser;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.MissingResourceException;
 import java.util.ResourceBundle;
-import javax.swing.JButton;
+
 import javax.swing.JComponent;
-import javax.swing.JFrame;
 import javax.swing.UIManager;
-import javax.swing.WindowConstants;
 
 /** A color chooser which can pop up a pluggable set of palettes.  The palette
  * displayed is controlled by combinations of the alt and shift and 
@@ -201,7 +198,7 @@ public class ColorChooser extends JComponent {
      * else returning a String representing RGB values.
      */
     public static String colorToString (Color c) {
-        NamedColor named = RecentColors.getDefault().findNamedColor(c);
+        NamedColor named = RecentColors.findNamedColor(c);
         if (named == null) {
             StringBuffer sb = new StringBuffer();
             sb.append (c.getRed());

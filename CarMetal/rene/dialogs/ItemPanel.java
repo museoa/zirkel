@@ -21,8 +21,9 @@ This file is part of C.a.R. software.
  
  package rene.dialogs;
 
-import javax.swing.JPanel;
 import java.util.Vector;
+
+import javax.swing.JPanel;
 
 import rene.gui.DoActionListener;
 

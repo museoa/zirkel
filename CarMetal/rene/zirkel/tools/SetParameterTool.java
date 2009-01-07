@@ -23,13 +23,21 @@ This file is part of C.a.R. software.
 
 // file: SetParameter.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.AngleObject;
+import rene.zirkel.objects.AreaObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.PrimitiveLineObject;
+import rene.zirkel.objects.UserFunctionObject;
 
 /**
  * Class to choose parameters for macro definition.

@@ -25,9 +25,9 @@ import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 
 import javax.swing.JPanel;
+
 import rene.gui.ButtonAction;
 import rene.gui.CloseDialog;
 import rene.gui.Global;

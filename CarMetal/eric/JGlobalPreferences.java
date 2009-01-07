@@ -22,6 +22,7 @@ This file is part of C.a.R. software.
  package eric;
 
 import java.awt.Color;
+
 import rene.gui.Global;
 import rene.util.parser.StringParser;
 

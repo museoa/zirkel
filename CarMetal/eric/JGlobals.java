@@ -13,14 +13,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package eric;
 
-import eric.bar.JPropertiesBar;
-import eric.controls.JCanvasPanel;
 import java.awt.Color;
 import java.awt.Font;
 import java.net.URL;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.Vector;
+
 import rene.gui.Global;
 import rene.util.parser.StringParser;
 import rene.util.xml.XmlTag;
@@ -33,6 +32,8 @@ import rene.zirkel.macro.MacroItem;
 import rene.zirkel.macro.MacroRunner;
 import rene.zirkel.objects.ConstructionObject;
 import rene.zirkel.objects.TextObject;
+import eric.bar.JPropertiesBar;
+import eric.controls.JCanvasPanel;
 
 /**
  *

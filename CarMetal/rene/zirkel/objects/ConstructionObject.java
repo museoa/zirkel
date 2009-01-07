@@ -20,14 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.objects;
 
 // file: ConstructionObject.java
-import java.awt.*;
-import java.util.*;
+import java.awt.Color;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
-import rene.lister.*;
+import rene.lister.Element;
 import rene.util.FileName;
 import rene.util.MyVector;
-import rene.util.xml.*;
-import rene.util.sort.*;
+import rene.util.sort.SortObject;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.ZirkelFrame;

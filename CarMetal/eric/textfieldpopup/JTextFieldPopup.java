@@ -21,24 +21,13 @@ This file is part of C.a.R. software.
  
  package eric.textfieldpopup;
 
-import eric.JGlobals;
-import java.awt.Font;
-import java.awt.Point;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
-import java.util.ArrayList;
-import javax.swing.JButton;
+
 import javax.swing.JComponent;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
-import javax.swing.JTextArea;
-import javax.swing.JTextField;
+
+import eric.JGlobals;
 
 /**
  *
@@ -47,7 +36,7 @@ import javax.swing.JTextField;
 public class JTextFieldPopup extends JPopupMenu{
 
 JComponent JTF;
-// NumŽro du menu :
+// Numï¿½ro du menu :
 static public int SPECIALCARMENU=0,FUNCTIONMENU=1,LATEXMENU=2;
 myJMenuItem m1,m2,m3;
 

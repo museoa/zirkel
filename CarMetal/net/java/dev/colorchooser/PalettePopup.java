@@ -35,6 +35,7 @@ import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 import java.lang.ref.Reference;
 import java.lang.ref.SoftReference;
+
 import javax.swing.JComponent;
 import javax.swing.Popup;
 import javax.swing.PopupFactory;

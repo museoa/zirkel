@@ -28,8 +28,13 @@ import java.awt.event.MouseEvent;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.SegmentObject;
 
 public class SetFixedCircle extends ObjectConstructor
 	implements Selector

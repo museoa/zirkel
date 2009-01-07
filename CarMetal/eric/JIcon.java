@@ -22,12 +22,20 @@ import java.awt.Image;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.Stroke;
+import java.awt.event.InputEvent;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.awt.image.FilteredImageSource;
 import java.awt.image.ImageFilter;
 import java.net.URL;
 import java.util.Vector;
-import javax.swing.*;
-import java.awt.event.*;
+
+import javax.swing.BorderFactory;
+import javax.swing.GrayFilter;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
 import rene.gui.Global;
 import rene.zirkel.ZirkelFrame;
 import rene.zirkel.constructors.AreaConstructor;

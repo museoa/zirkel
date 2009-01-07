@@ -23,7 +23,9 @@ This file is part of C.a.R. software.
 
 
 import java.awt.Color;
+import java.awt.GridLayout;
 import java.awt.event.KeyEvent;
+
 import javax.swing.JComponent;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -31,7 +33,6 @@ import javax.swing.JTable;
 import javax.swing.KeyStroke;
 import javax.swing.ListSelectionModel;
 import javax.swing.ScrollPaneConstants;
-import java.awt.GridLayout;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellEditor;
 import javax.swing.table.TableCellRenderer;

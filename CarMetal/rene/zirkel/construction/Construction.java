@@ -14,21 +14,51 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.construction;
 
 // file: ZirkelCanvas.java
-import eric.JLocusTrackObject;
 import java.awt.Color;
-import java.util.*;
-import rene.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
+
+import rene.gui.Global;
+import rene.util.MyVector;
 import rene.util.sort.Sorter;
-import rene.util.xml.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.ZirkelFrame;
-import rene.zirkel.constructors.*;
-import rene.zirkel.listener.*;
-import rene.zirkel.objects.*;
-import rene.zirkel.tools.*;
-import rene.zirkel.expression.*;
-import rene.gui.Global;
+import rene.zirkel.constructors.AngleConstructor;
+import rene.zirkel.constructors.AreaConstructor;
+import rene.zirkel.constructors.BoundedPointConstructor;
+import rene.zirkel.constructors.Circle3Constructor;
+import rene.zirkel.constructors.CircleConstructor;
+import rene.zirkel.constructors.EquationXYConstructor;
+import rene.zirkel.constructors.ExpressionConstructor;
+import rene.zirkel.constructors.FunctionConstructor;
+import rene.zirkel.constructors.ImageConstructor;
+import rene.zirkel.constructors.IntersectionConstructor;
+import rene.zirkel.constructors.LineConstructor;
+import rene.zirkel.constructors.MidpointConstructor;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.constructors.ParallelConstructor;
+import rene.zirkel.constructors.PlumbConstructor;
+import rene.zirkel.constructors.PointConstructor;
+import rene.zirkel.constructors.QuadricConstructor;
+import rene.zirkel.constructors.RayConstructor;
+import rene.zirkel.constructors.SegmentConstructor;
+import rene.zirkel.constructors.TextConstructor;
+import rene.zirkel.expression.Translator;
+import rene.zirkel.listener.AddEventListener;
+import rene.zirkel.objects.AxisObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.EquationXYObject;
+import rene.zirkel.objects.ExpressionObject;
+import rene.zirkel.objects.FunctionObject;
+import rene.zirkel.objects.IntersectionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.TrackObject;
+import rene.zirkel.tools.ObjectTracker;
+import eric.JLocusTrackObject;
 
 /**
  * Construction holds all construction details, like objects, default values,

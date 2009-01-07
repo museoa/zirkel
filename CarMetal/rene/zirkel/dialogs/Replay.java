@@ -36,7 +36,8 @@ import rene.gui.IconBarListener;
 import rene.gui.Panel3D;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.TextObject;
 
 public class Replay extends CloseDialog
 	implements IconBarListener

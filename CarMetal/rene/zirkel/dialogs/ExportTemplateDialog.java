@@ -21,11 +21,24 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Checkbox;
+import java.awt.Choice;
+import java.awt.GridLayout;
+import java.awt.TextField;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.util.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CheckboxAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyChoice;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.gui.TextFieldAction;
+import rene.util.FileName;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelFrame;
 import rene.zirkel.construction.Construction;

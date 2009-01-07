@@ -25,7 +25,6 @@ import java.awt.Color;
 import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.Label;
-import javax.swing.JPanel;
 import java.awt.Scrollbar;
 import java.awt.event.AdjustmentEvent;
 import java.awt.event.AdjustmentListener;
@@ -33,6 +32,7 @@ import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
 
 import javax.swing.JPanel;
+
 import rene.gui.ButtonAction;
 import rene.gui.CloseDialog;
 import rene.gui.DoActionListener;

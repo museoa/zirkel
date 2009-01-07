@@ -8,12 +8,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.plaf.ComboBoxUI;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.metal.MetalComboBoxUI;
+
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;

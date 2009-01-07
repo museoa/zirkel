@@ -23,11 +23,20 @@ This file is part of C.a.R. software.
 
 // file: ZirkelFrame.java
 
-import java.awt.*;
-import java.awt.event.*;
+import java.awt.Checkbox;
+import java.awt.FlowLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.ActionListener;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CheckboxAction;
+import rene.gui.CloseDialog;
+import rene.gui.Global;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
 
 public class AgainQuestion extends CloseDialog 
     implements ActionListener

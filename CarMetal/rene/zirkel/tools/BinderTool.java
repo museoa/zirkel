@@ -23,13 +23,16 @@ This file is part of C.a.R. software.
 
 // file: Binder.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.construction.*;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.construction.Selector;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.InsideObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PointonObject;
 
 public class BinderTool extends ObjectConstructor
 	implements Selector

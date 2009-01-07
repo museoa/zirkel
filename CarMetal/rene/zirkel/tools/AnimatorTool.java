@@ -21,15 +21,20 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.tools;
 
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import rene.util.xml.*;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Selector;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.SegmentObject;
 
 /**
  * Animator is a class to animate a point along a sequence

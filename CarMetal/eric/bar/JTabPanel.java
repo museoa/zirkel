@@ -21,21 +21,21 @@ This file is part of C.a.R. software.
  
  package eric.bar;
 
-import eric.JGlobals;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.util.ArrayList;
-import javax.swing.BorderFactory;
+
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
+
 import rene.gui.Global;
+import eric.JGlobals;
 
 /**
  *

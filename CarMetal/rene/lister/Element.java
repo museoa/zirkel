@@ -21,7 +21,7 @@ This file is part of C.a.R. software.
  
  package rene.lister;
 
-import java.awt.*;
+import java.awt.Color;
 
 public interface Element 
 {	public String getElementString (int state);

@@ -20,15 +20,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.tools;
 
 // file: Binder.java
-import eric.JGlobals;
-import java.awt.event.*;
-
+import java.awt.event.MouseEvent;
 import java.util.Enumeration;
+
 import rene.zirkel.ZirkelCanvas;
-import rene.zirkel.construction.*;
-import rene.zirkel.constructors.*;
-import rene.zirkel.objects.*;
+import rene.zirkel.construction.Selector;
+import rene.zirkel.constructors.ObjectConstructor;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.PointObject;
 import rene.zirkel.structures.MagnetObj;
+import eric.JGlobals;
 
 public class MagnetTool extends ObjectConstructor
         implements Selector {

@@ -23,20 +23,22 @@ This file is part of C.a.R. software.
 
 // file: PrimitiveCircleObject.java
 
-import eric.JGlobals;
 import java.awt.Color;
 import java.util.Enumeration;
 
 import rene.gui.Global;
 import rene.util.xml.XmlWriter;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.Count;
 import rene.zirkel.dialogs.CircleEditDialog;
 import rene.zirkel.dialogs.EditConditionals;
 import rene.zirkel.dialogs.ObjectEditDialog;
-import rene.zirkel.graphics.*;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
 import rene.zirkel.structures.Coordinates;
-import rene.zirkel.expression.*;
+import eric.JGlobals;
 
 public class PrimitiveCircleObject extends ConstructionObject
 	implements PointonObject, InsideObject

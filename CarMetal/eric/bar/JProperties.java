@@ -13,11 +13,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package eric.bar;
 
-import eric.JColorPicker;
-import eric.JGlobals;
-import eric.JZirkelFrame;
-import eric.textfieldpopup.JTextFieldPopup;
-import eric.textfieldpopup.JTextFieldPopup;
 import java.awt.AlphaComposite;
 import java.awt.BasicStroke;
 import java.awt.Color;
@@ -43,6 +38,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Vector;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -66,21 +62,24 @@ import javax.swing.plaf.ComboBoxUI;
 import javax.swing.plaf.ComponentUI;
 import javax.swing.plaf.metal.MetalComboBoxUI;
 import javax.swing.text.JTextComponent;
-import rene.gui.Global;
-import rene.zirkel.objects.ConstructionObject;
+
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
 import rene.zirkel.construction.ConstructionException;
 import rene.zirkel.expression.Expression;
+import rene.zirkel.objects.ConstructionObject;
 import rene.zirkel.objects.EquationXYObject;
 import rene.zirkel.objects.FunctionObject;
 import rene.zirkel.objects.InsideObject;
 import rene.zirkel.objects.IntersectionObject;
-import rene.zirkel.objects.MidpointObject;
 import rene.zirkel.objects.PointObject;
 import rene.zirkel.objects.PrimitiveCircleObject;
 import rene.zirkel.objects.TrackObject;
 import rene.zirkel.objects.UserFunctionObject;
+import eric.JColorPicker;
+import eric.JGlobals;
+import eric.JZirkelFrame;
+import eric.textfieldpopup.JTextFieldPopup;
 
 /**
  *

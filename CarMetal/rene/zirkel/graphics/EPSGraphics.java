@@ -30,10 +30,16 @@ Modified, completed and extended by R. Grothmann
 
 */
 
-import java.awt.*;
-import java.awt.datatransfer.*;
-import java.io.*;
-import java.util.*;
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontMetrics;
+import java.awt.Rectangle;
+import java.awt.Shape;
+import java.awt.datatransfer.Clipboard;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.util.Hashtable;
 
 class EpsFontMetrics extends FontMetrics
 {	Font F;

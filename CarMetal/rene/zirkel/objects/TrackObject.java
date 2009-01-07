@@ -16,17 +16,28 @@ package rene.zirkel.objects;
 // file: TrackObject.java
 import java.awt.Checkbox;
 import java.awt.Color;
-import javax.swing.JPanel;
 import java.util.Enumeration;
 import java.util.Vector;
 
-import rene.gui.*;
+import javax.swing.JPanel;
+
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.MyTextField;
 import rene.util.xml.XmlWriter;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.graphics.*;
-import rene.zirkel.structures.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.construction.Count;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
+import rene.zirkel.graphics.PolygonDrawer;
+import rene.zirkel.graphics.PolygonFiller;
+import rene.zirkel.structures.Coordinates;
 
 class TrackEditDialog extends ObjectEditDialog {
 

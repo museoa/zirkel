@@ -23,7 +23,7 @@ This file is part of C.a.R. software.
 
 // file: CloseListener.java
 
-import java.awt.*; // imports Frame
+import java.awt.Frame;
 
 public interface CloseListener
 {	public void closed (Frame f);

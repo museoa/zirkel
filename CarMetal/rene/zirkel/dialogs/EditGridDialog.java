@@ -21,12 +21,20 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
 
 import javax.swing.JPanel;
-import rene.gui.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
 import rene.zirkel.Zirkel;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 /**
  * @author Rene

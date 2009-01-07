@@ -20,17 +20,53 @@ This file is part of C.a.R. software.
  
  
  package eric;
-import java.awt.*;
-import java.awt.dnd.*;
-import java.awt.datatransfer.*;
-import java.awt.event.*;
-import java.awt.geom.*;
-import java.awt.image.*;
-import java.io.*;
+import java.awt.AlphaComposite;
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics2D;
+import java.awt.Insets;
+import java.awt.Point;
+import java.awt.Rectangle;
+import java.awt.SystemColor;
+import java.awt.datatransfer.DataFlavor;
+import java.awt.datatransfer.Transferable;
+import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.dnd.Autoscroll;
+import java.awt.dnd.DnDConstants;
+import java.awt.dnd.DragGestureEvent;
+import java.awt.dnd.DragGestureListener;
+import java.awt.dnd.DragSource;
+import java.awt.dnd.DragSourceDragEvent;
+import java.awt.dnd.DragSourceDropEvent;
+import java.awt.dnd.DragSourceEvent;
+import java.awt.dnd.DragSourceListener;
+import java.awt.dnd.DropTarget;
+import java.awt.dnd.DropTargetDragEvent;
+import java.awt.dnd.DropTargetDropEvent;
+import java.awt.dnd.DropTargetEvent;
+import java.awt.dnd.DropTargetListener;
+import java.awt.dnd.InvalidDnDOperationException;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 
-import javax.swing.*;
-import javax.swing.event.*;
-import javax.swing.tree.*;
+import javax.swing.Icon;
+import javax.swing.JLabel;
+import javax.swing.JTree;
+import javax.swing.Timer;
+import javax.swing.event.TreeModelEvent;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.MutableTreeNode;
+import javax.swing.tree.TreeModel;
+import javax.swing.tree.TreePath;
 
 
 
@@ -513,10 +549,10 @@ public class CTree extends JTree implements DragSourceListener,
 //		http://www.oreilly.com/catalog/jswing/chapter/dnd.beta.pdf
     
     private static final int AUTOSCROLL_MARGIN = 12;
-    // Ok, we’ve been told to scroll because the mouse cursor is in our
+    // Ok, weï¿½ve been told to scroll because the mouse cursor is in our
     // scroll zone.
     public void autoscroll(Point pt) {
-        // Figure out which row we’re on.
+        // Figure out which row weï¿½re on.
         int nRow = getRowForLocation(pt.x, pt.y);
         
         // If we are not on a row then ignore this autoscroll request
@@ -526,7 +562,7 @@ public class CTree extends JTree implements DragSourceListener,
         Rectangle raOuter = getBounds();
         // Now decide if the row is at the top of the screen or at the
         // bottom. We do this to make the previous row (or the next
-        // row) visible as appropriate. If we’re at the absolute top or
+        // row) visible as appropriate. If weï¿½re at the absolute top or
         // bottom, just return the first or last row respectively.
         
         nRow =	(pt.y + raOuter.y <= AUTOSCROLL_MARGIN)			// Is row at top of screen?

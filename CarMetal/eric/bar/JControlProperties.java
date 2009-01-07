@@ -4,12 +4,6 @@
  */
 package eric.bar;
 
-import eric.controls.JCanvasButton;
-import eric.controls.JCanvasPanel;
-import eric.controls.JCanvasPopup;
-import eric.controls.JCanvasSlider;
-import eric.controls.JCanvasTxtfield;
-import eric.textfieldpopup.JTextFieldPopup;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.event.FocusAdapter;
@@ -18,6 +12,7 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -28,6 +23,13 @@ import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.event.PopupMenuEvent;
 import javax.swing.event.PopupMenuListener;
+
+import eric.controls.JCanvasButton;
+import eric.controls.JCanvasPanel;
+import eric.controls.JCanvasPopup;
+import eric.controls.JCanvasSlider;
+import eric.controls.JCanvasTxtfield;
+import eric.textfieldpopup.JTextFieldPopup;
 
 /**
  *

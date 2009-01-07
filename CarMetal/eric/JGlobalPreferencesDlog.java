@@ -23,8 +23,10 @@ This file is part of C.a.R. software.
 
 import java.awt.Dimension;
 import java.awt.event.ItemEvent;
+
 import javax.swing.JComponent;
 import javax.swing.JPanel;
+
 import rene.gui.Global;
 
 /**

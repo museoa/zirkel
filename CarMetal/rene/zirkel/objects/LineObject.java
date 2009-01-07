@@ -24,9 +24,12 @@ This file is part of C.a.R. software.
 // file: LineObject.java
 
 import rene.util.xml.XmlWriter;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.graphics.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.Count;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
 
 public class LineObject extends TwoPointLineObject
 {	static Count N=new Count();

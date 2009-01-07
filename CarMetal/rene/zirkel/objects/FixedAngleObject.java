@@ -13,15 +13,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 package rene.zirkel.objects;
 
-import eric.JGlobals;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.util.Enumeration;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.dialogs.*;
-import rene.util.xml.*;
+
+import rene.dialogs.Warning;
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.TextFieldAction;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
@@ -33,6 +41,7 @@ import rene.zirkel.expression.Expression;
 import rene.zirkel.expression.InvalidException;
 import rene.zirkel.graphics.MyGraphics;
 import rene.zirkel.graphics.MyGraphics13;
+import eric.JGlobals;
 
 class FixedAngleEditDialog extends ObjectEditDialog {
 

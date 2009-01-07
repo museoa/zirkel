@@ -14,21 +14,35 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.objects;
 
 // file: Functionbject.java
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.util.Enumeration;
+import java.util.StringTokenizer;
+import java.util.Vector;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.graphics.*;
-import rene.dialogs.*;
+
+import rene.dialogs.Warning;
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.TextFieldAction;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.expression.InvalidException;
+import rene.zirkel.graphics.FunctionPolygonFiller;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.PolygonDrawer;
 import rene.zirkel.structures.Coordinates;
 
 class CurveEditDialog extends ObjectEditDialog {

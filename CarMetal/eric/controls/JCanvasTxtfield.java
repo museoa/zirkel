@@ -4,7 +4,6 @@
  */
 package eric.controls;
 
-import eric.bar.JProperties;
 import java.awt.Color;
 import java.awt.event.FocusAdapter;
 import java.awt.event.FocusEvent;
@@ -12,10 +11,13 @@ import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
 import javax.swing.JTextField;
+
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;
+import eric.bar.JProperties;
 
 /**
  *

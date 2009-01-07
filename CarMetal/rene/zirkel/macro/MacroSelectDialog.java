@@ -21,15 +21,27 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.macro;
 
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.lister.*;
-import rene.zirkel.*;
-import rene.zirkel.dialogs.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.lister.Lister;
+import rene.lister.ListerMouseEvent;
+import rene.lister.StringElement;
+import rene.zirkel.Zirkel;
+import rene.zirkel.dialogs.CommentDialog;
+import rene.zirkel.dialogs.HelpCloseDialog;
 
 /**
  * @author Rene

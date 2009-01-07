@@ -21,6 +21,7 @@ package rene.zirkel.graphics;
 
 import java.util.Enumeration;
 import java.util.Vector;
+
 import rene.zirkel.objects.FunctionObject;
 import rene.zirkel.structures.Coordinates;
 

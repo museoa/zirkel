@@ -22,14 +22,21 @@ This file is part of C.a.R. software.
  package rene.zirkel;
 
 // File: Zirkel.java
-import java.awt.*;
-import java.applet.*;
-import java.awt.event.*;
-import java.util.*;
-import java.io.*;
+import java.applet.Applet;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.GraphicsEnvironment;
+import java.awt.Rectangle;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.FileOutputStream;
+import java.io.PrintStream;
+import java.util.Locale;
+import java.util.Properties;
 
 import javax.swing.JFrame;
-import rene.gui.*;
+
+import rene.gui.Global;
 
 public class Zirkel extends Applet
         implements ActionListener {

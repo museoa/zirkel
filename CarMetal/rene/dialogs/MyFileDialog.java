@@ -28,7 +28,6 @@ import java.awt.FileDialog;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 import java.awt.TextField;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
@@ -41,6 +40,7 @@ import java.io.FilenameFilter;
 import java.util.Enumeration;
 
 import javax.swing.JPanel;
+
 import rene.gui.ButtonAction;
 import rene.gui.CloseDialog;
 import rene.gui.CloseFrame;
@@ -52,10 +52,11 @@ import rene.gui.MyLabel;
 import rene.gui.MyPanel;
 import rene.gui.Panel3D;
 import rene.gui.TextFieldAction;
+import rene.lister.Lister;
+import rene.lister.ListerMouseEvent;
 import rene.util.FileList;
 import rene.util.FileName;
 import rene.util.MyVector;
-import rene.lister.*;
 
 class DirFieldListener 
 	implements DoActionListener

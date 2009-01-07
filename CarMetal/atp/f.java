@@ -23,9 +23,16 @@ This file is part of the HotEqn package.
 
 package atp;
 
-import java.awt.*;
-import java.awt.image.*;
-import java.io.*;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.Toolkit;
+import java.awt.image.CropImageFilter;
+import java.awt.image.FilteredImageSource;
+import java.awt.image.ImageProducer;
+import java.io.BufferedInputStream;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
 import java.util.Hashtable;
 import java.util.StringTokenizer;
 

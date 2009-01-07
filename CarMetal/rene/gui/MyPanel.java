@@ -22,6 +22,7 @@ This file is part of C.a.R. software.
  package rene.gui;
 
 import java.awt.Graphics;
+
 import javax.swing.JPanel;
 
 public class MyPanel extends JPanel

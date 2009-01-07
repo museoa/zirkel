@@ -14,27 +14,38 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.objects;
 
 // file: PointObject.java
-import eric.JGlobals;
-import eric.JLocusTrackObject;
-import eric.JPointName;
-import java.awt.*;
-import java.awt.event.*;
-import java.awt.geom.Ellipse2D;
-import java.util.*;
+import java.awt.Button;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.event.FocusEvent;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.dialogs.*;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.graphics.*;
+import rene.dialogs.Warning;
+import rene.gui.ButtonAction;
+import rene.gui.CheckboxAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.MyTextField;
+import rene.gui.TextFieldAction;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
 import rene.zirkel.structures.MagnetObj;
+import eric.JGlobals;
+import eric.JPointName;
 
 class PointEditDialog extends ObjectEditDialog {
 
@@ -343,7 +354,7 @@ public class PointObject extends ConstructionObject
         if ((!SuperHidden)&&(!Hidden)) {
             Name=PointLabel.getBetterName(Cn, false);
         } else {
-            Name=PointLabel.getGenericName(Cn);
+            Name=JPointName.getGenericName(Cn);
         }
     }
 
@@ -353,7 +364,7 @@ public class PointObject extends ConstructionObject
             ConstructionObject o=Cn.find(n);
             if (o!=null) {
                 while (o!=null&&o!=this) {
-                    Name=PointLabel.getGenericName(Cn);
+                    Name=JPointName.getGenericName(Cn);
                     n=Name;
                     Name="";
                     o=Cn.find(n);

@@ -21,12 +21,22 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.dialogs;
 
-import java.awt.*;
+import java.awt.BorderLayout;
+import java.awt.Frame;
+import java.awt.GridLayout;
+import java.awt.TextArea;
+import java.awt.TextField;
 
 import javax.swing.JPanel;
-import rene.gui.*;
-import rene.zirkel.*;
-import rene.zirkel.macro.*;
+
+import rene.gui.ButtonAction;
+import rene.gui.CloseDialog;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.gui.TextFieldAction;
+import rene.zirkel.Zirkel;
+import rene.zirkel.macro.Macro;
 
 public class RenameMacroDialog extends CloseDialog
 {	boolean Aborted=true; 

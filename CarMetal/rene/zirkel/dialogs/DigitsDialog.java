@@ -24,6 +24,7 @@ This file is part of C.a.R. software.
 import java.awt.BorderLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 
 import rene.gui.ButtonAction;

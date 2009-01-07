@@ -14,20 +14,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.objects;
 
 // file: PointObject.java
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
-import java.io.*;
+import java.awt.BorderLayout;
+import java.awt.Checkbox;
+import java.awt.Color;
+import java.awt.FontMetrics;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.TextField;
+import java.awt.event.FocusEvent;
+import java.io.BufferedReader;
+import java.io.StringReader;
+import java.util.Enumeration;
+import java.util.Vector;
 
 import javax.swing.JPanel;
-import rene.gui.*;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.dialogs.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.graphics.*;
+import rene.gui.ButtonAction;
+import rene.gui.Global;
+import rene.gui.IconBar;
+import rene.gui.MyLabel;
+import rene.gui.MyPanel;
+import rene.gui.Panel3D;
+import rene.gui.TextFieldAction;
+import rene.util.xml.XmlWriter;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.Count;
+import rene.zirkel.dialogs.EditConditionals;
+import rene.zirkel.dialogs.HelpCloseDialog;
+import rene.zirkel.dialogs.ObjectEditDialog;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.expression.ExpressionString;
+import rene.zirkel.graphics.MyGraphics;
+import rene.zirkel.graphics.MyGraphics13;
 
 class TextObjectDialog extends HelpCloseDialog {
 

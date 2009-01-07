@@ -14,10 +14,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.constructors;
 
 // file: InersectionConstructor.java
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
-import rene.util.xml.*;
 import rene.util.MyVector;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;

@@ -24,6 +24,7 @@ import java.awt.Dimension;
 import java.awt.Rectangle;
 import java.awt.SystemColor;
 import java.util.Arrays;
+
 import javax.swing.UIManager;
 
 /** A palette of swatches with predefined colors 

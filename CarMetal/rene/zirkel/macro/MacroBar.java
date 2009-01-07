@@ -21,10 +21,12 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.macro;
 
-import java.awt.*;
-import java.util.*;
+import java.awt.Frame;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import rene.gui.*;
+import rene.gui.Global;
+import rene.gui.IconBar;
 
 class MacroBarElement
 {	public MacroItem M;

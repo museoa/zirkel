@@ -25,6 +25,7 @@ import java.awt.BorderLayout;
 import java.awt.Checkbox;
 import java.awt.Frame;
 import java.awt.GridLayout;
+
 import javax.swing.JPanel;
 
 import rene.gui.ButtonAction;

@@ -27,11 +27,12 @@ import java.awt.Checkbox;
 import java.awt.FlowLayout;
 import java.awt.Frame;
 import java.awt.GridLayout;
-import javax.swing.JPanel;
 import java.awt.event.ActionEvent;
 import java.awt.event.FocusEvent;
 import java.io.File;
 import java.util.Enumeration;
+
+import javax.swing.JPanel;
 
 import rene.gui.ButtonAction;
 import rene.gui.CheckboxAction;

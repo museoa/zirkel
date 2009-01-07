@@ -23,15 +23,24 @@ This file is part of C.a.R. software.
 
 // file: PointConstructor.java
 
-import java.awt.event.*;
+import java.awt.event.MouseEvent;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.macro.*;
-import rene.zirkel.objects.*;
 import rene.gui.Global;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTree;
+import rene.zirkel.Zirkel;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.macro.Macro;
+import rene.zirkel.objects.Circle3Object;
+import rene.zirkel.objects.CircleObject;
+import rene.zirkel.objects.ConstructionObject;
+import rene.zirkel.objects.FixedCircleObject;
+import rene.zirkel.objects.PointObject;
+import rene.zirkel.objects.PrimitiveCircleObject;
+import rene.zirkel.objects.SegmentObject;
 
 public class CircleConstructor extends ObjectConstructor
 {	PointObject P1=null,P2=null;

@@ -24,6 +24,7 @@ This file is part of C.a.R. software.
 import javax.swing.JMenuItem;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
+
 import rene.gui.MyMenuItem;
 import rene.zirkel.ZirkelFrame;
 import rene.zirkel.macro.Macro;
@@ -120,7 +121,7 @@ public class JDefaultMutableTreeNode extends DefaultMutableTreeNode{
 
 
     
-    //new name est donnŽ sous forme de path dŽbutant par "root/Macros/"
+    //new name est donnï¿½ sous forme de path dï¿½butant par "root/Macros/"
 //    public void setName(String newname){
 //        String [] mypath=newname.split("/");
 //        this.setUserObject(mypath[mypath.length-1]);

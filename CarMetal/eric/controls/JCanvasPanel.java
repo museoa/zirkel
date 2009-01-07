@@ -4,9 +4,6 @@
  */
 package eric.controls;
 
-import eric.JGlobals;
-import eric.JMacrosTools;
-import eric.JPointName;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -25,6 +22,7 @@ import java.awt.event.MouseMotionListener;
 import java.awt.geom.Rectangle2D;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
+
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
@@ -35,10 +33,14 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
+
 import rene.gui.Global;
 import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.objects.ExpressionObject;
+import eric.JGlobals;
+import eric.JMacrosTools;
+import eric.JPointName;
 
 /**
  *
@@ -51,7 +53,7 @@ public class JCanvasPanel extends JPanel implements MouseListener, MouseMotionLi
     static int COMSIZE=50;
     static Color COMCOLOR=new Color(80, 80, 80);
     JComponent JSL;
-    String lbl_com="", lbl_val="", lbl_unit="¡";
+    String lbl_com="", lbl_val="", lbl_unit="ï¿½";
     boolean showcom=true, showval=true, showunit=false;
     JLabel JCPlabel=new JLabel();
     JButton JCPresize=new JButton();

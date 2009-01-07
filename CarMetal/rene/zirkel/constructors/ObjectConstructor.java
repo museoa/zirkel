@@ -20,14 +20,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 package rene.zirkel.constructors;
 
 // file: ObjectConstructor.java
-import java.awt.event.*;
-import java.util.*;
+import java.awt.event.MouseEvent;
+import java.util.Enumeration;
 
-import rene.util.xml.*;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
-import rene.zirkel.expression.*;
-import rene.zirkel.objects.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTagText;
+import rene.util.xml.XmlTree;
+import rene.zirkel.ZirkelCanvas;
+import rene.zirkel.ZirkelFrame;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.ConstructionException;
+import rene.zirkel.expression.Expression;
+import rene.zirkel.objects.ConstructionObject;
 
 public class ObjectConstructor {
 

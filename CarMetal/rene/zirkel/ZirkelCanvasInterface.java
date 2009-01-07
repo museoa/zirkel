@@ -23,7 +23,7 @@ This file is part of C.a.R. software.
 
 import java.awt.Image;
 
-import rene.zirkel.macro.*;
+import rene.zirkel.macro.Macro;
 
 public interface ZirkelCanvasInterface
 {	public void replayChosen ();

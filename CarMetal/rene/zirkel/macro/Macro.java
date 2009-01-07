@@ -21,13 +21,17 @@ This file is part of C.a.R. software.
  
  package rene.zirkel.macro;
 
-import java.util.*;
+import java.util.Enumeration;
+import java.util.Vector;
 
-import rene.util.xml.*;
+import rene.util.xml.XmlTag;
+import rene.util.xml.XmlTagText;
+import rene.util.xml.XmlTree;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.ZirkelCanvas;
 import rene.zirkel.construction.Construction;
 import rene.zirkel.construction.ConstructionException;
-import rene.zirkel.objects.*;
+import rene.zirkel.objects.ConstructionObject;
 
 /**
 Macros are stored as constructions. Some of the construction objects

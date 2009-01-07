@@ -23,9 +23,8 @@ This file is part of C.a.R. software.
 
 // file: LineCircleIntersectionObject.java
 
-import rene.util.xml.*;
+import rene.util.xml.XmlWriter;
 import rene.zirkel.construction.Construction;
-import rene.zirkel.structures.Coordinates;
 
 
 public class AxisFunctionIntersectionObject extends IntersectionObject

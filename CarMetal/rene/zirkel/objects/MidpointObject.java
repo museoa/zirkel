@@ -26,8 +26,9 @@ This file is part of C.a.R. software.
 import java.util.Enumeration;
 
 import rene.util.xml.XmlWriter;
-import rene.zirkel.*;
-import rene.zirkel.construction.*;
+import rene.zirkel.Zirkel;
+import rene.zirkel.construction.Construction;
+import rene.zirkel.construction.Count;
 
 public class MidpointObject extends PointObject
 {	PointObject P1,P2;
