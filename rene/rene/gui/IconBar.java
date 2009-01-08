@@ -288,9 +288,16 @@ class BasicIcon extends Panel
 	}	
 	public void unset (boolean flag)
 	{	Unset=flag;
+		repaint();
 	}
 	public void unset ()
 	{	unset(true);
+		repaint();
+	}
+	
+	public void setOn (boolean flag)
+	{	On=flag;
+		repaint();
 	}
 }
 
@@ -505,8 +512,30 @@ class ColorIcon extends MultipleIcon
 	}
 	public void dopaint (Graphics g)
 	{	g.setColor(Colors[Selected]);
-		g.fill3DRect(5,5,Size-10,Size-10,true);
+		g.fill3DRect(5,5,Size-9,Size-9,true);
 	}	
+}
+
+/**
+ * One icon, which can display one color
+ * @author Rene Grothmann
+ */
+class ColoredIcon extends BasicIcon
+{	Color C;
+	public ColoredIcon (IconBar bar, String name, Color c)
+	{	super(bar,name);
+		C=c;
+	}
+	public void dopaint (Graphics g)
+	{	g.setColor(C);
+		g.fill3DRect(5,5,Size-9,Size-9,true);		
+	}
+	public Color getColor ()
+	{	return C;
+	}
+	public void setColor (Color c)
+	{	C=c;
+	}
 }
 
 /**
@@ -729,11 +758,13 @@ class IconGroup
 	{	for (int i=0; i<N; i++)
 		{	if (Icons[i]==icon) icon.setStateInGroup(true);
 			else Icons[i].setStateInGroup(false);
+			Icons[i].unset(false);
 		}
 	}
 	public void unselect ()
 	{	for (int i=0; i<N; i++)
 		{	Icons[i].setStateInGroup(false);
+			Icons[i].unset(false);
 		}
 	}
 	public int getN () { return N; }
@@ -1083,6 +1114,16 @@ public class IconBar extends Panel
 	}
 
 	/**
+	Add a colored icon
+	*/
+	public void addColoredIconLeft (String name, Color c)
+	{	addLeft(new ColoredIcon(this,name,c));
+	}
+	public void addColoredIconRight (String name, Color c)
+	{	addRight(new ColoredIcon(this,name,c));
+	}
+
+	/**
 	Add a state display at the left end.
 	*/
 	public void addStateLeft (String name)
@@ -1278,8 +1319,8 @@ public class IconBar extends Panel
 	*/
 	public void toggle (String name)
 	{	BasicIcon icon=find(name);
-		if (icon==null || !(icon instanceof ToggleIcon)) return;
-		((ToggleIcon)icon).setState(true);
+		if (icon==null) return;
+		if (icon instanceof ToggleIcon) ((ToggleIcon)icon).setState(true);
 	}
 	
 	/**
@@ -1294,8 +1335,8 @@ public class IconBar extends Panel
 	*/
 	public void unselect (String name)
 	{	BasicIcon icon=find(name);
-		if (icon==null || !(icon instanceof ToggleIcon)) return;
-		((ToggleIcon)icon).unselect();
+		if (icon==null) return;
+		if (icon instanceof ToggleIcon) ((ToggleIcon)icon).unselect();
 	}
 	
 	/**
@@ -1303,6 +1344,15 @@ public class IconBar extends Panel
 	*/
 	public void toggle (String name, int n)
 	{	toggle(name+n);
+	}
+	
+	/**
+	 * Set the state of an icon
+	*/
+	public void set (String name, boolean flag)
+	{	BasicIcon icon=find(name);
+		if (icon==null) return;
+		icon.setOn(flag);
 	}
 	
 	/**
@@ -1336,6 +1386,18 @@ public class IconBar extends Panel
 		{	if (getState(name+i)) return i;
 		}
 		return -1;
+	}
+
+	public void setColoredIcon (String name, Color c)
+	{	BasicIcon icon=find(name);
+		if (icon==null || !(icon instanceof ColoredIcon)) return;
+		((ColoredIcon)icon).setColor(c);
+	}
+
+	public Color getColoredIcon (String name)
+	{	BasicIcon icon=find(name);
+		if (icon==null || !(icon instanceof ColoredIcon)) return Color.black;
+		return ((ColoredIcon)icon).getColor();
 	}
 
 	/**

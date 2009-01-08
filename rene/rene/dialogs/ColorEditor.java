@@ -547,4 +547,8 @@ public class ColorEditor extends CloseDialog
 	public Color getColor ()
 	{	return Cret;	
 	}
+	
+	static public Color[] getSomeColors ()
+	{	return ColorPanel.getSomeColors();
+	}
 }
