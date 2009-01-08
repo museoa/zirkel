@@ -441,6 +441,7 @@ public class ZirkelFrame extends CloseFrame
 				Zirkel.name("colors."+ColorStrings[i]),
 				"cs-"+ColorStrings[i]); 
 		}
+		menuadd(ocolor,"menu.options.colors");
 		options.add(ocolor); 
 		FillBackground=menuaddcheck(options,"menu.options.fillbackground");
 		Menu otype=new MyMenu(Zirkel.name("menu.options.defaulttype")); 
@@ -749,6 +750,8 @@ public class ZirkelFrame extends CloseFrame
 			if (icon("animatebreak")) IA.addToggleLeft("animatebreak"); 
 			IA.addSeparatorLeft(); 
 			if (icon("color")) IA.addMultipleIconLeft("color",6); 
+			if (icon("colors")) IA.addColoredIconLeft("colors",
+					Global.getParameter("colors.recent",Color.black)); 
 			if (icon("type")) IA.addMultipleIconLeft("type",6); 
 			if (icon("thickness")) IA.addMultipleIconLeft("thickness",3); 
 			if (icon("fillbackground")) IA.addOnOffLeft("fillbackground");
@@ -825,6 +828,8 @@ public class ZirkelFrame extends CloseFrame
 			if (icon("replace")) IA.addToggleLeft("replace");
 			IA.addSeparatorLeft(); 
 			if (icon("color")) IA.addMultipleIconLeft("color",6); 
+			if (icon("colors")) IA.addColoredIconLeft("colors",
+					Global.getParameter("colors.recent",Color.black)); 
 			if (icon("type")) IA.addMultipleIconLeft("type",6); 
 			if (icon("thickness")) IA.addMultipleIconLeft("thickness",3); 
 			if (icon("fillbackground")) IA.addOnOffLeft("fillbackground");
@@ -1345,16 +1350,20 @@ public class ZirkelFrame extends CloseFrame
 			}
 			ZC.repaint(); 
 		}
+		else if (s.equals("menu.options.colors"))
+		{	iconPressed("colors");
+		}
 		else if (s.startsWith("colors.color"))
 		{	setinfo("colors"); 
 			try
 			{	int c=Integer.parseInt(s.substring("colors.color".length())); 
 				ColorEditor ce=new ColorEditor(this,"color"+c,
-					Colors[c]); 
+					Colors[c],ZirkelFrame.Colors,ObjectEditDialog.UserC); 
 				ce.center(this); 
 				ce.setVisible(true); 
 				initLightColors(); 
 				ZC.repaint(); 
+				ObjectEditDialog.rememberUserC();
 			}
 			catch (Exception e) {	}
 		}
@@ -1364,6 +1373,7 @@ public class ZirkelFrame extends CloseFrame
 				getBackground()); 
 			ce.center(this); 
 			ce.setVisible(true); 
+			ObjectEditDialog.rememberUserC();
 			initLightColors();
 			if (Global.haveParameter("colorbackground"))
 			{	ZC.setBackground(Global.getParameter("colorbackground",
@@ -1799,6 +1809,21 @@ public class ZirkelFrame extends CloseFrame
 			if (n>=0) setcolor(n); 
 			setinfo("defaults"); 
 		}
+		else if (o.equals("colors"))
+		{	ColorEditor ce=new ColorEditor(this,"colors.recent",
+				Color.black,ZirkelFrame.Colors,
+				ObjectEditDialog.UserC);
+			ce.center(this);
+			ce.setVisible(true);
+			if (!ce.isAborted())
+			{	IA.setColoredIcon("colors",ce.getColor());
+				setinfo("defaults"); 
+				setcolor(ce.getColor());
+				Global.setParameter("colors.recent",ce.getColor());
+				IA.set("colors",true);
+				ObjectEditDialog.rememberUserC();
+			}
+		}
 		else if (o.equals("showcolor"))
 		{	int n=IA.getMultipleState("showcolor"); 
 			if (n>=0) showcolor(n); 
@@ -1986,11 +2011,18 @@ public class ZirkelFrame extends CloseFrame
 	
 	public void setcolor (int c)
 	{	for (int i=0; i<ColorMenuItems.length; i++)
-		ColorMenuItems[i].setState(false); 
+			ColorMenuItems[i].setState(false); 
 		ColorMenuItems[c].setState(true); 
 		IA.setMultipleState("color",c); 
 		ZC.setDefaultColor(c); 
 		Global.setParameter("options.color",c); 
+		IA.set("colors",false); 
+	}
+	
+	public void setcolor (Color c)
+	{	for (int i=0; i<ColorMenuItems.length; i++)
+			ColorMenuItems[i].setState(false); 
+		ZC.setDefaultUserColor(c);
 	}
 	
 	public void settype (int c)

@@ -25,12 +25,12 @@ public class ExportDialog extends HelpCloseDialog
 	double Persp=1; // Fenster Höhe / Breite
 
 	static String ISb[]={"back","delete","undo","showcolor","showname","showvalue",
-		"color","hidden","macro0","replay","arrow","obtuse","solid","grid",
+		"color","colors","hidden","macro0","replay","arrow","obtuse","solid","grid",
 		"thickness0","fillbackground","type0","partial","plines",
 		"twolines","macrobar","qintersection","qpointon","qchoice","indicate",
 		"draw","rename","function"};
 	static String ISb0[]={"back","delete","undo","showcolor","showname","showvalue",
-		"color","hidden","macro","replay","arrow","obtuse","solid","grid",
+		"color","colors","hidden","macro","replay","arrow","obtuse","solid","grid",
 		"thickness","fillbackground","type","partial","plines",
 		"twolines","macrobar","qintersection","qpointon","qchoice","indicate",
 		"draw","rename","function"};

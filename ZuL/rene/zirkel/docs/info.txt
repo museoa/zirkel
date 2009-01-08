@@ -304,11 +304,17 @@ white thickness makes the object invisible, but not its label. Objects
 can be hidden or completely hidden. In the latter case, they can only
 be accessed through the construction description. 
 
-Some objects may fill with the background color. In this case, it is
-drawn above other objects. Points get this state by default. For
-points in 3D constructions, which can be covered by other
-objects, this state should be switched off. Areas and filled circles
-can fill with the background.
+Objects can have one of the six predefined colors from the C.a.R.
+color scheme, or a __user§defined§color__. To set a user defined color
+as default color, there is a menu entry. Alternatively, add the icon
+for user defined colors to the icon bar.
+
+Some objects (points, areas and circles) may fill with the background
+color. In this case, these objects are drawn above other objects.
+Points get this state by default. Note, that objects with
+background fill must be in normal thickness. For points in 3D
+constructions, which can be covered by other objects, this state
+should be switched off.
 
 Name and value display can be combined as in "s=2". If the name ends
 with an underscore as in "P_", the "_" will be deleted and there will
@@ -421,6 +427,10 @@ be kept in __polygons__, since they can be bound to these objects.
 Like other objects, free points can be dragged immediately after
 generation. During the drag, the size and name will display, unless
 this option is turned off.
+
+Points can also be filled with white background, if their thickness is
+normal. This is the default. The fill can be disabled in the edit
+dialog of the point.
 
 -> See: Self Reference, Intersections, Points on Objects
 
@@ -1172,6 +1182,12 @@ properties of new objects.
 
 These default settings are available in the menu and as tool bar
 icons.
+
+Some styles apply only to specific objects, some can be used for all
+objects. The color can either be one of the six predefined colors, or
+a user defined color. User defined colors are not encouraged per
+default. Activate the icon to set the user defined color by editing
+the icon bar, if you really need this. 
 
 .edit
 .related mouse properties conditions
@@ -2478,14 +2494,17 @@ hidden objects, completely hidden objects, invalid objects and basic
 The object list can be copied to the __clipboard__.
 
 .colors
-.related htmlexport
+.related properties htmlexport
 Set colors
 
-Set the various colors of C.a.R. to your liking. Colors will not be
-saved with your construction, but are exported to HTML.
+It is possible to change the various default colors of C.a.R.,
+including the background color. Colors will not be saved with your
+construction. They are saved in the configuration file and exported to
+HTML, however. This should only be used for special purposes. Colors
+are composed in the red, green and blue color model. 
 
-Colors are composed in the red, green and blue color model. Switch
-back to default colors for best compatibility.
+Use the default colors for best compatibility, or define a user
+defined color for special objects.
 
 .settings
 .related restricted iconbar tips beginner

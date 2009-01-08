@@ -5,6 +5,7 @@ package rene.zirkel.dialogs;
 import java.awt.*;
 import java.awt.event.*;
 
+import rene.dialogs.ColorEditor;
 import rene.gui.*;
 import rene.zirkel.*;
 import rene.zirkel.objects.*;
@@ -82,8 +83,15 @@ public class ObjectEditDialog extends HelpCloseDialog
 		cs.setLayout(new GridLayout(0,2));
 
 		ColorIB=new IconBar(this);
+		ColorIB.setIconBarListener(this);
 		ColorIB.addToggleGroupLeft("color",6);
 		ColorIB.toggle("color",O.getColorIndex(true));
+		ColorIB.addSeparatorLeft();
+		ColorIB.addColoredIconLeft("colors",o.getNormalColor());
+		if (o.hasUserColor())
+		{	ColorIB.unselect("color0");
+			ColorIB.set("colors",true);
+		}
 		cs.add(new MyLabel("")); cs.add(ColorIB);
 
 		ThicknessIB=new IconBar(this);
@@ -186,7 +194,9 @@ public class ObjectEditDialog extends HelpCloseDialog
 				if (SuperHide && IB.getState("hide")) O.setSuperHidden(true);
 				else O.setSuperHidden(false);
 			}
-			O.setColor(ColorIB.getToggleState("color"));
+			int cs=ColorIB.getToggleState("color");
+			if (cs>=0) O.setColor(ColorIB.getToggleState("color"));
+			else O.setColor(ColorIB.getColoredIcon("colors"));
 			O.setColorType(ThicknessIB.getToggleState("thickness"));
 			if (O.canFillBackground()) O.setFillBackground(ThicknessIB.getState("fillbackground"));
 			O.setShowName(o.equals("Name") || o.equals("Alias") || IB.getState("showname"));
@@ -217,6 +227,27 @@ public class ObjectEditDialog extends HelpCloseDialog
 	public void addButton (Panel p) {}
 
 	public void setAction () {}
+	
+	public static Color UserC[]=null;
+	
+	public static void rememberUserC ()
+	{	for (int i=0; i<UserC.length; i++)
+		{	Global.setParameter("usercolor"+i,UserC[i]);
+		}
+	}
+	
+	public static void getUserC ()
+	{	UserC=ColorEditor.getSomeColors();
+		for (int i=0; i<UserC.length; i++)
+		{	Color c=Global.getParameter("usercolor"+i,UserC[i]);
+			UserC[i]=c;
+		}
+	}
+	
+	static
+	{	getUserC();
+	}
+	
 	public void iconPressed (String o)
 	{	if (o.equals("hide"))
 		{	HideChanged=true;
@@ -227,6 +258,22 @@ public class ObjectEditDialog extends HelpCloseDialog
 		{	BreakChanged=true;
 			if (IB.isShiftPressed()) HidingBreak=IB.getState("setbreak");
 			else HidingBreak=false;
+		}
+		else if (o.equals("colors"))
+		{	ColorEditor ce=new ColorEditor(F,"colors.recent",
+				O.getColor(),ZirkelFrame.Colors,UserC);
+			ce.center(F);
+			ce.setVisible(true);
+			if (!ce.isAborted())
+			{	ColorIB.setColoredIcon("colors",ce.getColor());
+				Global.setParameter("colors.recent",ce.getColor());
+				ColorIB.unselect("color0");
+				ColorIB.set("colors",true);
+				rememberUserC();
+			}
+		}
+		else if (o.startsWith("color"))
+		{	ColorIB.set("colors",false);
 		}
 	}
 	public void showValue ()

@@ -319,6 +319,12 @@ Die Dicke wirkt allerdings verschieden je nach Objekt. Man probiert
 die Wirkung am besten aus. Die weiß dargestellte Dicke bedeutet, dass
 das Objekt nicht gezeichnet wird. 
 
+Die Farbe kann eine der vorgegebenen 6 Farben sein, oder eine
+__benutzerdefinierte§Farbe__. Für eine einheitliche Darstellung sollte
+einer der vorgegebenen Farben gewählt werden. Das Werkzeug zum Wählen
+einer benutzerdefinierten Default-Farbe muss erst in der
+Werkzeugleiste aktiviert werden.
+
 Es kann auch eingestellt werden, dass das Objekt mit der
 __Hintergrundfarbe__ gefüllt werden soll. Solche Objekte werden immer
 zuletzt gezeichnet, so dass sie alle anderen Objekte überdecken.
@@ -1237,7 +1243,7 @@ Funktion kann von irgend zwei Variablen abhängig sein, die im
 Variablenfeld durch Leerzeichen getrennt angegeben werden müssen.
 
 .defaults
-.related line angle colors iconbar
+.related line angle colors iconbar properties
 Einstellungen
 
 Man kann mehrere __Default-Einstellungen__ für neue Objekte festlegen.

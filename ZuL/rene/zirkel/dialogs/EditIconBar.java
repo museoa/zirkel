@@ -41,6 +41,7 @@ public class EditIconBar extends HelpCloseDialog
 		add(IA,"undo"); 
 		IA.addSeparatorLeft(); 
 		add(IA,"color","color"); 
+		add(IA,"colors");
 		add(IA,"type","type0"); 
 		add(IA,"thickness","thickness0"); 
 		add(IA,"fillbackground");
@@ -120,6 +121,7 @@ public class EditIconBar extends HelpCloseDialog
 			add(s,IA,"delete"); 
 			add(s,IA,"undo"); 
 			add(s,IA,"color","color"); 
+			add(s,IA,"colors","colors");
 			add(s,IA,"type","type0"); 
 			add(s,IA,"thickness","thickness0"); 
 			add(s,IA,"fillbackground");

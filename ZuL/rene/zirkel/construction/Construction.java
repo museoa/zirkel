@@ -2,6 +2,7 @@ package rene.zirkel.construction;
 
 // file: ZirkelCanvas.java
 
+import java.awt.Color;
 import java.util.*;
 import rene.util.*;
 import rene.util.sort.Sorter;
@@ -53,6 +54,7 @@ public class Construction
 		DefaultColor=Global.getParameter("options.color",0),
 		DefaultType=Global.getParameter("options.type",0),
 		DefaultColorType=Global.getParameter("options.colortype",0);
+	public Color DefaultUserColor=null;
 	public boolean Changed=false;
 	int Count=0; // Unique number for each object
 	public Construction TranslateInto;

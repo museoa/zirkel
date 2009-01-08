@@ -6,6 +6,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
 
+import rene.dialogs.ColorEditor;
 import rene.gui.*;
 import rene.zirkel.*;
 import rene.zirkel.objects.*;
@@ -25,6 +26,11 @@ public class ObjectsEditDialog extends HelpCloseDialog
 	Button OK;
 	Vector V;
 	
+	boolean equalcolor (Color c1, Color c2)
+	{	return c1.getRed()==c2.getRed() && c1.getBlue()==c2.getBlue()
+			&& c1.getGreen()==c2.getGreen();
+	}
+
 	public ObjectsEditDialog (Frame f, Vector v)
 	{	super(f,Zirkel.name("objectsedit.title"),true);
 		F=f;
@@ -36,17 +42,42 @@ public class ObjectsEditDialog extends HelpCloseDialog
 		center.setLayout(new GridLayout(0,1));
 
 		ColorIB=new IconBar(F);
+		ColorIB.setIconBarListener(this);
 		ColorIB.addToggleGroupLeft("color",6);
 		Enumeration e=V.elements();
 		int col=((ConstructionObject)e.nextElement()).getColorIndex(true);
 		boolean unique=true;
 		while (e.hasMoreElements())
-		{	if (((ConstructionObject)e.nextElement()).getColorIndex(true)
-				!=col)
+		{	ConstructionObject o=(ConstructionObject)e.nextElement();
+			if (o.getColorIndex(true)!=col || o.hasUserColor()) 
 			{	unique=false; break;
 			}
 		}
-		if (unique) ColorIB.setState("color"+col,true);
+		if (unique)
+		{	ColorIB.setState("color"+col,true);
+		}
+		else
+		{	ColorIB.unset("color0");
+		}
+		ColorIB.addSeparatorLeft();
+		ColorIB.addColoredIconLeft("colors",Color.black);
+		unique=true;
+		e=V.elements();
+		Color cu=((ConstructionObject)e.nextElement()).getUserColor();
+		if (cu==null) unique=false;
+		else
+			while (e.hasMoreElements())
+			{	ConstructionObject o=(ConstructionObject)e.nextElement();
+				if (!o.hasUserColor() || !equalcolor(o.getUserColor(),cu))
+				{	unique=false; break;
+				}
+			}
+		if (unique)
+		{	ColorIB.setColoredIcon("colors",cu);
+		}
+		else
+		{	ColorIB.unset("colors");
+		}
 		center.add(ColorIB);
 
 		ThicknessIB=new IconBar(F);
@@ -59,7 +90,12 @@ public class ObjectsEditDialog extends HelpCloseDialog
 			{	unique=false; break;
 			}
 		}
-		if (unique) ThicknessIB.setState("thickness"+th,true);
+		if (unique) 
+		{	ThicknessIB.setState("thickness"+th,true);
+		}
+		else
+		{	ThicknessIB.unset("thickness0");
+		}
 		
 		ThicknessIB.addSeparatorLeft();
 		ThicknessIB.addToggleLeft("fillbackground");
@@ -208,8 +244,13 @@ public class ObjectsEditDialog extends HelpCloseDialog
 			while (e.hasMoreElements())
 			{	ConstructionObject O=(ConstructionObject)e.nextElement();
 				if (IB.isSet("hide")) O.setHidden(IB.getState("hide"));
-				O.setColor(ColorIB.getToggleState("color"));
 				O.setColorType(ThicknessIB.getToggleState("thickness"));
+				if (ColorIB.isSet("color0"))
+				{	int cs=ColorIB.getToggleState("color");
+					if (cs>=0) O.setColor(ColorIB.getToggleState("color"));
+					else O.setColor(ColorIB.getColoredIcon("colors"));
+				}
+				if (ThicknessIB.isSet("thickness0")) O.setColorType(ThicknessIB.getToggleState("thickness"));
 				if (ThicknessIB.isSet("fillbackground")) O.setFillBackground(ThicknessIB.getState("fillbackground"));
 				if (IB.isSet("showname")) O.setShowName(IB.getState("showname"));
 				if (IB.isSet("isback")) O.setBack(IB.getState("isback"));
@@ -231,6 +272,23 @@ public class ObjectsEditDialog extends HelpCloseDialog
 	}
 
 	public void iconPressed (String o)
-	{
+	{	if (o.equals("colors"))
+		{	ColorEditor ce=new ColorEditor(F,"colors.recent",Color.black,
+				ZirkelFrame.Colors,
+				ObjectEditDialog.UserC);
+			ce.center(F);
+			ce.setVisible(true);
+			if (!ce.isAborted())
+			{	ColorIB.setColoredIcon("colors",ce.getColor());
+				Global.setParameter("colors.recent",ce.getColor());
+				ColorIB.unselect("color0");
+				ColorIB.set("colors",true);
+				ObjectEditDialog.rememberUserC();
+			}
+		}
+		else if (o.startsWith("color"))
+		{	ColorIB.set("colors",false);
+		}
+
 	}
 }

@@ -8,6 +8,7 @@ import java.net.*;
 import java.util.*;
 import java.util.zip.*;
 
+import rene.dialogs.ColorEditor;
 import rene.dialogs.Warning;
 import rene.gui.*;
 import rene.util.*;
@@ -482,6 +483,8 @@ public class ZirkelApplet extends Applet
 			IA.addMultipleIconLeft("showcolor",ZirkelFrame.Colors.length);
 		if (set.indexOf("color")>=0)
 			IA.addMultipleIconLeft("color",6);
+		if (set.indexOf("colors")>=0)
+			IA.addColoredIconLeft("colors",Color.black);
 		if (set.indexOf("type")>=0)
 			IA.addMultipleIconLeft("type",4);
 		if (set.indexOf("thickness")>=0)
@@ -575,6 +578,19 @@ public class ZirkelApplet extends Applet
 		else if (o.equals("color"))
 		{	int n=IA.getMultipleState("color");
 			if (n>=0) setcolor(n);
+		}
+		else if (o.equals("colors"))
+		{	ColorEditor ce=new ColorEditor(F,"colors.recent",
+				Color.black,ZirkelFrame.Colors,
+				ObjectEditDialog.UserC);
+			ce.center(F);
+			ce.setVisible(true);
+			if (!ce.isAborted())
+			{	IA.setColoredIcon("colors",ce.getColor());
+				setcolor(ce.getColor());
+				Global.setParameter("colors.recent",ce.getColor());
+				IA.set("colors",true);
+			}
 		}
 		else if (o.equals("showcolor"))
 		{	int n=IA.getMultipleState("showcolor");
@@ -795,7 +811,12 @@ public class ZirkelApplet extends Applet
 	
 	public void setcolor (int c)
 	{	IA.setMultipleState("color",c);
+		IA.set("colors",false); 
 		ZC.setDefaultColor(c);
+	}
+	
+	public void setcolor (Color c)
+	{	ZC.setDefaultUserColor(c);
 	}
 	
 	public void settype (int c)

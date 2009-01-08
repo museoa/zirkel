@@ -173,6 +173,16 @@ public class ObjectConstructor
 					(ZirkelFrame.Colors.length-1)+")");
 			}
 		}
+		if (tag.hasParam("usercolor"))
+		{	String scol="";
+			try
+			{	scol=tag.getValue("usercolor");
+				o.setColor(ConstructionObject.translate(scol,o.getColor()));
+			}
+			catch (Exception ex)
+			{	throw new ConstructionException("Illegal user color "+scol);
+			}
+		}
 		if (tag.hasParam("type"))
 		{	String type=tag.getValue("type");
 			if (type.equals("thick")) o.setColorType(ConstructionObject.THICK);

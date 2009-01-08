@@ -65,24 +65,7 @@ public class MyGraphics13 extends MyGraphics
 
 	public void setColor (ConstructionObject o)
 	{	G.setStroke(Normal);
-		if (o.isJobTarget()) 
-		{	if (o.isNoCheckTarget()) setColor(ZirkelFrame.NoCheckTargetColor);
-			else setColor(ZirkelFrame.TargetColor);
-		}
-		else if (o.indicated()) setColor(ZirkelFrame.IndicateColor);
-		else if (o.selected()) setColor(ZirkelFrame.SelectColor);
-		else
-		{	if (o.getColorType()==ConstructionObject.THIN)
-			{	int i=o.getColorIndex();
-				if (o.isHidden()) setColor(ZirkelFrame.BrighterLightColors[i]);
-				else setColor(ZirkelFrame.LightColors[i]);			
-			}		
-			else
-			{	int i=o.getColorIndex();
-				if (o.isHidden()) setColor(ZirkelFrame.BrighterColors[i]);
-				else setColor(ZirkelFrame.Colors[i]);			
-			}
-		}
+		setColor(o.getColor());
 		if (o.getColorType()==ConstructionObject.THIN)
 		{	G.setStroke(Thin);
 		}
@@ -109,14 +92,12 @@ public class MyGraphics13 extends MyGraphics
 		}
 		else
 		{	if (o.getColorType()!=ConstructionObject.THICK)
-			{	int i=o.getColorIndex();
-				if (o.isHidden()) setColor(ZirkelFrame.BrighterLightColors[i]);
-				else setColor(ZirkelFrame.LightColors[i]);			
+			{	if (o.isHidden()) setColor(o.getBrighterLightColor());
+				else setColor(o.getLightColor());			
 			}		
 			else
-			{	int i=o.getColorIndex();
-				if (o.isHidden()) setColor(ZirkelFrame.BrighterColors[i]);
-				else setColor(ZirkelFrame.Colors[i]);			
+			{	if (o.isHidden()) setColor(o.getBrighterColor());
+				else setColor(o.getNormalColor());			
 			}
 			if (o.getColorType()==ConstructionObject.THIN)
 			{	G.setStroke(Thin);

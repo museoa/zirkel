@@ -21,12 +21,12 @@ public class ExportTemplateDialog extends HelpCloseDialog
 	boolean Restrict;
 
 	static String ISb[]={"back","delete","undo","showcolor","showname","showvalue",
-		"color","hidden","macro0","replay","arrow","obtuse","solid","grid",
+		"color","colors","hidden","macro0","replay","arrow","obtuse","solid","grid",
 		"thickness0","type0","partial","plines",
 		"smallicons","twolines","macrobar","qintersection","qpointon","qchoice","indicate",
 		"draw","rename","function"};
 	static String ISb0[]={"back","delete","undo","showcolor","showname","showvalue",
-		"color","hidden","macro","replay","arrow","obtuse","solid","grid",
+		"color","colors","hidden","macro","replay","arrow","obtuse","solid","grid",
 		"thickness","type","partial","plines",
 		"smallicons","twolines","macrobar","qintersection","qpointon","qchoice","indicate",
 		"draw","rename","function"};

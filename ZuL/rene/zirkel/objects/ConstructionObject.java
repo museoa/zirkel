@@ -9,6 +9,7 @@ import rene.lister.*;
 import rene.util.FileName;
 import rene.util.MyVector;
 import rene.util.xml.*;
+import rene.util.parser.StringParser;
 import rene.util.sort.*;
 import rene.zirkel.Zirkel;
 import rene.zirkel.ZirkelCanvas;
@@ -43,6 +44,7 @@ public class ConstructionObject
 	protected int ColorType=0;
 	public static final int NORMAL=0,THICK=1,THIN=2,INVISIBLE=3;
 	protected int ColorIndex=0;
+	protected Color UserColor=null,UserLightColor=null;
 	
 	protected boolean Selected=false; // is selected (highlight red!)
 	protected boolean StrongSelected=false; // to highlight the object even more
@@ -305,6 +307,18 @@ public class ConstructionObject
 	*/
 	public void setColor (int index)
 	{	if (index>=0) ColorIndex=index;
+		UserColor=null;
+	}
+	
+	public void setColor (Color C)
+	{	UserColor=C;
+		Color back=Color.gray.brighter(); 
+		int red=back.getRed(),green=back.getGreen(),blue=back.getBlue(); 
+		double lambda=0.4; 
+		int r=(int)(red*(1-lambda)+C.getRed()*lambda); 
+		int g=(int)(green*(1-lambda)+C.getGreen()*lambda); 
+		int b=(int)(blue*(1-lambda)+C.getBlue()*lambda); 
+		UserLightColor=new Color(r,g,b); 
 	}
 
 	/**
@@ -323,6 +337,14 @@ public class ConstructionObject
 		return ColorIndex; 
 	}
 	
+	public boolean hasUserColor ()
+	{	return UserColor!=null;
+	}
+	
+	public Color getUserColor ()
+	{	return UserColor;
+	}
+	
 	/**
 	 * If there is a conditional for the color, test it and use it.
 	 * @return Color
@@ -332,18 +354,61 @@ public class ConstructionObject
 	}
 
 	public Color getColor ()
-	{	if (isJobTarget()) return ZirkelFrame.TargetColor;
+	{	if (isJobTarget()) 
+		{	if (isNoCheckTarget()) return ZirkelFrame.NoCheckTargetColor;
+			else return ZirkelFrame.TargetColor;
+		}
+		else if (indicated()) return ZirkelFrame.IndicateColor;
 		else if (selected()) return ZirkelFrame.SelectColor;
 		else if (getColorType()==ConstructionObject.THIN)
 		{	int i=getColorIndex();
-			if (isHidden()) return ZirkelFrame.BrighterLightColors[i];
-			else return ZirkelFrame.LightColors[i];			
+			if (UserColor==null)
+			{	if (isHidden()) return ZirkelFrame.BrighterLightColors[i];
+				else return ZirkelFrame.LightColors[i];
+			}
+			else
+			{	if (isHidden()) return UserColor.brighter().brighter();
+				else return UserColor.brighter();
+			}			
 		}		
 		else
 		{	int i=getColorIndex();
-			if (isHidden()) return ZirkelFrame.BrighterColors[i];
-			else return ZirkelFrame.Colors[i];			
+			if (UserColor==null)
+			{	if (isHidden()) return ZirkelFrame.BrighterColors[i];
+				else return ZirkelFrame.Colors[i];
+			}
+			else
+			{	if (isHidden()) return UserColor.brighter().brighter();
+				else return UserColor;
+			}			
 		}
+	}
+	
+	public Color getNormalColor ()
+	{	if (UserColor==null) return ZirkelFrame.Colors[ColorIndex];
+		else return UserColor; 
+	}
+
+	public Color getBrighterColor ()
+	{	if (UserColor==null) return ZirkelFrame.BrighterColors[ColorIndex];
+		else return UserColor.brighter(); 
+	}
+
+	public Color getLightColor ()
+	{	if (UserColor==null) return ZirkelFrame.LightColors[ColorIndex];
+		else return UserLightColor; 
+	}
+
+	public Color getBrighterLightColor ()
+	{	if (UserColor==null) return ZirkelFrame.BrighterLightColors[ColorIndex];
+		else return UserLightColor.brighter(); 
+	}
+
+	/**
+	 * Get a color for the element in the display color.
+	 */
+	public Color getElementColor() 
+	{	return getColor();
 	}
 
 
@@ -504,6 +569,31 @@ public class ConstructionObject
 		TX2=TX1+ws; TY2=TY1+hs;
 	}
 
+	static public Color translate (String s, Color cdef)
+	{	int red=0,green=0,blue=0;
+		if (s.startsWith("#") && s.length()==7)
+		{	red=Integer.parseInt(s.substring(1,3),16);
+			green=Integer.parseInt(s.substring(3,5),16);
+			blue=Integer.parseInt(s.substring(5,7),16);
+		}
+		else
+		{	StringParser p=new StringParser(s);
+			p.replace(',',' ');
+			red=p.parseint(); green=p.parseint(); blue=p.parseint();
+		}
+		try
+		{	return new Color(red,green,blue);
+		}
+		catch (RuntimeException e)
+		{	return cdef;
+		}
+	}
+	
+	public static String translate (Color c)
+	{	return ""+c.getRed()+","+c.getGreen()+","+c.getBlue();
+	}
+
+
 	/**
 	* Save the object in XML form.
 	*/
@@ -513,6 +603,7 @@ public class ConstructionObject
 		if (AliasES!=null) xml.printArg("alias",AliasES.toString());
 		xml.printArg("n",""+NCount);
 		if (ColorIndex!=0) xml.printArg("color",""+ColorIndex);
+		if (UserColor!=null) xml.printArg("usercolor",translate(UserColor));
 		if (ColorType==THICK) xml.printArg("type","thick");
 		if (ColorType==THIN) xml.printArg("type","thin");
 		if (ColorType==INVISIBLE) xml.printArg("type","invisible");
@@ -842,7 +933,6 @@ public class ConstructionObject
 	
 	public void setColorType (int type)
 	{	ColorType=type;
-		setColor(ColorIndex);
 	}
 	
 	public boolean isParameter () { return Parameter || MainParameter; }
@@ -1009,7 +1099,8 @@ public class ConstructionObject
 	public void setDefaults ()
 	{	setShowName(Cn.ShowNames);
 		setShowValue(Cn.ShowValues);
-		setColor(Cn.DefaultColor);
+		if (Cn.DefaultUserColor==null) setColor(Cn.DefaultColor);
+		else setColor(Cn.DefaultUserColor);
 		setColorType(Cn.DefaultColorType);
 		setHidden(Cn.Hidden);
 		setObtuse(Cn.Obtuse);
@@ -1365,16 +1456,6 @@ public class ConstructionObject
 	{	return getElementString(0);
 	}
 	
-	/**
-	 * Get a color for the element in the display color.
-	 */
-	public Color getElementColor() 
-	{	if (isJobTarget()) return ZirkelFrame.TargetColor;
-		else if (indicated()) return ZirkelFrame.IndicateColor;
-		else if (selected()) return ZirkelFrame.SelectColor;
-		return getColor();
-	}
-
 	public boolean SpecialParameter=false;
 	public boolean isSpecialParameter () { return SpecialParameter; }
 	public void setSpecialParameter (boolean flag) { SpecialParameter=flag; }

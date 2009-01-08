@@ -2274,9 +2274,16 @@ public class ZirkelCanvas extends Panel
 
 	public void setDefaultColor (int c)
 	{	C.DefaultColor=c;
+		C.DefaultUserColor=null;
 	}
 	public int getDefaultColor ()
 	{	return C.DefaultColor;
+	}
+	public void setDefaultUserColor (Color c)
+	{	C.DefaultUserColor=c;
+	}
+	public Color getDefaultUserColor ()
+	{	return C.DefaultUserColor;
 	}
 
 	public void setDefaultType (int c)

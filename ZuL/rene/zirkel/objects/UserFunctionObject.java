@@ -270,7 +270,7 @@ public class UserFunctionObject extends ConstructionObject
 						drawZeros(g,zc,x23,y23,z23,x3,y3,z3,x3r,y3r,z3r,level-1);
 					}
 				}
-				catch (Exception e) { e.printStackTrace(); }
+				catch (Exception e) {}
 			}
 		}
 	}
@@ -304,7 +304,7 @@ public class UserFunctionObject extends ConstructionObject
 						//g.drawLine(zc.col(xv[0]),zc.row(xv[1]),zc.col(xv[0]),zc.row(xv[1]));
 					}
 					catch (Exception e)
-					{	z[i][j]=0;
+					{	z[i][j]=1;
 					}
 				}
 			g.setColor(this);
