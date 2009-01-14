@@ -509,7 +509,7 @@ public class ZirkelApplet extends Applet
 			IA.addOnOffLeft("solid");
 		if (set.indexOf("grid")>=0)
 			IA.addOnOffLeft("grid");
-		if (set.indexOf("macro")>=0)
+		if (set.indexOf("macro")>=0 && !(set.indexOf("macrobar")==set.indexOf("macro")))
 			IA.addMultipleToggleIconLeft("macro",3);
 		if (set.indexOf("replay")>=0)
 			IA.addLeft("replay");

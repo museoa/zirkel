@@ -271,6 +271,7 @@ public class IntersectionConstructor extends ObjectConstructor
 	}
 
 	public String getTag () { return "Intersection"; }
+	
 	public void construct (Construction c, 
 		String name, String params[], int nparams)
 		throws ConstructionException
