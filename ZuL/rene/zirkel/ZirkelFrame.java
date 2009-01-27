@@ -107,7 +107,7 @@ public class ZirkelFrame extends CloseFrame
 	public static Color Colors[]=DefaultColors; 
 	public static Color LightColors[]; 
 	public static Color BrighterLightColors[]; 
-	public static Color BrighterColors[]; 
+	public static Color BrighterColors[];
 	public static Color SelectColor=Global.getParameter("colorselect",
 		new Color(255,0,0)); 
 	public static Color IndicateColor=Global.getParameter("colorselect",
@@ -987,8 +987,9 @@ public class ZirkelFrame extends CloseFrame
 		}
 	}
 	
-	public static void initLightColors (Color back)
-	{	int n=DefaultColors.length; 
+	public static synchronized void initLightColors (Color back)
+	{	if (BrighterColors!=null) return; // already done!
+		int n=DefaultColors.length; 
 		Colors=new Color[DefaultColors.length]; 
 		for (int i=0; i<n; i++)
 		{	if (Global.haveParameter("color"+i))

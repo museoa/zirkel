@@ -315,11 +315,13 @@ class b
             _fldbyte = true;
         }
     }
+    
+    String blank=" ";
 
     private e _mthtry()
     {
         StringBuffer stringbuffer = new StringBuffer("");
-        String s = new String("");
+        String s = "";
         e e1 = new e();
         boolean flag = false;
         while(!_fldbyte) 
@@ -335,7 +337,7 @@ class b
 
             case 32: // ' '
                 a();
-                return new e(25, new String(" "));
+                return new e(25,blank);
 
             case 33: // '!'
             case 35: // '#'

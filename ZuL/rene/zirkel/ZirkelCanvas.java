@@ -563,7 +563,7 @@ public class ZirkelCanvas extends Panel
 	{	if (Frozen) return;
 		int w=getSize().width,h=getSize().height;
 		if (I==null || IW!=w || IH!=h)
-		{	if (w==0 || h==0) return;
+		{	if (w<=0 || h<=0) return;
 			IW=w; IH=h;
 			I=createImage(IW,IH);
 			if (!Global.getParameter("printscalepreview",false)
@@ -1018,10 +1018,9 @@ public class ZirkelCanvas extends Panel
 	{	return (int)(Scale*x);
 	}
 	
-	static char c[]=new char[20];
 	int nc;
 	public String format (double x)
-	{	// double xx=x;
+	{	char c[]=new char[20];
 		nc=0;
 		boolean minus=false;
 		if (x<-1e-12)
@@ -1029,7 +1028,7 @@ public class ZirkelCanvas extends Panel
 		}
 		x+=1e-12;
 		double h=x-Math.floor(x);
-		if (rekformat(h,8)) c[nc++]='.';
+		if (rekformat(h,8,c)) c[nc++]='.';
 		while (x>=1)
 		{	double s=Math.floor(x/10);
 			c[nc++]=(char)('0'+(int)(x-s*10));
@@ -1042,11 +1041,10 @@ public class ZirkelCanvas extends Panel
 			c[nc-1-i]=c[i];
 			c[i]=hc;
 		}
-		// System.out.println(xx+" -> "+new String(c,0,nc));
 		return new String(c,0,nc);
 	}
 	
-	boolean rekformat (double h, int k)
+	boolean rekformat (double h, int k, char c[])
 	{	h=h*10;
 		double x=Math.floor(h);
 		if (k==0)
@@ -1059,7 +1057,7 @@ public class ZirkelCanvas extends Panel
 		}
 		else
 		{	int i=(int)x;
-			if (rekformat(h-x,k-1) || i>0)
+			if (rekformat(h-x,k-1,c) || i>0)
 			{	c[nc++]=(char)('0'+i);
 				return true;
 			}

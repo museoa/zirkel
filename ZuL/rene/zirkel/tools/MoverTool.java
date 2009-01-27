@@ -260,12 +260,13 @@ public class MoverTool extends ObjectConstructor
 		Graphics g=zc.getGraphics();
 		if (g!=null)
 		{	zc.paint(g);
-			g.dispose();
 			try
 			{	Thread.sleep(400);
 			}
 			catch (Exception e) {}
 			zc.clearSelected();
+			zc.paint(g);
+			g.dispose();
 		}
 		zc.repaint(); 
 		Selected=false;
