@@ -28,12 +28,12 @@ public class ExportDialog extends HelpCloseDialog
 		"color","colors","hidden","macro0","replay","arrow","obtuse","solid","grid",
 		"thickness0","fillbackground","type0","partial","plines",
 		"twolines","macrobar","qintersection","qpointon","qchoice","indicate",
-		"draw","rename","function"};
+		"draw","rename","ticks","function"};
 	static String ISb0[]={"back","delete","undo","showcolor","showname","showvalue",
 		"color","colors","hidden","macro","replay","arrow","obtuse","solid","grid",
 		"thickness","fillbackground","type","partial","plines",
 		"twolines","macrobar","qintersection","qpointon","qchoice","indicate",
-		"draw","rename","function"};
+		"draw","rename","ticks","function"};
 	
 	static String ST[]={"plain","3D","icons","full","nonvisual","breaks"};
 	
@@ -174,17 +174,17 @@ public class ExportDialog extends HelpCloseDialog
 		String icb;
 		if (restrict)
 			icb=Global.getParameter("restrictedicons",
-				"back hidden color indicate twolines ");
+				" back hidden color indicate twolines ");
 		else
 			icb=Global.getParameter("export.tools",
-				"back hidden color indicate twolines ");
+				" back hidden color indicate twolines ");
 		for (int i=0; i<ISb.length; i++)
 		{	String s=ISb[i];
 			if (s.equals("qintersection")) IBb.addSeparatorLeft();
 			if (s.equals("twolines")) IBb.addSeparatorLeft();
 			if (s.equals("draw")) IBb.addSeparatorLeft();
 			IBb.addToggleLeft(s);
-			if (icb.equals("full") || icb.indexOf(ISb0[i])>=0)
+			if (icb.equals("full") || icb.indexOf(ISb[i])>=0)
 				IBb.setState(s,true);
 		}
 		icons.add(new Panel3D(IBb));
@@ -323,10 +323,14 @@ public class ExportDialog extends HelpCloseDialog
 	}
 
 	public String getTools ()
-	{	StringBuffer b=new StringBuffer();
-		b.append(" ");
+	{	StringBuffer b=new StringBuffer(),b1=new StringBuffer();
+		b.append(" "); b1.append(" ");
 		for (int i=0; i<ISb.length; i++)
 		{	String s=ISb[i];
+			if (IBb.getState(s))
+			{	b1.append(s);
+				b1.append(" ");
+			}
 			if (s.equals("indicate") && !IBb.getState(s))
 			{	b.append("noindicate ");
 			}
@@ -336,7 +340,7 @@ public class ExportDialog extends HelpCloseDialog
 			}
 		}
 		if (!Restrict)
-			Global.setParameter("export.tools",b.toString());
+			Global.setParameter("export.tools",b1.toString());
 		return b.toString();
 	}
 	

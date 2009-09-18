@@ -204,6 +204,33 @@ public class FixedAngleObject extends PrimitiveLineObject
 			else 
 				g.drawCircleArc(c1+R,r1+R,R,A1/Math.PI*180,DA,this);
 		}
+		if (Ticks>0)
+		{	double dr=zc.scale(
+				Global.getParameter("arrowsize",10)*2/3);
+			g.setColor(this);
+			switch (Ticks)
+			{	case 1:
+					g.drawLine(c1+R+Math.cos(A1+A/2)*(R-dr),r1+R-Math.sin(A1+A/2)*(R-dr),
+							c1+R+Math.cos(A1+A/2)*(R+dr),r1+R-Math.sin(A1+A/2)*(R+dr));
+					break;
+				case 2: 
+					d=dr/200;
+					g.drawLine(c1+R+Math.cos(A1+A/2+d)*(R-dr),r1+R-Math.sin(A1+A/2+d)*(R-dr),
+							c1+R+Math.cos(A1+A/2+d)*(R+dr),r1+R-Math.sin(A1+A/2+d)*(R+dr));
+					g.drawLine(c1+R+Math.cos(A1+A/2-d)*(R-dr),r1+R-Math.sin(A1+A/2-d)*(R-dr),
+							c1+R+Math.cos(A1+A/2-d)*(R+dr),r1+R-Math.sin(A1+A/2-d)*(R+dr));
+					break;
+				case 3: 
+					d=dr/100;
+					g.drawLine(c1+R+Math.cos(A1+A/2+d)*(R-dr),r1+R-Math.sin(A1+A/2+d)*(R-dr),
+							c1+R+Math.cos(A1+A/2+d)*(R+dr),r1+R-Math.sin(A1+A/2+d)*(R+dr));
+					g.drawLine(c1+R+Math.cos(A1+A/2-d)*(R-dr),r1+R-Math.sin(A1+A/2-d)*(R-dr),
+							c1+R+Math.cos(A1+A/2-d)*(R+dr),r1+R-Math.sin(A1+A/2-d)*(R+dr));
+					g.drawLine(c1+R+Math.cos(A1+A/2)*(R-dr),r1+R-Math.sin(A1+A/2)*(R-dr),
+							c1+R+Math.cos(A1+A/2)*(R+dr),r1+R-Math.sin(A1+A/2)*(R+dr));
+					break;
+			}
+		}
 		if (!s.equals(""))
 		{	g.setLabelColor(this);
 			setFont(g);
@@ -594,4 +621,8 @@ public class FixedAngleObject extends PrimitiveLineObject
 		P.move(xmin,ymin);
 		return false;
 	}	
+
+	public boolean canHaveTicks ()
+	{	return true;
+	}
 }

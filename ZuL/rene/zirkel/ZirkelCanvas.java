@@ -285,7 +285,7 @@ public class ZirkelCanvas extends Panel
 	* Check, if it solves a problem and notify the DoneListener, if so.
 	*/
 	public void added (Construction c, ConstructionObject o)
-	{	if (displayJob() && TargetO.length>0)
+	{	if (displayJob() && TargetO.length>0 && !o.isHidden())
 		{	boolean olddone=true;
 			for (int i=0; i<TargetO.length; i++)
 			{	if (TargetS[i]!=null && !TargetS[i].isInConstruction())

@@ -98,17 +98,23 @@ public class ObjectEditDialog extends HelpCloseDialog
 		ThicknessIB.addToggleGroupLeft("thickness",4);
 		int ct=O.getColorType(true);
 		ThicknessIB.toggle("thickness",ct);
+		boolean tsep=false;
 		if (O.canFillBackground())
-		{	ThicknessIB.addSeparatorLeft();
+		{	ThicknessIB.addSeparatorLeft(); tsep=true;
 			ThicknessIB.addToggleLeft("fillbackground");
 			ThicknessIB.setState("fillbackground",O.isFillBackground());
 		}
 		if (o.maybeTransparent())
-		{	ThicknessIB.addSeparatorLeft();
+		{	if (!tsep) ThicknessIB.addSeparatorLeft(); tsep=true;
 			ThicknessIB.addOnOffLeft("solid");
 			ThicknessIB.setState("solid",o.isSolid(true));
 			if (!o.isFilled())
 				ThicknessIB.setEnabled("solid",false);
+		}
+		if (o.canHaveTicks())
+		{	if (!tsep) ThicknessIB.addSeparatorLeft(); tsep=true;
+			ThicknessIB.addMultipleIconLeft("mark",4);
+			ThicknessIB.setMultipleState("mark",o.getTicks());
 		}
 		cs.add(new MyLabel("")); cs.add(ThicknessIB);
 
@@ -216,6 +222,9 @@ public class ObjectEditDialog extends HelpCloseDialog
 			}
 			if (O instanceof PointonObject && Decorative!=null)
 			{	O.setDecorative(Decorative.getState());
+			}
+			if (O.canHaveTicks())
+			{	O.setTicks(ThicknessIB.getMultipleState("mark"));
 			}
 			doclose();
 			setAction();

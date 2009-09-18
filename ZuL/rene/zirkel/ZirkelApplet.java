@@ -513,6 +513,10 @@ public class ZirkelApplet extends Applet
 			IA.addMultipleToggleIconLeft("macro",3);
 		if (set.indexOf("replay")>=0)
 			IA.addLeft("replay");
+		if (set.indexOf("rename")>=0)
+			IA.addToggleLeft("rename");
+		if (set.indexOf("ticks")>=0)
+			IA.addToggleLeft("ticks");
 		if (set.indexOf("zoom")>=0)
 			IA.addToggleLeft("zoom");
 		if (set.indexOf("comment")>=0)
@@ -805,6 +809,7 @@ public class ZirkelApplet extends Applet
 		IA.setState("edit",i==ZirkelFrame.NEdit);
 		IA.setState("draw",i==ZirkelFrame.NDraw);
 		IA.setState("rename",i==ZirkelFrame.NRename);
+		IA.setState("ticks",i==ZirkelFrame.NTicks);
 		IA.setState("zoom",i==ZirkelFrame.NZoom);
 	}
 	

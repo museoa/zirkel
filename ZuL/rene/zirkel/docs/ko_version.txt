@@ -1,18 +1,14 @@
-Welcome to C.a.R.!
+C.a.R. 사용을 환영합니다.
 
-You will find the homepage of C.a.R. and my current mail address at
+C.a.R.의 홈페이지는 http://www.z-u-l.de/ 입니다.
 
-http://www.z-u-l.de/
+야후 그룹에 포럼이 만들어져 있습니다. 그곳에서 C.a.R.에 대한
+새로운 소식과 정보를 찾을 수 있습니다.
 
-The homepage of C.a.R. also contains a version history documenting
-recent changes.
+이 프로그램은 Gnu GPL 라이센스 아래에서 자유롭게 사용하거나
+배포할 수 있습니다.
 
-There is a forum on Yahoo groups. You will find a link in the
-documentation. Moreover, there is a user Wiki with lots of
-information and news about C.a.R.
-
-Thanks for using this program! The program is free to use and
-distribute under the Gnu GPL License.
+C.a.R.의 한국어 홈페이지는 http://carkor.x-y.net/ 입니다.
 
 사단법인 전국수학교사모임(수학사랑) 소프트웨어 활용팀에서
 메뉴 및 도움말을 한글화 하였습니다.
@@ -23,5 +19,5 @@ distribute under the Gnu GPL License.
 또는 
    http://carkor.x-y.net
 또는
-   양인웅 : fitfit@paran.com 
+   fitfit@paran.com 
 을 이용해 주십시오.

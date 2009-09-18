@@ -71,6 +71,7 @@ public class EditIconBar extends HelpCloseDialog
 		add(IAA,"grab"); 
 		add(IAA,"draw"); 
 		add(IAA,"rename"); 
+		add(IAA,"ticks"); 
 		add(IAA,"replace"); 
 		add(IAA,"function"); 
 		IAA.addSeparatorLeft(); 
@@ -145,6 +146,7 @@ public class EditIconBar extends HelpCloseDialog
 			add(s,IAA,"grab"); 
 			add(s,IAA,"draw"); 
 			add(s,IAA,"rename"); 
+			add(s,IAA,"ticks"); 
 			add(s,IAA,"replace"); 
 			add(s,IAA,"function"); 
 			add(s,IAA,"visual"); 

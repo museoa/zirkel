@@ -120,7 +120,12 @@ public class Zirkel extends Applet
 		if (!Global.haveParameter("options.germanpoints") && 
 				Locale.getDefault().getLanguage().equals("de"))
 			Global.setParameter("options.germanpoints",true);
-			
+		if (!Global.haveParameter("options.update.ticks") &&
+				Global.haveParameter("icons"))
+		{	Global.setParameter("options.update.ticks",true);
+			String s=Global.getParameter("icons","")+"ticks ";
+			Global.setParameter("icons",s);
+		}
 	}
 	
 	public void actionPerformed (ActionEvent e)

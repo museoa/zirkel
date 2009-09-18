@@ -24,12 +24,12 @@ public class ExportTemplateDialog extends HelpCloseDialog
 		"color","colors","hidden","macro0","replay","arrow","obtuse","solid","grid",
 		"thickness0","type0","partial","plines",
 		"smallicons","twolines","macrobar","qintersection","qpointon","qchoice","indicate",
-		"draw","rename","function"};
+		"draw","rename","ticks","function"};
 	static String ISb0[]={"back","delete","undo","showcolor","showname","showvalue",
 		"color","colors","hidden","macro","replay","arrow","obtuse","solid","grid",
 		"thickness","type","partial","plines",
 		"smallicons","twolines","macrobar","qintersection","qpointon","qchoice","indicate",
-		"draw","rename","function"};
+		"draw","rename","ticks","function"};
 	
 	static String ST[]={"plain","3D","icons","full","nonvisual","breaks"};
 	
@@ -108,7 +108,7 @@ public class ExportTemplateDialog extends HelpCloseDialog
 			if (s.equals("twolines")) IBb.addSeparatorLeft();
 			if (s.equals("draw")) IBb.addSeparatorLeft();
 			IBb.addToggleLeft(s);
-			if (icb.equals("full") || icb.indexOf(ISb0[i])>=0)
+			if (icb.equals("full") || icb.indexOf(ISb[i])>=0)
 				IBb.setState(s,true);
 		}
 		icons.add(new Panel3D(IBb));
@@ -164,23 +164,24 @@ public class ExportTemplateDialog extends HelpCloseDialog
 	}
 
 	public String getTools ()
-	{	StringBuffer b=new StringBuffer();
-		boolean first=true;
+	{	StringBuffer b=new StringBuffer(),b1=new StringBuffer();
+		b.append(" "); b1.append(" ");
 		for (int i=0; i<ISb.length; i++)
 		{	String s=ISb[i];
+			if (IBb.getState(s))
+			{	b1.append(s);
+				b1.append(" ");
+			}
 			if (s.equals("indicate") && !IBb.getState(s))
-			{	if (!first) b.append(' ');
-				b.append("noindicate");
-				first=false;
+			{	b.append("noindicate ");
 			}
 			else if (IBb.getState(s))
-			{	if (!first) b.append(' ');
-				b.append(ISb0[i]);
-				first=false;
+			{	b.append(ISb0[i]);
+				b.append(" ");
 			}
 		}
 		if (!Restrict)
-			Global.setParameter("export.tools",b.toString());
+			Global.setParameter("export.tools",b1.toString());
 		return b.toString();
 	}
 	

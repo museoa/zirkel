@@ -106,6 +106,8 @@ public class ConstructionObject
 	protected int NCount=0; // Unique number
 	protected boolean gotNCount=false; // Have already a number (from load file)
 	
+	protected int Ticks=0;
+	
 	public boolean isGotNCount() {
 		return gotNCount;
 	}
@@ -385,22 +387,22 @@ public class ConstructionObject
 	}
 	
 	public Color getNormalColor ()
-	{	if (UserColor==null) return ZirkelFrame.Colors[ColorIndex];
+	{	if (UserColor==null) return ZirkelFrame.Colors[getColorIndex()];
 		else return UserColor; 
 	}
 
 	public Color getBrighterColor ()
-	{	if (UserColor==null) return ZirkelFrame.BrighterColors[ColorIndex];
+	{	if (UserColor==null) return ZirkelFrame.BrighterColors[getColorIndex()];
 		else return UserColor.brighter(); 
 	}
 
 	public Color getLightColor ()
-	{	if (UserColor==null) return ZirkelFrame.LightColors[ColorIndex];
+	{	if (UserColor==null) return ZirkelFrame.LightColors[getColorIndex()];
 		else return UserLightColor; 
 	}
 
 	public Color getBrighterLightColor ()
-	{	if (UserColor==null) return ZirkelFrame.BrighterLightColors[ColorIndex];
+	{	if (UserColor==null) return ZirkelFrame.BrighterLightColors[getColorIndex()];
 		else return UserLightColor.brighter(); 
 	}
 
@@ -622,6 +624,7 @@ public class ConstructionObject
 		{	if (HideBreak) xml.printArg("hidebreak","true");
 			else xml.printArg("break","true");
 		}
+		if (Ticks>0) xml.printArg("ticks",""+Ticks);
 		if (Solid && maybeTransparent() && isFilled()) 
 			xml.printArg("solid","true");
 		if (!Unit.equals("")) xml.printArg("unit",Unit);
@@ -1539,5 +1542,15 @@ public class ConstructionObject
 	 */
 	public boolean editAt (double x, double y, ZirkelCanvas zc)
 	{	return true;
+	}
+	
+	public int getTicks ()
+	{	return Ticks;
+	}
+	public void setTicks (int ticks)
+	{	Ticks=ticks;
+	}
+	public boolean canHaveTicks ()
+	{	return false;
 	}
 }

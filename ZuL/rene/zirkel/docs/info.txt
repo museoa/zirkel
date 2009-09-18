@@ -1420,15 +1420,20 @@ The Macro Bar
 On request, a line for macro icons can be used. In the program, select
 this line with a menu option. Also select, if you want to see the
 default icons in that line. In applets, include the parameter
-"macrobar" into the "options" parameter.
+"macrobar" into the "options" parameter, or select the macrobar
+icon during HTML export.
 
 Macros are only displayed, if the macro name ends with a text in
 brackets. The program and the applet will try to load an icon with
-that name from a subdirectory named "icons". If no icon is found, the
-text will displayed. Icons should be 32x32 in PNG with transparent
-background, and the aliasing should be optimized for light gray.
+that name from a subdirectory named "icons". This must be a
+subdirectory of the directory containing the construction file. If no
+icon is found, the text inside the brackets will be used in the macro
+bar. Icons should be 32x32 in PNG format with transparent background,
+and the aliasing should be optimized for light gray.
 
-The program archive contains the following useful icons.
+The program archive contains the following useful icons. To use
+one of these icons for a macro, put the number into brackets after the
+macro name.
 
 //image- icons/1.png
 1 - Middle Perpendicular

@@ -151,6 +151,31 @@ public class SegmentObject extends TwoPointLineObject
 			else
 			{	g.drawLine(c1,r1,c2,r2,this);
 			}
+			if (Ticks>0)
+			{	double xt=(X1+X2)/2,yt=(Y1+Y2)/2;
+				double r=zc.dx(zc.scale(
+					Global.getParameter("arrowsize",10)*2/3)); // 20 pixel on the screen
+				double dx=-DY*r,dy=DX*r;
+				g.setColor(this);
+				switch (Ticks)
+				{	case 1: 
+						g.drawLine(zc.col(xt-dx),zc.row(yt-dy),zc.col(xt+dx),zc.row(yt+dy));
+						break;
+					case 2: 
+						g.drawLine(zc.col(xt-DX*r/4-dx),zc.row(yt-DY*r/4-dy),
+								zc.col(xt-DX*r/4+dx),zc.row(yt-DY*r/4+dy));
+						g.drawLine(zc.col(xt+DX*r/4-dx),zc.row(yt+DY*r/4-dy),
+								zc.col(xt+DX*r/4+dx),zc.row(yt+DY*r/4+dy));
+						break;
+					case 3: 
+						g.drawLine(zc.col(xt-dx),zc.row(yt-dy),zc.col(xt+dx),zc.row(yt+dy));
+						g.drawLine(zc.col(xt-DX*r/2-dx),zc.row(yt-DY*r/2-dy),
+								zc.col(xt-DX*r/2+dx),zc.row(yt-DY*r/2+dy));
+						g.drawLine(zc.col(xt+DX*r/2-dx),zc.row(yt+DY*r/2-dy),
+								zc.col(xt+DX*r/2+dx),zc.row(yt+DY*r/2+dy));
+						break;
+				}
+			}
 		}
 		String s=getDisplayText();
 		if (!s.equals(""))
@@ -353,4 +378,7 @@ public class SegmentObject extends TwoPointLineObject
 		return false;
 	}
 
+	public boolean canHaveTicks ()
+	{	return true;
+	}
 }

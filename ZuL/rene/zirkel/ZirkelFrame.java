@@ -146,7 +146,7 @@ public class ZirkelFrame extends CloseFrame
 		"expression","area","quadric","image","text",
 		"hide","runmacro",
 		"edit","parameter","targets","definejob","delete","reorder",
-		"draw","rename","zoom","animatebreak","replace"
+		"draw","rename","ticks","zoom","animatebreak","replace"
 	}; 
 	// separators for the arrays, starting with !
 	final public static String Separators[]= // names
@@ -159,7 +159,7 @@ public class ZirkelFrame extends CloseFrame
 		"!expression","area","quadric","image","text",
 		"!hide","runmacro",
 		"edit","parameter","targets","definejob","delete","reorder",
-		"draw","rename","zoom","animatebreak","replace"
+		"draw","rename","ticks","zoom","animatebreak","replace"
 	}; 
 	final public static String MenuTitles[]=
 	{	"points","lines","circles","complex","angles","move","decorative"
@@ -168,8 +168,8 @@ public class ZirkelFrame extends CloseFrame
 	final public static int NEdit=IconNumber,NParameters=IconNumber+1,
 		NTargets=IconNumber+2,NDefineJob=IconNumber+3,
 		NDelete=IconNumber+4,NReorder=IconNumber+5,NDraw=IconNumber+6,
-		NRename=IconNumber+7,NZoom=IconNumber+8,NAnimateBreak=IconNumber+9,
-		NReplace=IconNumber+10; 
+		NRename=IconNumber+7,NTicks=IconNumber+8,NZoom=IconNumber+9,
+		NAnimateBreak=IconNumber+10,NReplace=IconNumber+11; 
 	final public static int NAnimator=18,NObjectTracker=17,NTracker=16,NMover=15; 
 	final public static int NMacro=IconNumber-1; 
 	public static ObjectConstructor ObjectConstructors[]= // constructors
@@ -207,6 +207,7 @@ public class ZirkelFrame extends CloseFrame
 		new ReorderTool(),
 		new DrawerTool(),
 		new RenamerTool(),
+		new TicksTool(),
 		new ZoomerTool(),
 		new BreakpointAnimator(),
 		new ReplacerTool()
@@ -355,6 +356,8 @@ public class ZirkelFrame extends CloseFrame
 		objects.addSeparator(); 
 		if (!Global.getParameter("restricted",false) || icon("rename"))
 			objects.add(ObjectMenuItems[NRename]); 
+		if (!Global.getParameter("restricted",false) || icon("ticks"))
+			objects.add(ObjectMenuItems[NTicks]); 
 		if (!Global.getParameter("restricted",false) || icon("replace"))
 			objects.add(ObjectMenuItems[NReplace]); 
 		if (!Global.getParameter("restricted",false) || icon("reorder"))
@@ -703,7 +706,7 @@ public class ZirkelFrame extends CloseFrame
 		" parallel plumb circle3 midpoint angle fixedangle"+
 		" move tracker objecttracker hide expression area text quadric"+
 		" runmacro edit animate "+
-		" info zoom draw function rename "; 
+		" info zoom draw function rename ticks "; 
 	final static public String DefaultRestrictedIcons=
 		" back undo color"+
 		" hidden showcolor macro grid comment"+
@@ -715,7 +718,7 @@ public class ZirkelFrame extends CloseFrame
 	
 	/**
 	Generate an icon bar and insert some icons. The icon bar
-	is inserrted into the frame at North.
+	is inserted into the frame at North.
 	*/
 	public void makeIconBar ()
 	{	String icons=Global.getParameter("icons",DefaultIcons); 
@@ -741,6 +744,7 @@ public class ZirkelFrame extends CloseFrame
 			if (icon("edit")) IA.addToggleLeft("edit"); 
 			if (icon("draw")) IA.addToggleLeft("draw"); 
 			if (icon("rename")) IA.addToggleLeft("rename");
+			if (icon("ticks")) IA.addToggleLeft("ticks");
 			if (icon("replace")) IA.addToggleLeft("replace");
 			if (icon("macro")) IA.addMultipleToggleIconLeft("macro",3); 
 			IA.addSeparatorLeft(); 
@@ -825,6 +829,7 @@ public class ZirkelFrame extends CloseFrame
 			if (icon("zoom")) IA.addToggleLeft("zoom"); 
 			if (icon("draw")) IA.addToggleLeft("draw"); 
 			if (icon("rename")) IA.addToggleLeft("rename");
+			if (icon("ticks")) IA.addToggleLeft("ticks");
 			if (icon("replace")) IA.addToggleLeft("replace");
 			IA.addSeparatorLeft(); 
 			if (icon("color")) IA.addMultipleIconLeft("color",6); 
@@ -2004,6 +2009,7 @@ public class ZirkelFrame extends CloseFrame
 		IA.setState("edit",i==NEdit); 
 		IA.setState("draw",i==NDraw); 
 		IA.setState("rename",i==NRename); 
+		IA.setState("ticks",i==NTicks); 
 		IA.setState("replace",i==NReplace); 
 		IA.setState("zoom",i==NZoom); 
 		IA.setState("animatebreak",i==NAnimateBreak); 

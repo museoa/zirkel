@@ -123,6 +123,15 @@ public class ObjectConstructor
 		if (tag.hasTrueParam("large"))
 		{	o.setLarge(true);
 		}
+		if (tag.hasParam("ticks"))
+		{	try
+			{	int ticks=Integer.parseInt(tag.getValue("ticks"));
+				o.setTicks(ticks);
+			}
+			catch (Exception e)
+			{	throw new ConstructionException("Illegal ticks value");
+			}
+		}
 		if (tag.hasParam("xoffset") || tag.hasParam("yoffset"))
 		{	int x=0,y=0;
 			try
