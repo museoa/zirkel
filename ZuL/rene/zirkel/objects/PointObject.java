@@ -465,9 +465,9 @@ public class PointObject extends ConstructionObject
 	}
 	
 	public String getDisplayValue ()
-	{	return "("+roundDisplay(X)+
+	{	return "("+roundFrac(X,ZirkelCanvas.LengthsFactor)+
 			(Global.getParameter("options.germanpoints",false)?"|":",")
-			+roundDisplay(Y)+")";
+			+roundFrac(Y,ZirkelCanvas.LengthsFactor)+")";
 	}
 	
 	public boolean nearto (int x, int y, ZirkelCanvas zc)
@@ -850,5 +850,9 @@ public class PointObject extends ConstructionObject
 	
 	public boolean canBeReplacedBy (ConstructionObject o)
 	{	return o instanceof PointObject;
+	}
+
+	public boolean canuseFrac ()
+	{	return true;
 	}
 }

@@ -151,6 +151,20 @@ public class SegmentObject extends TwoPointLineObject
 			else
 			{	g.drawLine(c1,r1,c2,r2,this);
 			}
+			if (Quad)
+			{	double xt=(X1+X2)/2,yt=(Y1+Y2)/2;
+				double r=zc.dx((int)(zc.fontSize()))/3;
+				double dx=-DY*r,dy=DX*r;
+				g.setColor(this);
+				g.drawLine(zc.col(xt-DX*3*r-dx),zc.row(yt-DY*3*r-dy),
+						zc.col(xt-DX*3*r+dx),zc.row(yt-DY*3*r+dy));
+				g.drawLine(zc.col(xt+DX*3*r-dx),zc.row(yt+DY*3*r-dy),
+						zc.col(xt+DX*3*r+dx),zc.row(yt+DY*3*r+dy));
+				g.drawLine(zc.col(xt-DX*3*r-dx),zc.row(yt-DY*3*r-dy),
+						zc.col(xt+DX*3*r-dx),zc.row(yt+DY*3*r-dy));
+				g.drawLine(zc.col(xt+DX*3*r+dx),zc.row(yt+DY*3*r+dy),
+						zc.col(xt-DX*3*r+dx),zc.row(yt-DY*3*r+dy));
+			}
 			if (Ticks>0)
 			{	double xt=(X1+X2)/2,yt=(Y1+Y2)/2;
 				double r=zc.dx(zc.scale(
@@ -204,7 +218,8 @@ public class SegmentObject extends TwoPointLineObject
 	}
 
 	public String getDisplayValue ()
-	{	return ""+round(R,ZirkelCanvas.LengthsFactor);
+	{	if (isQuad()) return QS+roundFrac(R*R,ZirkelCanvas.LengthsFactor);
+		return ""+roundFrac(R,ZirkelCanvas.LengthsFactor);
 	}
 	
 	/**
@@ -379,6 +394,13 @@ public class SegmentObject extends TwoPointLineObject
 	}
 
 	public boolean canHaveTicks ()
+	{	return true;
+	}
+
+	public boolean canuseQuad ()
+	{	return true;
+	}
+	public boolean canuseFrac ()
 	{	return true;
 	}
 }

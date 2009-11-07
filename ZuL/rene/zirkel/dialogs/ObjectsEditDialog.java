@@ -204,6 +204,30 @@ public class ObjectsEditDialog extends HelpCloseDialog
 		}
 		if (unique) IB.setState("bold",flag);
 		else IB.unset("bold");
+		IB.addToggleLeft("frac");
+		e=V.elements();
+		flag=((ConstructionObject)e.nextElement()).isFrac();
+		unique=true;
+		while (e.hasMoreElements())
+		{	if (((ConstructionObject)e.nextElement()).isFrac()
+				!=flag)
+			{	unique=false; break;
+			}
+		}
+		if (unique) IB.setState("frac",flag);
+		else IB.unset("frac");
+		IB.addToggleLeft("quad");
+		e=V.elements();
+		flag=((ConstructionObject)e.nextElement()).isQuad();
+		unique=true;
+		while (e.hasMoreElements())
+		{	if (((ConstructionObject)e.nextElement()).isQuad()
+				!=flag)
+			{	unique=false; break;
+			}
+		}
+		if (unique) IB.setState("quad",flag);
+		else IB.unset("quad");
 		IB.addSeparatorLeft();
 		IB.addToggleLeft("isback");
 		e=V.elements();
@@ -257,6 +281,8 @@ public class ObjectsEditDialog extends HelpCloseDialog
 				if (IB.isSet("showvalue")) O.setShowValue(IB.getState("showvalue"));
 				if (IB.isSet("large")) O.setLarge(IB.getState("large"));
 				if (IB.isSet("bold")) O.setBold(IB.getState("bold"));
+				if (IB.isSet("frac") && O.canuseFrac()) O.setFrac(IB.getState("frac"));
+				if (IB.isSet("quad") && O.canuseQuad()) O.setQuad(IB.getState("quad"));
 				if (TypeIB!=null && O instanceof PointObject &&
 						TypeIB.getToggleState("type")>=0)
 				{	((PointObject)O).setType(TypeIB.getToggleState("type"));

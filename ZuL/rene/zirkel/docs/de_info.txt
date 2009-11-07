@@ -262,8 +262,27 @@ Größe des Applets wird gleich der Bildgröße gewählt. Das Bild muss in
 das Verzeichnis, in dem sich "zirkel.jar" befindet, publiziert
 werden.
 
+.rattrig
+.related properties
+Rationale Geometrie
+
+__Rationale§Trigonometrie__ vereinfacht die Berechnungen durch
+weitgehende Vermeidung von trigonometrischen Funktionen und deren
+Umkehrfunktionen. Die Idee ist im Buch "Divine Proportions" von N.J.
+Wildberger beschrieben. 
+
+Z.u.L. kann Längen und Winkel mit Werten in dieser Trigonometrie
+anzeigen. In diesem Fall werden Längen quadriert angegeben (als
+__Quadranz__), und Winkel t als sin(t)^2 (__Spreizung__). Es ist
+dann auch nützlich, die Anzeige als Bruch für das Objekt
+anzuschalten. Verwenden Sie dazu den Eigenschaftendialog des Objekts.
+
+Strecken, die als Quadranzen erscheinen sollen, werden mit einem
+langgestreckten Rechteck versehen. Winkel als Spreizungen werden
+gestreckt, und nicht als Bogen, ausgegeben.
+
 .properties
-.related edit conditions colors hide mouse transparent point fixedangle animatebreak expressionsyntax latex replay
+.related edit conditions colors hide mouse transparent point fixedangle animatebreak expressionsyntax latex replay rattrig
 Objekteigenschaften
 
 //image images/Punkt.jpg
@@ -344,6 +363,15 @@ der Umschalttaste gesetzt.
 Der __Stil§von§Punkten__ bestimmt die Darstellung als Kreis oder
 Quadrat etc. Strecken können als __Vektoren__ dargestellt werden.
 Dabei ist die Richtung der Strecke zu beachten.
+
+Strecken, Kreise und Winkel können als Objekte der rationalen Geomerie
+angezeigt werden. In diesem Fall werden Strecken im Quadrat, und
+Winkel als sin(t)^2 angezeigt. Mehr Informationen darüber finden sich
+im Abschnitt über __Rationale§Trigonometrie__.
+
+Viele Objekte können auch als Brüche angezeigt werden. Es wird dann
+ein Bruch verwendet, solange der Nenner des Näherungsbruch kleiner als
+1000 ist.
 
 Man beachte auch die Knöpfe auf der unteren Leiste des Objektdialogs.
 Punkte haben dort z.B. einen Schalter, mit dem sie sich an ein Objekt
@@ -1032,6 +1060,15 @@ __inside__
 liegt, dann wird 0.5 zurück gegeben. A kann ein Polygon, ein Kreis,
 oder ein Winkel sein.
 
+__quadrances__
+  q(x)
+  Berechnet x*x. Dies sind die Werte für __Rationale§Trigonometrie__.
+
+__spreads__
+  s(t)
+  Berechnet sin(t)^2. Diese Werte werden für die
+  __Rationale§Trigonometrie__ benötigt.
+
 Es können die üblichen mathematischen Funktionen abs,
 sign, sin, cos, tan, arcsin, arccos, arctan, sqrt, exp und log
 verwendet werden. Darüber hinaus gibt es round, ceil und floor zum
@@ -1089,7 +1126,7 @@ Unterbrechungspunkten ist es nützlich, diese Punkte hinter den
 versteckten Texte zu erzeugen.
 
 .quadric
-.related properties point transparent
+.related properties point transparent function
 Kegelschnitte
 
 //image- images/quadric.png
@@ -1102,9 +1139,23 @@ anzeigen.
 
 //image images/Ellipse.jpg
 
-Zur Eingabe von Quadriken ist einfach die Auswahl von 5 Punkten nötig.
+Zur Eingabe von Quadriken ist die Auswahl von 5 Punkten nötig.
+Alternativ können zwei Punkte durch einen Punkt und eine Gerade
+ersetzt werden. Es wird dann ein Kegelschnitt erzeugt, der in diesem
+Punkt eine zur Geraden parallele Tangente hat. 
+
 Auf Quadriken können Punkte fixiert werden, und das Programm kann
 Schnitte mit Quadriken berechnen.
+
+Es ist auch möglich, Quadriken durch eine Gleichung q(x,y)=0 zu
+beschreiben. Dazu klickt man mit der Strg-Taste auf das Werkzeug, oder
+wählt das Werkzeug im Menü unter "Funktionen" aus. Im Dialog muss die
+Gleichung q(x,y) eingegeben werden. Es ist wichtig, dass diese
+Gleichung tatsächlich einen Kegelschnitt beschreibt, also nach dem
+Ausmultiplizieren die Variablen nur in der Form x^2, y^2, x, y, xy
+enthält! Die Variablennamen sind immer x und y. Nullstellen anderer
+Funktionen können mit dem entsprechenden Werkzeug angezeigt werden,
+aber nur Kegelschnitte arbeiten als Konstruktionsobjekte.
 
 .hide
 .related construction properties mouse

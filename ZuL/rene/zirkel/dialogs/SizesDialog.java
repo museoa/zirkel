@@ -23,7 +23,7 @@ public class SizesDialog extends HelpCloseDialog
 		
 		Pointsize=addfield(center,"minpointsize.prompt","minpointsize",4);
 		Linewidth=addfield(center,"minlinesize.prompt","minlinesize",1.5);
-		Fontsize=addfield(center,"minfontsize.prompt","minfontsize",14);
+		Fontsize=addfield(center,"minfontsize.prompt","minfontsize",12);
 		Selectionsize=addfield(center,"selectionsize.prompt","selectionsize",2);
 		Arrowsize=addfield(center,"arrowsize.prompt","arrowsize",20);
 		

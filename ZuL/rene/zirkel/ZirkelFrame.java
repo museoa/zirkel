@@ -347,6 +347,8 @@ public class ZirkelFrame extends CloseFrame
 			menuadd(functions,"menu.options.userfunction");
 		if (!Global.getParameter("restricted",false) || icon("function"))
 			objects.add(functions);
+		if (!Global.getParameter("restricted",false) || icon("quadric"))
+			menuadd(functions,"menu.options.expressionquadric");
 		ObjectMenuItems[CurrentTool].setState(true);
 		objects.addSeparator(); 
 		
@@ -1202,6 +1204,10 @@ public class ZirkelFrame extends CloseFrame
 		{	setinfo("function");
 			ZC.createFunction();
 		}
+		else if (s.equals("menu.options.expressionquadric"))
+		{	setinfo("quadric");
+			ZC.createExpressionQuadric();
+		}
 		else if (s.equals("menu.options.editlast"))
 		{	setinfo("edit");
 			ZC.editLast();
@@ -1491,8 +1497,9 @@ public class ZirkelFrame extends CloseFrame
 		}
 		else
 		{	settool(0); 
-			setcolor(Global.getParameter("options.color",0));
-			setcolortype(Global.getParameter("options.colortype",0)); 
+			settype(2); 
+			setcolor(0);
+			setcolortype(0); 
 			settype(Global.getParameter("options.type",2)); 
 			showcolor(0); 
 			setRestricted(Global.getParameter("options.restricted",true)); 
@@ -1929,6 +1936,10 @@ public class ZirkelFrame extends CloseFrame
 		{	setinfo("function"); 
 			if (IA.isControlPressed()) ZC.createFunction();
 			else ZC.createCurve();
+		}
+		else if (o.equals("quadric") && IB.isControlPressed())
+		{	setinfo("quadric");
+			ZC.createExpressionQuadric();
 		}
 		else if (IB.isControlPressed())
 		{	int i=CurrentTool;
@@ -3074,9 +3085,9 @@ public class ZirkelFrame extends CloseFrame
 			if (Global.getParameter("minlinesize",1.5)!=1.5)
 				out.println("<param name=\"minlinewidth\" value=\""+
 				Global.getParameter("minlinesize",1.5)+"\" />");
-			if (Global.getParameter("minfontsize",14)!=14)
+			if (Global.getParameter("minfontsize",12)!=12)
 				out.println("<param name=\"minfontsize\" value=\""+
-				Global.getParameter("minfontsize",14)+"\" />");
+				Global.getParameter("minfontsize",12)+"\" />");
 			if (Global.getParameter("options.germanpoints",true))
 				out.println("<param name=\"germanpoints\" value=\"true\" />");
 			if (!Background.equals(""))
@@ -3324,9 +3335,9 @@ public class ZirkelFrame extends CloseFrame
 						if (Global.getParameter("minpointsize",4)!=4)
 							out.println("<param name=\"minpointsize\" value=\""+
 								Global.getParameter("minpointsize",4)+"\" />");
-						if (Global.getParameter("minfontsize",14)!=14)
+						if (Global.getParameter("minfontsize",12)!=12)
 							out.println("<param name=\"minfontsize\" value=\""+
-								Global.getParameter("minfontsize",14)+"\" />");
+								Global.getParameter("minfontsize",12)+"\" />");
 						if (Global.getParameter("minlinesize",1.5)!=1.5)
 							out.println("<param name=\"minlinewidth\" value=\""+
 								Global.getParameter("minlinesize",1.5)+"\" />");
@@ -4188,7 +4199,8 @@ public class ZirkelFrame extends CloseFrame
 	}
 	
 	public void setinfo (String s)
-	{	Info.Subject=s; 
+	{	// System.out.println(s);
+		Info.Subject=s; 
 		if (InfoWindow!=null) InfoWindow.fill(); 
 	}
 	

@@ -154,7 +154,7 @@ public class AreaObject extends ConstructionObject
 	}
 
 	public String getDisplayValue ()
-	{	return ""+round(Math.abs(A),ZirkelCanvas.LengthsFactor);
+	{	return ""+roundFrac(Math.abs(A),ZirkelCanvas.LengthsFactor);
 	}
 	
 	public void printArgs (XmlWriter xml)
@@ -492,4 +492,9 @@ public class AreaObject extends ConstructionObject
 	public boolean canBeReplacedBy (ConstructionObject o)
 	{	return o instanceof AreaObject;
 	}
+	
+	public boolean canuseFrac ()
+	{	return true;
+	}
+
 }

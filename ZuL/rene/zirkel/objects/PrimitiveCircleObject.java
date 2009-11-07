@@ -123,7 +123,8 @@ public class PrimitiveCircleObject extends ConstructionObject
 	}
 	
 	public String getDisplayValue ()
-	{	return ""+round(R,ZirkelCanvas.LengthsFactor);
+	{	if (isQuad()) return QS+roundFrac(R*R,ZirkelCanvas.LengthsFactor);
+		return ""+roundFrac(R,ZirkelCanvas.LengthsFactor);
 	}
 	
 	public String getEquation ()
@@ -300,7 +301,7 @@ public class PrimitiveCircleObject extends ConstructionObject
 
 	/**
 	 * A circle depends on its midpoint at least.
-	 * Other circles depen on more points!
+	 * Other circles depend on more points!
 	 * No circle depends on Start and End.
 	 */
 	public Enumeration depending ()
@@ -528,5 +529,12 @@ public class PrimitiveCircleObject extends ConstructionObject
 
 	public boolean canBeReplacedBy (ConstructionObject o)
 	{	return o instanceof PrimitiveCircleObject;
+	}
+
+	public boolean canuseFrac ()
+	{	return true;
+	}
+	public boolean canuseQuad ()
+	{	return true;
 	}
 }

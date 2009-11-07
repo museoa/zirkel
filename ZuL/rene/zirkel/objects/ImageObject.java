@@ -99,7 +99,7 @@ public class ImageObject extends ConstructionObject
 
 	public ConstructionObject copy ()
 	{	try
-		{	QuadricObject o=(QuadricObject)clone();
+		{	ImageObject o=(ImageObject)clone();
 			setTranslation(o);
 			o.P=new PointObject[P.length];
 			for (int i=0; i<P.length; i++) o.P[i]=P[i];

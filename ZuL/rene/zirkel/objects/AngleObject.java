@@ -133,8 +133,13 @@ public class AngleObject extends ConstructionObject
 	}
 	
 	public String getDisplayValue ()
-	{	if (ZirkelCanvas.AnglesFactor<=2) return ""+(int)(A/Math.PI*180+0.5);
-		else return ""+round(A/Math.PI*180,ZirkelCanvas.AnglesFactor);
+	{	if (isQuad())
+		{	double x=Math.sin(A);
+			return QS+roundFrac(x*x,ZirkelCanvas.LengthsFactor);
+		}
+		double x=A/Math.PI*180;
+		if (ZirkelCanvas.AnglesFactor<=2) return ""+(int)(x+0.5);
+		else return ""+roundFrac(x,ZirkelCanvas.AnglesFactor);
 	}
 	
 	public boolean nearto (int x, int y, ZirkelCanvas zc)
@@ -242,10 +247,28 @@ public class AngleObject extends ConstructionObject
 					x[3]=c1+R+R*dx2; y[3]=r1+R-R*dy2;
 					g.fillPolygon(x,y,4,false,getColorType()!=THICK,this);
 				}
+				else if (Quad)
+				{	double dx1=Math.cos(A1),dy1=Math.sin(A1),
+					dx2=Math.cos(A1+DA/180*Math.PI),dy2=Math.sin(A1+DA/180*Math.PI);
+					if (Selected||getColorType()!=THIN)
+					{	g.setColor(this);
+						g.drawLine(c1+R+R*dx1,r1+R-R*dy1,c1+R+R*dx2,r1+R-R*dy2);
+					}
+					x[0]=c1+R; y[0]=r1+R;
+					x[1]=c1+R+R*dx1; y[1]=r1+R-R*dy1;
+					x[2]=c1+R+R*dx2; y[2]=r1+R-R*dy2;
+					g.fillPolygon(x,y,3,false,getColorType()!=THICK,this);
+				}
 				else 
 					g.fillArc(c1,r1,2*R,2*R,A1/Math.PI*180,DA,
 							Selected||getColorType()!=THIN,
 							getColorType()!=THICK&&!isFillBackground(),true,this);
+			}
+			else if (Quad)
+			{	double dx1=Math.cos(A1),dy1=Math.sin(A1),
+					dx2=Math.cos(A1+DA/180*Math.PI),dy2=Math.sin(A1+DA/180*Math.PI);
+				g.setColor(this);
+				g.drawLine(c1+R+R*dx1,r1+R-R*dy1,c1+R+R*dx2,r1+R-R*dy2);
 			}
 			else
 			{	g.setColor(this);
@@ -318,9 +341,11 @@ public class AngleObject extends ConstructionObject
 						X+d*dx,Y+d*dy,0,0);
 				}
 				else
+				{	double R1=zc.col(getDisplayTextSize(zc))-zc.col(0);
 					drawCenteredLabel(g,s,zc,
-						X+zc.dx(R*LabelScale)*dx,Y+zc.dy(R*LabelScale)*dy,
+						X+zc.dx(R1*LabelScale)*dx,Y+zc.dy(R1*LabelScale)*dy,
 						XcOffset,YcOffset);
+				}
 			}
 		}
 	}
@@ -342,7 +367,18 @@ public class AngleObject extends ConstructionObject
 	 */
 	double getDisplaySize (ZirkelCanvas zc)
 	{	double R=zc.dx((int)(zc.angleSize()));
-		if (DisplaySize==SMALL || DisplaySize==RECT) R/=2;
+		if (DisplaySize==SMALL || DisplaySize==RECT || Quad) R/=2;
+		else if (DisplaySize==LARGER) R*=2;
+		else if (DisplaySize==LARGE)
+		{	double dx=P1.getX()-X,dy=P1.getY()-Y;
+			R=Math.sqrt(dx*dx+dy*dy);
+		}
+		return R;
+	}
+	double getDisplayTextSize (ZirkelCanvas zc)
+	{	double R=zc.dx((int)(zc.angleSize()));
+		if (DisplaySize==SMALL) R*=1.5;
+		else if (DisplaySize==RECT) R*=2;
 		else if (DisplaySize==LARGER) R*=2;
 		else if (DisplaySize==LARGE)
 		{	double dx=P1.getX()-X,dy=P1.getY()-Y;
@@ -579,6 +615,13 @@ public class AngleObject extends ConstructionObject
 	}	
 
 	public boolean canHaveTicks ()
+	{	return true;
+	}
+	
+	public boolean canuseQuad ()
+	{	return true;
+	}
+	public boolean canuseFrac ()
 	{	return true;
 	}
 }

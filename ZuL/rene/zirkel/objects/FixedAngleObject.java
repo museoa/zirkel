@@ -301,8 +301,12 @@ public class FixedAngleObject extends PrimitiveLineObject
 	}
 	
 	public String getDisplayValue ()
-	{	if (ZirkelCanvas.AnglesFactor<=2) return ""+(int)(A/Math.PI*180+0.5);
-		else return ""+round(A/Math.PI*180,ZirkelCanvas.AnglesFactor);
+	{	if (isQuad())
+		{	double x=Math.sin(A);
+			return QS+roundFrac(x*x,ZirkelCanvas.LengthsFactor);
+		}
+		if (ZirkelCanvas.AnglesFactor<=2) return ""+(int)(A/Math.PI*180+0.5);
+		else return ""+roundFrac(A/Math.PI*180,ZirkelCanvas.AnglesFactor);
 	}
 	
 	public void validate ()
@@ -456,10 +460,7 @@ public class FixedAngleObject extends PrimitiveLineObject
 	public Enumeration depending ()
 	{	super.depending();
 		depset(P1,P2);
-		Enumeration e=E.getDepList().elements();
-		while (e.hasMoreElements())
-		{	DL.add((ConstructionObject)e.nextElement());
-		}
+		addDepending(E);
 		return DL.elements();
 	}
 
@@ -623,6 +624,13 @@ public class FixedAngleObject extends PrimitiveLineObject
 	}	
 
 	public boolean canHaveTicks ()
+	{	return true;
+	}
+
+	public boolean canuseQuad ()
+	{	return true;
+	}
+	public boolean canuseFrac ()
 	{	return true;
 	}
 }

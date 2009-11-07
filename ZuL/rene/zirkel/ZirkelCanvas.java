@@ -357,7 +357,7 @@ public class ZirkelCanvas extends Panel
 	
 	boolean Dragging=false,RightClicked=false;
 	
-	boolean Control=false; // Control-Taste bei letztem Mausdruck aktiv?
+	boolean Control=false,Shift=false; // Control-Taste bei letztem Mausdruck aktiv?
 	
 	public boolean SmartBoardPreview=false;
 	
@@ -427,7 +427,9 @@ public class ZirkelCanvas extends Panel
 			}
 			else
 			{	Control=e.isControlDown();
+				Shift=e.isShiftDown();
 				OC.mousePressed(e,this); // pass to ObjectConstructor
+				Shift=false;
 				Control=false;
 			}
 		}
@@ -580,7 +582,7 @@ public class ZirkelCanvas extends Panel
 				FontSize=PointSize*4;
 				MinPointSize=Global.getParameter("minpointsize",4);
 				if (PointSize<MinPointSize) PointSize=MinPointSize;
-				MinFontSize=Global.getParameter("minfontsize",14);
+				MinFontSize=Global.getParameter("minfontsize",12);
 				if (FontSize<MinFontSize) FontSize=MinFontSize;
 				IG.setDefaultFont((int)FontSize,
 					Global.getParameter("font.large",false),
@@ -1004,6 +1006,10 @@ public class ZirkelCanvas extends Panel
 	
 	public double angleSize ()
 	{	return 4*FontSize*Scale;
+	}
+	
+	public double fontSize ()
+	{	return FontSize*Scale;
 	}
 	
 	public double SelectionPointFactor=Global.getParameter("selectionsize",2);
@@ -1482,9 +1488,10 @@ public class ZirkelCanvas extends Panel
 	* variable NewPoint is set to true, if the point was indeed created.
 	* @param multiple determines, if multiple selections are possible.
 	* @param any determines, if the first point should be used.
+	* @param sel determines, if other objects are allowed
 	**/
-	public PointObject selectCreatePoint (int x, int y, boolean multiple,
-		boolean any, boolean all)
+	public ConstructionObject selectCreatePoint (int x, int y, boolean multiple,
+		boolean any, boolean all, Selector sel)
 	{	NewPoint=false;
 		if (Preview)
 		{	PointObject p=new PointObject(C,x(x),y(y));
@@ -1499,7 +1506,9 @@ public class ZirkelCanvas extends Panel
 		V.removeAllElements();
 		while (e.hasMoreElements())
 		{	ConstructionObject o=(ConstructionObject)e.nextElement();
-			if (o.isSelectable() && o instanceof PointObject && o.nearto(x,y,this)
+			if (o.isSelectable() 
+				&& (o instanceof PointObject) 
+				&& o.nearto(x,y,this)
 				&& (multiple || !o.selected()))
 					V.addElement(o);
 			sort(V);
@@ -1508,10 +1517,31 @@ public class ZirkelCanvas extends Panel
 		{	if (any) return (PointObject)(V.elementAt(0));
 			ConstructionObject o=select(V,Control 
 				|| !Global.getParameter("options.indicate",true));
-			if (o!=null) return (PointObject)o;
+			if (o!=null) return o;
 			return null;
 		}
 		
+		if (sel!=null && Shift)
+		{	e=C.elements();
+			V.removeAllElements();
+			while (e.hasMoreElements())
+			{	ConstructionObject o=(ConstructionObject)e.nextElement();
+				if (o.isSelectable()
+					&& sel.isAdmissible(this,o)
+					&& o.nearto(x,y,this)
+					&& (multiple || !o.selected()))
+						V.addElement(o);
+				sort(V);
+			}
+			if (V.size()>0)
+			{	if (any) return (ConstructionObject)V.elementAt(0);
+				ConstructionObject o=select(V,Control 
+					|| !Global.getParameter("options.indicate",true));
+				if (o!=null) return o;
+				return null;
+			}
+		}
+
 		// User creates a new point:
 		ConstructionObject oc=tryCreateIntersection(x,y,true,all);
 		if (oc!=null) return (PointObject)oc;
@@ -1615,11 +1645,15 @@ public class ZirkelCanvas extends Panel
 	}
 
 	public PointObject selectCreatePoint (int x, int y)
-	{	return selectCreatePoint(x,y,true,false,true);
+	{	return (PointObject)selectCreatePoint(x,y,true,false,true,null);
+	}
+
+	public ConstructionObject selectCreatePointWithSelector (int x, int y, Selector sel)
+	{	return selectCreatePoint(x,y,true,false,true,sel);
 	}
 
 	public PointObject selectCreatePoint (int x, int y, boolean multiple)
-	{	return selectCreatePoint(x,y,multiple,false,true);
+	{	return (PointObject)selectCreatePoint(x,y,multiple,false,true,null);
 	}
 
 	/**
@@ -4186,6 +4220,16 @@ public class ZirkelCanvas extends Panel
 		if (f.EditAborted) delete(f);
 		repaint();
 		reloadCD();
+	}
+	
+	public void createExpressionQuadric ()
+	{	QuadricExpressionObject o=new QuadricExpressionObject(C);
+		o.setDefaults();
+		C.add(o);
+		o.edit(this);
+		if (o.EditAborted) delete(o);
+		repaint();
+		reloadCD();		
 	}
 	
 	public void editLast ()

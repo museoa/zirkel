@@ -44,6 +44,8 @@ public class Construction
 		LongNames=Global.getParameter("options.longnames",false),
 		LargeFont=Global.getParameter("options.largefont",false),
 		BoldFont=Global.getParameter("options.boldfont",false),
+		Frac=Global.getParameter("options.frac",false),
+		Quad=Global.getParameter("options.quad",false),
 		Hidden=false,
 		Obtuse=Global.getParameter("options.obtuse",false),
 		Solid=Global.getParameter("options.solid",false);

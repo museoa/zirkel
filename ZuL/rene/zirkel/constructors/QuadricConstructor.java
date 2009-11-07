@@ -10,11 +10,13 @@ import rene.zirkel.construction.*;
 import rene.zirkel.objects.*;
 
 public class QuadricConstructor extends ObjectConstructor
-{	PointObject P[];
+	implements Selector
+{	ConstructionObject P[];
 	int NPoints;
 	public void mousePressed (MouseEvent e, ZirkelCanvas zc)
 	{	if (!zc.checkVisual()) return;
-		PointObject p=zc.selectCreatePoint(e.getX(),e.getY());
+		ConstructionObject 
+			p=zc.selectCreatePointWithSelector(e.getX(),e.getY(),this);
 		if (p!=null)
 		{	P[NPoints++]=p;
 			p.setSelected(true);
@@ -32,13 +34,17 @@ public class QuadricConstructor extends ObjectConstructor
 	}
 
 	public void showStatus (ZirkelCanvas zc)
-	{	zc.showStatus(Zirkel.name("message.quadric")+" "+(NPoints+1));
+	{	if (NPoints>0 && P[NPoints-1] instanceof PointObject)
+			zc.showStatus(ConstructionObject.text2(
+					Zirkel.name("message.quadricparallel"),""+(NPoints+1),P[NPoints-1].getName()));
+		else
+			zc.showStatus(Zirkel.name("message.quadric")+" "+(NPoints+1));
 	}
 	
 	public void reset (ZirkelCanvas zc)
 	{	super.reset(zc);
 		if (zc.Visual)
-		{	P=new PointObject[5]; NPoints=0;
+		{	P=new ConstructionObject[5]; NPoints=0;
 			showStatus(zc);
 		}
 		else
@@ -50,24 +56,45 @@ public class QuadricConstructor extends ObjectConstructor
 		throws ConstructionException
 	{	if (!testTree(tree,"Quadric")) return false;
 		XmlTag tag=tree.getTag();
-		for (int i=0; i<5; i++)
-		if (!tag.hasParam("point"+(i+1)))
-			throw new ConstructionException("Quadric points missing!");
-		try
-		{	PointObject P[]=new PointObject[5];
-			for (int i=0; i<5; i++)
-				P[i]=(PointObject)c.find(tag.getValue("point"+(i+1))); 
-			QuadricObject p=new QuadricObject(c,P);
-			setName(tag,p);
-			set(tree,p);
-			c.add(p);
-			setConditionals(tree,c,p);
+		if (tag.hasParam("expr"))
+		{	try
+			{	QuadricExpressionObject q=new QuadricExpressionObject(c);
+				q.setExpression(tag.getValue("expr"));
+				setName(tag,q);
+				set(tree,q);
+				c.add(q);
+				setConditionals(tree,c,q);
+			}
+			catch (ConstructionException e)
+			{	throw e;
+			}
+			catch (Exception e)
+			{	throw new ConstructionException("Quadric points illegal!");
+			}
 		}
-		catch (ConstructionException e)
-		{	throw e;
-		}
-		catch (Exception e)
-		{	throw new ConstructionException("Quadric points illegal!");
+		else
+		{	for (int i=0; i<5; i++)
+				if (!tag.hasParam("point"+(i+1)))
+					throw new ConstructionException("Quadric points missing!");
+			try
+			{	ConstructionObject P[]=new ConstructionObject[5];
+				for (int i=0; i<5; i++)
+				{	P[i]=c.find(tag.getValue("point"+(i+1)));
+					if (P[i]==null)
+						throw new ConstructionException("");
+				}
+				QuadricObject p=new QuadricObject(c,P);
+				setName(tag,p);
+				set(tree,p);
+				c.add(p);
+				setConditionals(tree,c,p);
+			}
+			catch (ConstructionException e)
+			{	throw e;
+			}
+			catch (Exception e)
+			{	throw new ConstructionException("Quadric objects illegal!");
+			}
 		}
 		return true;
 	}
@@ -98,6 +125,11 @@ public class QuadricConstructor extends ObjectConstructor
 		if (!name.equals("")) s.setNameCheck(name);
 		c.add(s);
 		s.setDefaults();
+	}
+
+	public boolean isAdmissible(ZirkelCanvas zc, ConstructionObject o)
+	{	return
+			NPoints>0 && P[NPoints-1] instanceof PointObject;
 	}
 
 }

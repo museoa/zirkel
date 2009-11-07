@@ -209,16 +209,7 @@ public class ExpressionObject extends ConstructionObject
 			else s=Prompt;
 		}
 		if (showValue()) // show the value
-		{	try
-			{	E.getValue();
-				double x=round(CurrentValue);
-				if (Slider) x=round(CurrentValue,100);
-				if (Math.abs(x-Math.round(x))<1e-10) s=s+(int)x;
-				else s=s+x;
-			}
-			catch (Exception e) { s=s+"???"; }
-		}
-		s=s+Unit; // add optional unit
+			s=s+getDisplayValue();
 		s=AngleObject.translateToUnicode(s); // translate \a etc.
 		W=fm.stringWidth("---"); 
 		if (s.equals(""))  // nothing to show 
@@ -655,12 +646,12 @@ public class ExpressionObject extends ConstructionObject
 	{	String s="";
 		try
 		{	E.getValue();
-			double x=round(CurrentValue);
-			if (Slider) x=round(CurrentValue,100);
-			if (Math.abs(x-Math.round(x))<1e-10) s=s+(int)x;
-			else s=s+x;
+			String x="";
+			if (Slider) x=roundFrac(CurrentValue,100);
+			else x=roundFrac(CurrentValue,ZirkelCanvas.EditFactor);
+			s=s+x;
 		}
-		catch (Exception e) { s=s+"???"; }
+		catch (Exception e) { return "???"; }
 		s=s+Unit; // add optional unit
 		return s;
 	}
@@ -684,5 +675,9 @@ public class ExpressionObject extends ConstructionObject
 	
 	public void setOnOff (boolean flag)
 	{	OnOff=flag;
+	}
+	
+	public boolean canuseFrac ()
+	{	return true;
 	}
 }

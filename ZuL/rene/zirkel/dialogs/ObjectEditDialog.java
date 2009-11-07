@@ -135,6 +135,14 @@ public class ObjectEditDialog extends HelpCloseDialog
 			IB.setState("bold",O.isBold());
 			IB.addOnOffLeft("large");
 			IB.setState("large",O.isLarge());
+			if (O.canuseFrac())
+			{	IB.addOnOffLeft("frac");
+				IB.setState("frac",O.isFrac());
+			}
+			if (O.canuseQuad())
+			{	IB.addOnOffLeft("quad");
+				IB.setState("quad",O.isQuad());
+			}
 			IB.addSeparatorLeft();
 		}
 		IB.addOnOffLeft("isback");
@@ -208,6 +216,8 @@ public class ObjectEditDialog extends HelpCloseDialog
 			O.setShowName(o.equals("Name") || o.equals("Alias") || IB.getState("showname"));
 			O.setBold(IB.getState("bold"));
 			O.setLarge(IB.getState("large"));
+			if (O.canuseQuad()) O.setQuad(IB.getState("quad"));
+			if (O.canuseFrac()) O.setFrac(IB.getState("frac"));
 			O.setBack(IB.getState("isback"));
 			if (showsValue()) O.setShowValue(IB.getState("showvalue"));
 			if (O.maybeTransparent())

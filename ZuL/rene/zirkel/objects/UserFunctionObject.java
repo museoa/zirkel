@@ -562,15 +562,6 @@ public class UserFunctionObject extends ConstructionObject
 		return DL.elements();
 	}
 	
-	public void addDepending (Expression E)
-	{	if (E!=null)
-		{	Enumeration e=E.getDepList().elements();
-			while (e.hasMoreElements())
-			{	DL.add((ConstructionObject)e.nextElement());
-			}
-		}
-	}
-
 	public boolean hasUnit ()
 	{	return false;
 	}

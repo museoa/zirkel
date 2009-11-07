@@ -148,17 +148,24 @@ public class ExpressionString
 				else sb.append((String)o); 
 			}
 			else if (o instanceof Expression)
-			{	try
-				{	double value=((Expression)o).getValue();
-					value=O.round(value);
-					if (((Expression)o).isForcePlus() && value>=0) sb.append("+");
-					if (value==Math.floor(value+0.5))
-						sb.append((int)(value));
-					else
-						sb.append(O.round(value)); 
+			{	ConstructionObject co=((Expression)o).getObject();
+				if (co==null)
+				{
+					try
+					{	double value=((Expression)o).getValue();
+						value=O.round(value);
+						if (((Expression)o).isForcePlus() && value>=0) sb.append("+");
+						if (value==Math.floor(value+0.5))
+							sb.append((int)(value));
+						else
+							sb.append(O.round(value)); 
+					}
+					catch (Exception exc)
+					{	sb.append("???");
+					}
 				}
-				catch (Exception exc)
-				{	sb.append("???");
+				else
+				{	sb.append(co.getDisplayValue());
 				}
 			}
 			else if (o instanceof EquationExpressionString)

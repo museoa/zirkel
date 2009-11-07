@@ -341,10 +341,14 @@ class ObjectExpression extends BasicExpression
 	public double getValue () throws ConstructionException
 	{	if (!O.valid())
 			throw new InvalidException("");
-		if (Var!=null && 
-				(O instanceof FunctionObject)) return ((FunctionObject)O).getValue(Var);
-		if (Var!=null && 
-				(O instanceof UserFunctionObject)) return ((UserFunctionObject)O).getValue(Var);
+		if (Var!=null)
+		{	try
+			{	return O.getValue(Var);
+			}
+			catch (Exception e)
+			{	return O.getValue();
+			}
+		}
 		return O.getValue();
 	}
 
@@ -585,9 +589,10 @@ class FunctionExpression extends BasicExpression
 			"d","a","angle180","angle360","abs","scale","sign","d","sum",
 			"if","deg","rad","integrate","zero","diff","min","max","length",
 			"rsin","rcos","rtan","rarcsin","rarccos","rarctan",
-			"sinhyp","coshyp","z","simulate","inside"
+			"sinhyp","coshyp","z","simulate","inside",
+			"q","s"
 		};
-	final static int NX=10,NY=11,ND=14,NA=15,NS=19,
+	final static int NX=10,NY=11,ND=14,NA=15,NSCALE=19,
 		NSUM=22,NIF=23,NINT=26,NZERO=27,NDIFF=28,NMIN=29,NMAX=30,NLENGTH=31,
 		NZ=40,NSIM=41,NINSIDE=42;
 		
@@ -692,7 +697,7 @@ class FunctionExpression extends BasicExpression
 					+" ("+Functions[f]+")");		
 			
 		}
-		else if (f==NS)
+		else if (f==NSCALE)
 		{	if (t.next()!=',')
 				throw new ConstructionException(Zirkel.name("exception.parameter"));
 			t.advance();
@@ -876,7 +881,7 @@ class FunctionExpression extends BasicExpression
 				if (a<0) a+=360;
 				if (a>360) a-=360;
 				return a;
-			case NS :
+			case NSCALE :
 				double x=E[0].getValue(),xa=E[1].getValue(),xb=E[2].getValue();
 				if (x<xa || x>=xb || xb<=xa)
 					throw new InvalidException(Zirkel.name("exception.invalid"));
@@ -981,6 +986,8 @@ class FunctionExpression extends BasicExpression
 			case 37 : return Math.atan(x);
 			case 38 : return (Math.exp(x)-Math.exp(-x))/2;
 			case 39 : return (Math.exp(x)+Math.exp(-x))/2;
+			case 43 : return x*x;
+			case 44 : x=Math.sin(x/180*Math.PI); return x*x;
 		}
 		throw new ConstructionException("");
 	}

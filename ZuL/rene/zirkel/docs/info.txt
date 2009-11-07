@@ -258,8 +258,25 @@ If the picture fits the window size exactly, a link will be saved
 along with the HTML export. The applet size will be the picture size
 in this case. The picture must be published in the applet directory.
 
+.rattrig
+.related properties
+Rational Geometry
+
+__Rational§Trigonometry__ simplifies trigonometric computations by
+trying to keep the values rational. The idea is described in a book
+"Divine Proportions" by N.J. Wildberger. This author has also a lot of
+videos about the subject.
+
+C.a.R. can show distances squared (as a __quadrance__), and angles as
+sin(t)^2 instead of t (as a __spread__). In this case, it is useful to
+enable fractional display for the object too. Use the properties
+dialog of the object to enable these representations.
+
+To make the different values visually apparent, line segments get a
+long rectangle, and angles are straight segments instead of arcs.
+
 .properties
-.related edit conditions colors hide mouse transparent point fixedangle replay animatebreak expressionsyntax latex
+.related edit conditions colors hide mouse transparent point fixedangle replay animatebreak expressionsyntax latex rattrig
 Object Properties
 
 //image images/PointDialog.jpg
@@ -333,6 +350,13 @@ Breakpoints are important for __replay__ and for the animation of
 breakpoints. Breakpoints can either be set in the replay dialog, or in
 the properties dialog of the object. For hiding breakpoints press the
 shift key.
+
+Some objects can display their value as fractions. This will also
+apply in text objects, if the object is referred with %name%.
+
+Distances and angles can be display with their values in the
+__Rational§Geometry__. See the section in the link list about this way
+to compute trigonometric values for more information.
 
 Also, have a look at the buttons on the lower side of the properties
 dialog. E.g., points have a special button to choose an object to
@@ -1015,6 +1039,15 @@ __inside__
  Tests, if the point P is inside the object A. Returns 1/2, if it is
 on the boundary if A. A can be a polygon, a circle or an angle.
 
+__quad__
+  quad(a)
+  Computes a*a. These are the __quadrances__ in __Rational§Geometry__.
+
+__spread__
+  s(t)
+  Compute sin(t)^2. These are the __spreads__ in
+  __Rational§Geometry__.
+
 .text
 .related replay comment properties latex
 Text
@@ -1036,14 +1069,28 @@ __Hidden§texts__ appear in replay mode. This allows to show local
 comments of constructions steps that disappear later.
 
 .quadric
-.related properties point transparent
+.related properties point transparent function
 Conic sections
 
 //image- images/quadric.png
 __Conic§sections__ are sets of solutions of equations formed by linear
 combinations of x^2, y^2, x, y, xy and 1 (quadratic functions in two
 variables). It is well know, that conics are determined by 5 points.
-Simply select the 5 points to create a conic section.
+Select the 5 points to create a conic section. Two points can be
+replaced by one point and a tangent line. Select the point and a line.
+The conic section will have a tangent in that point, which is parallel
+to the line.
+
+Conic sections can also be determined by their formula. To do this,
+click on the conic section icon with the ctrl key, or use the menu
+entry in the functions menu. In the dialog, enter a quadratic
+expression q(x,y), which will define the conic section by q(x,y)=0.
+Make sure, the expression really defines a conic section! Otherwise, a
+conic section interpolating your function in some points in the plane
+will be generated. You must use the variables x and y. Zero sets of
+other functions can be generated with the user function tool. But only
+a conic section can be used for intersections, and to place points on
+it.
 
 To edit the __properties__ of the curve, click on it and use the
 normal properties dialog. Conics will display the defining formula as

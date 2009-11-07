@@ -20,6 +20,7 @@ import rene.zirkel.construction.Count;
 import rene.zirkel.construction.DepList;
 import rene.zirkel.expression.Expression;
 import rene.zirkel.expression.ExpressionString;
+import rene.zirkel.expression.Fraction;
 import rene.zirkel.expression.NoValueException;
 import rene.zirkel.graphics.MyGraphics;
 
@@ -105,6 +106,9 @@ public class ConstructionObject
 	
 	protected int NCount=0; // Unique number
 	protected boolean gotNCount=false; // Have already a number (from load file)
+	
+	protected boolean Quad=false; // Display as quadrance or spread
+	protected boolean Frac=false; // Display as fraction
 	
 	protected int Ticks=0;
 	
@@ -630,6 +634,8 @@ public class ConstructionObject
 		if (!Unit.equals("")) xml.printArg("unit",Unit);
 		if (Bold) xml.printArg("bold","true");
 		if (Large) xml.printArg("large","true");
+		if (Quad) xml.printArg("quad","true");
+		if (Frac) xml.printArg("frac","true");
 		if (this instanceof PointonObject && isDecorative()) xml.printArg("decorative","true");
 		if (this instanceof PointObject)
 		{	if (ColorType==NORMAL && !FillBackground) xml.printArg("fillbackground","false");
@@ -682,6 +688,9 @@ public class ConstructionObject
 	}
 	public void setShowValue (boolean f) { ShowValue=f; }
 
+	public char QC=9633;
+	public String QS=""; // QC+" ";
+	
 	/**
 	Determine the string to be displayed onscreen.
 	@return "", if there should be no display.
@@ -705,7 +714,7 @@ public class ConstructionObject
 				else
 				{	name=name+" = ";
 				}
-				if (Unit.equals(""))
+				if (Quad || Unit.equals(""))
 					return name+getDisplayValue();
 				else
 					return name+getDisplayValue()+Unit;
@@ -718,10 +727,9 @@ public class ConstructionObject
 			}
 		}
 		else if (showValue())
-		{	if (Unit.equals(""))
-				return getDisplayValue();
-			else
-				return getDisplayValue()+Unit;
+		{	String s=getDisplayValue();
+			if (!Quad && !Unit.equals("")) s=s+Unit;
+			return s;
 		}
 		return "";
 	}
@@ -873,7 +881,8 @@ public class ConstructionObject
 	{	return "";
 	}
 	public String getSizeDisplay ()
-	{	return getDisplayValue()+getUnit();
+	{	if (Quad) return getDisplayValue();
+		return getDisplayValue()+getUnit();
 	}
 	
 	/**
@@ -887,6 +896,23 @@ public class ConstructionObject
 	}
 	public double round (double x, double Rounder)
 	{	return Math.round(x*Rounder)/Rounder;
+	}
+	
+	static Fraction FR=new Fraction();
+	
+	public String roundFrac (double x, double Rounder)
+	{	if (Frac && FR.frac(x,1e-10) && FR.d<10000)
+		{	String s="";
+			if (FR.signum<0) s="-";
+			if (FR.d==1) s=s+FR.n;
+			else s=s+FR.n+"/"+FR.d;
+			return s;
+		}
+		else
+		{	x=round(x,Rounder);
+			if (x==(int)x) return ""+((int)x);
+			return ""+round(x,Rounder);
+		}
 	}
 	
 	// The following procedures are for label offset
@@ -1110,6 +1136,8 @@ public class ConstructionObject
 		setSolid(Cn.Solid);
 		setLarge(Cn.LargeFont);
 		setBold(Cn.BoldFont);
+		setQuad(Cn.Quad);
+		setFrac(Cn.Frac);
 	}
 	
 	public void setTargetDefaults ()
@@ -1315,6 +1343,26 @@ public class ConstructionObject
 	{	Large=large;
 	} 
 
+	public boolean isFrac ()
+	{	return Frac;
+	}
+	public void setFrac (boolean frac)
+	{	Frac=frac;
+	}
+	public boolean canuseFrac ()
+	{	return false;
+	}
+	
+	public boolean isQuad ()
+	{	return Quad;
+	}
+	public void setQuad (boolean quad)
+	{	Quad=quad;
+	}
+	public boolean canuseQuad ()
+	{	return false;
+	}
+	
 	// Routines for conditional formatting
 	
 	public void addConditional (String tag, Expression expr)
@@ -1552,5 +1600,19 @@ public class ConstructionObject
 	}
 	public boolean canHaveTicks ()
 	{	return false;
+	}
+
+	public void addDepending (Expression E)
+	{	if (E!=null)
+		{	Enumeration e=E.getDepList().elements();
+			while (e.hasMoreElements())
+			{	DL.add((ConstructionObject)e.nextElement());
+			}
+		}
+	}
+
+	public double getValue (String var)
+		throws ConstructionException
+	{	throw new ConstructionException("");
 	}
 }

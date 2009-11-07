@@ -2,8 +2,10 @@ package rene.zirkel.objects;
 
 // file: QuadricObject.java
 
+import java.awt.*;
 import java.util.*;
 
+import rene.gui.*;
 import rene.util.xml.*;
 import rene.zirkel.*;
 import rene.zirkel.construction.*;
@@ -11,16 +13,44 @@ import rene.zirkel.dialogs.*;
 import rene.zirkel.expression.*;
 import rene.zirkel.graphics.*;
 
-public class QuadricObject extends ConstructionObject
-	implements PointonObject, MoveableObject
-{	private ConstructionObject P[];
-	static Count N=new Count();
-	double X[];
+class QuadricExpressionEditDialog extends ObjectEditDialog
+{	TextFieldAction A;
 	
-	public QuadricObject (Construction c, ConstructionObject p[])
+	public QuadricExpressionEditDialog (Frame f, String title, QuadricExpressionObject o)
+	{	super(f,Zirkel.name("edit.point.title"),o);
+	}
+
+	public void addFirst (Panel P)
+	{	QuadricExpressionObject Q=(QuadricExpressionObject)O;
+		
+		A=new TextFieldAction(this,"a",Q.getExpression(),30);
+		P.add(new MyLabel(Zirkel.name("edit.quadricexpression"))); P.add(A);
+	}
+	
+	public void setAction ()
+	{	QuadricExpressionObject Q=(QuadricExpressionObject)O;
+		Q.setExpression(A.getText());
+		Q.validate();
+	}
+}
+
+public class QuadricExpressionObject extends ConstructionObject
+	implements PointonObject, MoveableObject
+{	Expression E;
+	static Count N=new Count();
+	double X[]=new double[6];
+	static String Var[]={"x","y"};
+	double VX[]=new double[2];
+	
+	public QuadricExpressionObject (Construction c)
 	{	super(c);
-		P=p;
 		validate();
+		E=new Expression("x^2+y^2-1",c,this,Var);
+		updateText();
+	}
+	
+	public void setExpression (String s)
+	{	E=new Expression(s,getConstruction(),this,Var);
 		updateText();
 	}
 
@@ -29,113 +59,41 @@ public class QuadricObject extends ConstructionObject
 	
 	public void updateText ()
 	{	try
-		{	String Names[]=new String[P.length];
-			for (int i=0; i<P.length; i++) Names[i]=P[i].getName();
-			setText(textAny(Zirkel.name("text.quadric"),Names));
+		{	setText(E.toString()+"=1");
 		} 
 		catch (Exception e) {}
 	}
 	
+	static double x[]={-1,1,-2,2,-1,1}; 
+	static double y[]={-1,-2,0,0,1,2};
+	static double A[][]={	
+	{-2.0/9,   1.0/18,   11.0/36,   1.0/36,   -2.0/9,   1.0/18}, 
+	{-1.0/6,    1.0/6,    1.0/6,   -1.0/6,   -1.0/6,    1.0/6}, 
+	{0,     0,   -1.0/4,    1.0/4,     0,     0}, 
+	{-1.0/4,   -1.0/8,     0,     0,    1.0/4,    1.0/8}, 
+	{1.0/4,   -1.0/8,     0,     0,   -1.0/4,    1.0/8}, 
+	{8.0/9,   -2.0/9,  -13.0/18,   7.0/18,    8.0/9,   -2.0/9}};
+	
+	static double t[]=new double[6];
+	
 	public void validate ()
-	{	for (int i=0; i<P.length; i++)
-			if (!P[i].valid())
-			{	Valid=false; return;
-			}
-		Valid=true;
-		
-		// Build coefficient matrix
-		double A[][]=new double[5][6];
-		for (int i=0; i<P.length; i++)
-		{	if (P[i] instanceof PointObject)
-			{	double x=((PointObject)P[i]).getX(),y=((PointObject)P[i]).getY();
-				A[i][0]=x*x; A[i][1]=y*y;
-				A[i][2]=x; A[i][3]=y;
-				A[i][4]=x*y; A[i][5]=1;
-			}
-			else if (P[i] instanceof PrimitiveLineObject && i>0 
-					&& P[i-1] instanceof PointObject)
-			{	double vx=((PrimitiveLineObject)P[i]).DX,
-					vy=((PrimitiveLineObject)P[i]).DY,
-					x=((PointObject)P[i-1]).getX(),
-					y=((PointObject)P[i-1]).getY();
-				A[i][0]=2*x*vx; 
-				A[i][1]=2*y*vy;
-				A[i][2]=vx;
-				A[i][3]=vy;
-				A[i][4]=y*vx+x*vy;
-				A[i][5]=0;
-			}
-			else
-			{	Valid=false; return;
-			}
-			double sum=0;
-			for (int j=0; j<6; j++) sum+=A[i][j]*A[i][j];
-			sum=Math.sqrt(sum);
-			for (int j=0; j<6; j++) A[i][j]/=sum;
-		}
-		
-		// Gauß algorithm
-		int r=0;
-		int colindex[]=new int[6]; // Index der Stufe oder -1 (keine Stufe)
-		// Iteration über alle Spalten:
-		for (int c=0; c<6; c++)
-		{	if (r>=5) // Schema schon fertig
-			{	colindex[c]=-1; continue;
-			}
-			// Berechne Pivotelement mit spaltenweiser Maximumssuche
-			double max=Math.abs(A[r][c]);
-			int imax=r;
-			for (int i=r+1; i<5; i++)
-			{	double h=Math.abs(A[i][c]);
-				if (h>max)
-				{	max=h; imax=i;
-				}
-			}
-			if (max>1e-13)
-			{	// Vertausche Zeilen:
-				if (imax!=r)
-				{	double h[]=A[imax];
-					A[imax]=A[r];
-					A[r]=h;
-				}
-				// Mache restliche Spalte zu 0:
-				for (int i=r+1; i<5; i++)
-				{	double lambda=A[i][c]/A[r][c];
-					for (int j=c+1; j<6; j++)
-						A[i][j]-=lambda*A[r][j];
-				}
-				colindex[c]=r;
-				r++;
-			}
-			else
-			{	colindex[c]=-1;
+	{	Valid=true;
+		try
+		{	for (int i=0; i<6; i++) t[i]=evaluateF(x[i],y[i]);
+			for (int i=0; i<6; i++)
+			{	X[i]=0;
+				for (int j=0; j<6; j++) X[i]+=A[i][j]*t[j];
 			}
 		}
-		// Berechne die x-Werte:
-		X=new double[6];
-		for (int j=5; j>=0; j--)
-		{	if (colindex[j]<0)
-			{	X[j]=1;
-			}
-			else
-			{	double h=0;
-				int i=colindex[j];
-				for (int k=j+1; k<6; k++)
-					h+=A[i][k]*X[k];
-				X[j]=-h/A[i][j];
-			}
+		catch (Exception e)
+		{	Valid=false; return;
 		}
-		// Normalize
-		double sum=0;
-		for (int i=0; i<=5; i++) sum+=Math.abs(X[i]);
-		if (sum<1e-10) Valid=false;
-		for (int i=0; i<=5; i++) X[i]/=sum;
 	}
 	
 	public void paint (MyGraphics g, ZirkelCanvas zc)
 	{	if (!Valid || mustHide(zc)) return;
 		g.setColor(this);
-		// Draw the lower part of the quadrik (minus the root):
+		// Draw the lower part of the quadric (minus the root):
 		double start=zc.minX(),x=start;
 		double end=zc.maxX();
 		double h=zc.dx(1);
@@ -252,10 +210,24 @@ public class QuadricObject extends ConstructionObject
 		}
 		return false;
 	}
+	
+	public boolean EditAborted;		
 		
 	public void edit (ZirkelCanvas zc)
-	{	ObjectEditDialog d=new ObjectEditDialog(zc.getFrame(),"",this);
-		d.setVisible(true);
+	{	QuadricExpressionEditDialog d=new QuadricExpressionEditDialog(zc.getFrame(),"",this);
+		while (true)
+		{	d.setVisible(true);
+			EditAborted=false;
+			if (d.isAborted())
+			{	EditAborted=true;
+				break;
+			}
+			boolean error=false;
+			if (!E.isValid())
+			{	error=true; break;
+			}
+			if (!error) break;
+		}
 		zc.repaint();
 		if (d.wantsMore())
 		{	new EditConditionals(zc.getFrame(),this);
@@ -286,39 +258,25 @@ public class QuadricObject extends ConstructionObject
 	}
 	
 	public void printArgs (XmlWriter xml)
-	{	for (int i=0; i<P.length; i++)
-			if (P[i]!=null) xml.printArg("point"+(i+1),P[i].getName());
+	{	xml.printArg("expr",E.toString());
 	}
 
 	public Enumeration depending ()
 	{	super.depending();
-		if (P!=null)
-			for (int i=0; i<P.length; i++) DL.add(P[i]);
-		return DL.elements();
+		DL.reset();
+		addDepending(E);
+		return DL.elements();		
 	}
 
 	public void translate ()
-	{	for (int i=0; i<P.length; i++)
-			P[i]=(PointObject)P[i].getTranslation();
-	}
-
-	public ConstructionObject copy ()
-	{	try
-		{	QuadricObject o=(QuadricObject)clone();
-			setTranslation(o);
-			o.P=new PointObject[P.length];
-			for (int i=0; i<P.length; i++) o.P[i]=P[i];
-			o.translateConditionals();
-			o.translate();
-			o.setName();
-			o.updateText();
-			o.setBreak(false);
-			o.setTarget(false);
-			return o;
+	{	X=new double[6];
+		super.translate();
+		try
+		{	setExpression(E.toString());
+			setTranslation(this);
+			E.translate();
 		}
-		catch (Exception e)
-		{	return null; 
-		}
+		catch (Exception e) {}
 	}
 
 	public boolean onlynearto (int x, int y, ZirkelCanvas zc)
@@ -385,11 +343,7 @@ public class QuadricObject extends ConstructionObject
 	}
 
 	public boolean dragTo (double x, double y) 
-	{	for (int i=0; i<5; i++)
-		{	if (P[i] instanceof PointObject) 
-				((PointObject)P[i]).move(xd[i]+(x-x1),yd[i]+(y-y1));
-		}
-		return true;
+	{	return false;
 	}
 
 	public void move (double x, double y) 
@@ -397,33 +351,13 @@ public class QuadricObject extends ConstructionObject
 	}
 
 	public boolean moveable () 
-	{	for (int i=0; i<5; i++)
-		{	if (!(P[i] instanceof PointObject))
-				return false;
-		}
-		return true;
+	{	return false;
 	}
 	
 	double xd[],yd[],x1,y1;
 
 	public boolean startDrag (double x, double y) 
-	{	if (xd==null)
-		{	xd=new double[5];
-			yd=new double[5];
-		}
-		for (int i=0; i<5; i++)
-		{	xd[i]=((PointObject)P[i]).getX(); yd[i]=((PointObject)P[i]).getY();
-		}
-		x1=x; y1=y;
-		return true;
-	}
-
-	public void snap (ZirkelCanvas zc)
-	{	if (moveable())
-		{	for (int i=0; i<5; i++)
-			{	P[i].snap(zc);
-			}
-		}
+	{	return false;
 	}
 
 	public boolean canInteresectWith(ConstructionObject o) 
@@ -438,4 +372,27 @@ public class QuadricObject extends ConstructionObject
 	{	return o instanceof QuadricObject;
 	}
 	
+	public String getExpression ()
+	{	return E.toString(); 
+	}
+	
+	public double getValue (String var)
+		throws ConstructionException
+	{	if (!Valid) throw new InvalidException("exception.invalid");
+		for (int i=0; i<Var.length; i++)
+			if (var.equals(Var[i])) return VX[i];
+		return VX[0];
+	}
+
+	public double evaluateF (double x, double y)
+		throws ConstructionException
+	{	VX[0]=x; VX[1]=y;
+		try
+		{	return E.getValue();
+		}
+		catch (Exception e)
+		{	throw new ConstructionException("");
+		}
+	}
+
 }

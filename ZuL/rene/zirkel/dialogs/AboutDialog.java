@@ -31,7 +31,7 @@ public class AboutDialog extends CloseDialog
 		text.add(l=new MyLabel(empty+"***"+empty));
 		l.setAlignment(Label.CENTER);
 		text.add(l=new MyLabel(Zirkel.name("about.language")+": "
-			+Global.name("language","")));
+			+Global.getParameter("language","")));
 		l.setAlignment(Label.CENTER);
 		add("Center",new Panel3D(text));
 		Panel p=new MyPanel();

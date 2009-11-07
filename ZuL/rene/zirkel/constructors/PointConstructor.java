@@ -18,7 +18,8 @@ public class PointConstructor extends ObjectConstructor
 	
 	public void mousePressed (MouseEvent e, ZirkelCanvas zc)
 	{	double x=zc.x(e.getX()),y=zc.y(e.getY());
-		PointObject o=zc.selectCreatePoint(e.getX(),e.getY(),false,true,false);
+		PointObject o=
+			(PointObject)zc.selectCreatePoint(e.getX(),e.getY(),false,true,false,null);
 		Dragging=false;
 		if (o==null) return;
 		else if (e.isShiftDown() && !zc.isNewPoint())

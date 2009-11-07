@@ -123,6 +123,12 @@ public class ObjectConstructor
 		if (tag.hasTrueParam("large"))
 		{	o.setLarge(true);
 		}
+		if (tag.hasTrueParam("quad"))
+		{	o.setQuad(true);
+		}
+		if (tag.hasTrueParam("frac"))
+		{	o.setFrac(true);
+		}
 		if (tag.hasParam("ticks"))
 		{	try
 			{	int ticks=Integer.parseInt(tag.getValue("ticks"));

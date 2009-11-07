@@ -56,29 +56,33 @@ public class PointonObjectIntersectionObject extends IntersectionObject
 		if (!Valid) return;
 		double distold=projectOnce();
 		if (!Valid) return;
-		for (int i=0; i<10; i++)
-		{	double dist1=projectOnce();
-			if (dist1>=distold && dist1<Eps) return;
-			distold=dist1;
-			double a=(x1-x),b=(y1-y);
-			double s=Math.max(Math.abs(a),Math.abs(b)); 
-			if (Math.abs(s)>1e-13) a/=s; b/=s;
-			double c=(X-x1),d=(Y-y1);
-			s=Math.max(Math.abs(c),Math.abs(d)); 
-			if (Math.abs(s)>1e-13) c/=s; d/=s;
-			double e=a*x1+b*y1,f=c*X+d*Y;
-			double det=a*d-c*b;
-			if (Math.abs(det)>1e-13)
-			{	double xn=(e*d-f*b)/det;
-				double yn=(a*f-c*e)/det;
-				double xold=X,yold=Y;
-				X=xn; Y=yn;
-				double dist2=projectOnce();
-				if (dist2>dist1) // interpolation does not work
-				{	X=xold; Y=yold;
+		for (int k=1; k<3; k++)
+		{	for (int i=0; i<10; i++)
+			{	double dist1=projectOnce();
+				if (dist1>=distold && dist1<Eps && Math.abs(X)<1e10 && Math.abs(Y)<1e10) 
+					return;
+				distold=dist1;
+				double a=(x1-x),b=(y1-y);
+				double s=Math.max(Math.abs(a),Math.abs(b)); 
+				if (Math.abs(s)>1e-13) a/=s; b/=s;
+				double c=(X-x1),d=(Y-y1);
+				s=Math.max(Math.abs(c),Math.abs(d)); 
+				if (Math.abs(s)>1e-13) c/=s; d/=s;
+				double e=a*x1+b*y1,f=c*X+d*Y;
+				double det=a*d-c*b;
+				if (Math.abs(det)>1e-13)
+				{	double xn=(e*d-f*b)/det;
+					double yn=(a*f-c*e)/det;
+					double xold=X,yold=Y;
+					X=xn; Y=yn;
+					double dist2=projectOnce();
+					if (dist2>dist1) // interpolation does not work
+					{	X=xold; Y=yold;
+					}
+					else distold=dist2;
 				}
-				else distold=dist2;
 			}
+			X=Math.random()-0.5; Y=Math.random()-0.5;
 		}
 		Valid=false;
 	}

@@ -8,7 +8,7 @@ import java.awt.*;
 
 /**
  * @author Rene
- * An internal class to hold a font sructure (size, face
+ * An internal class to hold a font structure (size, face
  * and font object)
  */
 public class FontStruct
