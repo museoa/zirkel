@@ -1315,6 +1315,19 @@ Man kann mehrere __Default-Einstellungen__ für neue Objekte festlegen.
 Dafür gibt es Werkzeuge im Menü, die alle in der oberen Reihe der
 Werkzeugleiste angezeigt werden können.
 
+Es gibt auch globale Einstellung, die für alle Objekte gültig sind.
+
+- Großer oder fetter Font
+- Fontname (dialog, dialoginput, monospace, serif, sansserif)
+- Minimalgrößen für Punkte, Linienbreite und Fonts
+- Größe des Auswahlbereichs für Punkte
+- Pfeilgröße
+- Nachkommastellen
+- Defaultfarben
+
+Die meisten dieser Einstellungen werden beim HTML-Export in den
+Parametern des Applets gespeichert.
+
 .edit
 .related conditions mouse properties expression
 Bearbeiten von Objekten

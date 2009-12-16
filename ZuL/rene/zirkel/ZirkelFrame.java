@@ -513,6 +513,7 @@ public class ZirkelFrame extends CloseFrame
 			FontBold.setState(Global.getParameter("font.bold",false)); 
 			FontLarge=menuaddcheck(settings,"menu.settings.font.large"); 
 			FontLarge.setState(Global.getParameter("font.large",false)); 
+			menuadd(settings,"menu.settings.fontname"); 
 			
 			settings.addSeparator();
 			 
@@ -1455,6 +1456,18 @@ public class ZirkelFrame extends CloseFrame
 		else if (s.equals("menu.options.editgrid"))
 		{	editGrid(); 
 			setinfo("grid"); 
+		}
+		else if (s.equals("menu.settings.fontname"))
+		{	setinfo("defaults");
+			GetParameter.InputLength=32;
+			GetParameter d=new GetParameter(this,Zirkel.name("fontname.title"),
+				Zirkel.name("fontname.prompt"),Zirkel.name("ok"));
+			d.center(this);
+			d.set(Global.getParameter("font.name","dialog"));
+			d.setVisible(true);
+			if (d.getResult().equals("")) Global.removeParameter("font.name");  
+			else Global.setParameter("font.name",d.getResult());
+			ZC.newImage();
 		}
 		ZC.pause(false);
 		ZC.requestFocus();
@@ -3066,7 +3079,10 @@ public class ZirkelFrame extends CloseFrame
 			if (!d.allowPopup())
 				out.println("<param name=\"nopopupmenu\" value=\"true\" />"); 				
 			if (d.restrictedMove())
-				out.println("<param name=\"restrictedmove\" value=\"true\" />"); 				
+				out.println("<param name=\"restrictedmove\" value=\"true\" />");
+			if (!Global.getParameter("font.name","dialog").equals("dialog"))
+				out.println("<param name=\"fontname\" value=\""
+						+Global.getParameter("font.name","dialog")+"\" />");
 			String s=""; 
 			if (Global.getParameter("font.bold",false)) s=s+"bold"; 
 			if (Global.getParameter("font.large",false)) s=s+" large"; 
@@ -3322,6 +3338,9 @@ public class ZirkelFrame extends CloseFrame
 					}
 					else if (s.equals("#font"))
 					{	String ss=""; 
+						if (!Global.getParameter("font.name","dialog").equals("dialog"))
+							out.println("<param name=\"fontname\" value=\""
+									+Global.getParameter("font.name","dialog")+"\" />");
 						if (Global.getParameter("font.bold",false)) ss=ss+"bold"; 
 						if (Global.getParameter("font.large",false)) ss=ss+" large"; 
 						if (!ss.equals("")) 

@@ -299,14 +299,14 @@ public class QuadricObject extends ConstructionObject
 
 	public void translate ()
 	{	for (int i=0; i<P.length; i++)
-			P[i]=(PointObject)P[i].getTranslation();
+			P[i]=(ConstructionObject)P[i].getTranslation();
 	}
 
 	public ConstructionObject copy ()
 	{	try
 		{	QuadricObject o=(QuadricObject)clone();
 			setTranslation(o);
-			o.P=new PointObject[P.length];
+			o.P=new ConstructionObject[P.length];
 			for (int i=0; i<P.length; i++) o.P[i]=P[i];
 			o.translateConditionals();
 			o.translate();

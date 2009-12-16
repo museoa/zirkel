@@ -138,6 +138,9 @@ public class ZirkelApplet extends Applet
 		
 		if (getParameter("edit")!=null) edit=true;
 		
+		String fontname=getParameter("fontname");
+		if (fontname!=null) Global.setParameter("font.name",fontname);
+		
 		for (int i=0; i<ZirkelFrame.Colors.length; i++)
 		{	color=getParameter("color"+i);
 			if (color!=null) Global.setParameter("color"+i,color);
@@ -1261,6 +1264,7 @@ public class ZirkelApplet extends Applet
 	
 	public void replay ()
 	{	if (RD!=null) return;
+		ZC.getConstruction().setOriginalOrder(true);
 		RD=new Replay(F,ZC)
 			{	public void doclose ()
 				{	RD=null;
@@ -1271,6 +1275,7 @@ public class ZirkelApplet extends Applet
 		RD.setLocation(d.width-100-RD.getSize().width,100);
 		ZC.OC.invalidate(ZC);
 		RD.setVisible(true);
+		ZC.getConstruction().setOriginalOrder(false);
 	}
 	
 	public void replayChosen ()

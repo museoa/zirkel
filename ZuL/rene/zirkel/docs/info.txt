@@ -1236,6 +1236,20 @@ a user defined color. User defined colors are not encouraged per
 default. Activate the icon to set the user defined color by editing
 the icon bar, if you really need this. 
 
+There also global settings, which apply to all objects in the
+construction. The following global settings are available.
+
+- large or fat font
+- font name (dialog, dialoginput, monospace, serif, sansserif)
+- minimal point size, line width, font size
+- area of selection for points
+- arrow size
+- number of digits for display
+- global colors
+
+Most of these are saved on HTML export in the parameter section of the
+applet.
+
 .edit
 .related mouse properties conditions
 Edit Objects

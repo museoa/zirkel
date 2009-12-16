@@ -31,8 +31,8 @@
         <javaElement handleIdentifier="=rene/&lt;rene.gui{IconBarListener.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.util.parser"/>
         <javaElement handleIdentifier="=rene/&lt;rene.dialogs{GetParameter.java"/>
-        <javaElement handleIdentifier="=rene/&lt;rene.gui{FormTextField.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.gui{MyMenuItem.java"/>
+        <javaElement handleIdentifier="=rene/&lt;rene.gui{FormTextField.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.gui{MyMenu.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.gui{TextFieldAction.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.viewer{Viewer.java"/>
@@ -72,4 +72,5 @@
         <javaElement handleIdentifier="=rene/&lt;rene.dialogs{MyFileDialog.java"/>
         <javaElement handleIdentifier="=rene/&lt;rene.gui{MenuItemAction.java"/>
     </selectedElements>
+    <fatjar builder="org.eclipse.jdt.ui.plain_jar_builder" launchConfig=""/>
 </jardesc>

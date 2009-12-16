@@ -337,7 +337,7 @@ public class MyGraphics13 extends MyGraphics
 		if (f!=null) G.setFont(f);
 		else
 		{	f=new Font(
-				Global.getParameter("font.name","dialoginput"),
+				Global.getParameter("font.name","dialog"),
 				bold?Font.BOLD:Font.PLAIN,
 				h);
 			FS.storeFont(h,bold,f);

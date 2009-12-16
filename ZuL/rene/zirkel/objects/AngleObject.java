@@ -249,7 +249,7 @@ public class AngleObject extends ConstructionObject
 				}
 				else if (Quad)
 				{	double dx1=Math.cos(A1),dy1=Math.sin(A1),
-					dx2=Math.cos(A1+DA/180*Math.PI),dy2=Math.sin(A1+DA/180*Math.PI);
+						dx2=Math.cos(A1+DA/180*Math.PI),dy2=Math.sin(A1+DA/180*Math.PI);
 					if (Selected||getColorType()!=THIN)
 					{	g.setColor(this);
 						g.drawLine(c1+R+R*dx1,r1+R-R*dy1,c1+R+R*dx2,r1+R-R*dy2);
@@ -367,7 +367,7 @@ public class AngleObject extends ConstructionObject
 	 */
 	double getDisplaySize (ZirkelCanvas zc)
 	{	double R=zc.dx((int)(zc.angleSize()));
-		if (DisplaySize==SMALL || DisplaySize==RECT || Quad) R/=2;
+		if (DisplaySize==SMALL || DisplaySize==RECT) R/=2;
 		else if (DisplaySize==LARGER) R*=2;
 		else if (DisplaySize==LARGE)
 		{	double dx=P1.getX()-X,dy=P1.getY()-Y;
