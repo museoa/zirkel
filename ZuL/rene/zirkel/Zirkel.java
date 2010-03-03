@@ -113,6 +113,8 @@ public class Zirkel extends Applet
 			Global.setParameter("iconsize",24);
 		else Global.setParameter("iconsize",32);
 		Help.CodePage=Global.name("codepage.help","");
+		Global.makeFonts();
+		Global.makeColors();
 		ZirkelFrame f=new ZirkelFrame(false);
 		if (!filename.equals(""))
 		{	f.load(filename);

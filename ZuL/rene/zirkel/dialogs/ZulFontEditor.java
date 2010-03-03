@@ -1,3 +1,6 @@
+package rene.zirkel.dialogs;
+
+/*
 package rene.dialogs;
 
 import java.awt.*;
@@ -8,9 +11,12 @@ A canvas to display a sample of the chosen font.
 The samples is drawn from the GetFontSize dialog.
 */
 
+import java.awt.*;
+import rene.gui.*;
+
 class ExampleCanvas extends Canvas
-{   FontEditor GFS;
-    public ExampleCanvas (FontEditor gfs)
+{   ZulFontEditor GFS;
+    public ExampleCanvas (ZulFontEditor gfs)
     {   GFS=gfs;
     }
     public void paint (Graphics g)
@@ -26,21 +32,26 @@ A dialog to get the font size of the fixed font and its name.
 Both items are stored as a Global Parameter.
 */
 
-public class FontEditor extends CloseDialog
+public class ZulFontEditor extends CloseDialog
 {	String FontTag;
 	TextField FontName;
-	IntField FontSize,FontSpacing;
-	Choice Fonts,Mode;
+	IntField FontSize;
+	Choice Fonts,Mode,LargeSmall;
 	Canvas Example;
 	String E=Global.name("fonteditor.sample");
-	Checkbox Smooth;
+	String FontDef;
+	int SizeDef;
 	/**
 	@param fonttag,fontdef the font name resource tag and its default value
 	@param sizetag,sizedef the font size resource tag and its default value
 	*/
-	public FontEditor (Frame f, String fonttag,
-		String fontdef, int sizedef)
+	public ZulFontEditor (Frame f, String fonttag,
+		String fontdef, int sizedef,
+		boolean bold, boolean italic, 
+		boolean largesmallonly)
 	{	super(f,Global.name("fonteditor.title"),true);
+		FontDef=fontdef;
+		SizeDef=sizedef;
 		FontTag=fonttag;
 		setLayout(new BorderLayout());
 		Panel p=new MyPanel();
@@ -50,19 +61,11 @@ public class FontEditor extends CloseDialog
 		FontName.setText(Global.getParameter(fonttag+".name",fontdef));
 		p.add(new MyLabel(Global.name("fonteditor.available")));
 		p.add(Fonts=new ChoiceAction(this,"Fonts"));
-		String[] fonts=Toolkit.getDefaultToolkit().getFontList();
-		if (fonts!=null)
-		{	for (int i=0; i<fonts.length; i++)
-			{   Fonts.add(fonts[i]);
-			}
-		}
-		else
-		{	Fonts.add("Dialog");
-			Fonts.add("SansSerif");
-			Fonts.add("Serif");
-			Fonts.add("Monospaced");
-			Fonts.add("DialogInput");
-		}
+		Fonts.add("Dialog");
+		Fonts.add("SansSerif");
+		Fonts.add("Serif");
+		Fonts.add("Monospaced");
+		Fonts.add("DialogInput");
 		Fonts.add("Courier");
 		Fonts.add("TimesRoman");
 		Fonts.add("Helvetica");
@@ -70,26 +73,29 @@ public class FontEditor extends CloseDialog
 		p.add(new MyLabel(Global.name("fonteditor.mode")));
 		p.add(Mode=new ChoiceAction(this,"Mode"));
 		Mode.add(Global.name("fonteditor.plain"));
-		Mode.add(Global.name("fonteditor.bold"));
-		Mode.add(Global.name("fonteditor.italic"));
+		if (bold) Mode.add(Global.name("fonteditor.bold"));
+		if (italic) Mode.add(Global.name("fonteditor.italic"));
 		String name=Global.getParameter(fonttag+".mode","plain");
 	    if (name.startsWith("bold")) Mode.select(1);
 	    else if (name.startsWith("italic")) Mode.select(2);
 	    else Mode.select(0);
 		p.add(new MyLabel(Global.name("fonteditor.size")));
-		p.add(FontSize=new IntField(this,"FontSize",
-			Global.getParameter(fonttag+".size",sizedef)));
-		p.add(new MyLabel(Global.name("fonteditor.spacing")));
-		p.add(FontSpacing=new IntField(this,"FontSpacing",
-			Global.getParameter(fonttag+".spacing",0)));
-		p.add(new MyLabel(Global.name("fonteditor.antialias")));
-		p.add(Smooth=new CheckboxAction(this,"","Smooth"));
-		Smooth.setState(Global.getParameter("font.smooth",true));
+		if (largesmallonly)
+		{	p.add(LargeSmall=new ChoiceAction(this,"LargeSmall"));
+			LargeSmall.add(Global.name("fonteditor.normal"));
+			LargeSmall.add(Global.name("fonteditor.large"));
+			LargeSmall.select(Global.getParameter(fonttag+".large",false)?1:0);
+		}
+		else
+		{	p.add(FontSize=new IntField(this,"FontSize",
+					Global.getParameter(fonttag+".size",sizedef)));
+		}
 		add("North",new Panel3D(p));
 		Example=new ExampleCanvas(this);
 		add("Center",new Panel3D(Example));
 		Panel bp=new MyPanel();
 		bp.add(new ButtonAction(this,Global.name("OK"),"OK"));
+		bp.add(new ButtonAction(this,Global.name("fonteditor.default"),"Default"));
 		bp.add(new ButtonAction(this,Global.name("close"),"Close"));
 		add("South",new Panel3D(bp));
 		pack();
@@ -101,11 +107,16 @@ public class FontEditor extends CloseDialog
     		if (mode()==Font.BOLD) s="bold";
     		else if (mode()==Font.ITALIC) s="Italic";
     		Global.setParameter(FontTag+".mode",s);
-		    Global.setParameter(FontTag+".size",FontSize.value(3,50));
-		    Global.setParameter(FontTag+".spacing",FontSpacing.value(-10,10));
-		    Global.setParameter("font.smooth",Smooth.getState());
+		    if (FontSize!=null) Global.setParameter(FontTag+".size",FontSize.value(3,50));
+		    else Global.setParameter(FontTag+".large",LargeSmall.getSelectedIndex()==1);
 		    doclose();
-    	}
+	    }
+		else if ("Default".equals(o))
+		{	if (FontSize!=null) FontSize.set(SizeDef);
+			else LargeSmall.select(0); 
+			FontName.setText(FontDef);
+			Mode.select(0);
+		}
 		else super.doAction(o);
         Example.repaint();
 	}
@@ -121,12 +132,13 @@ public class FontEditor extends CloseDialog
 	    else return Font.PLAIN;
 	}
 	public void example (Graphics g, int w, int h)
-	{   Font f=new Font(FontName.getText(),mode(),FontSize.value(3,50));
+	{   int size=12;
+		if (FontSize!=null) size=FontSize.value(3,50);
+		Font f=new Font(FontName.getText(),mode(),size);
 	    g.setFont(f);
 	    FontMetrics fm=g.getFontMetrics();
-	    int d=FontSpacing.value(-10,10);
 	    for (int i=1; i<=4; i++)
 	        g.drawString(E,5,
-	        	5+d+i*d+fm.getLeading()+fm.getAscent()+i*fm.getHeight());
+	        	5+fm.getLeading()+fm.getAscent()+i*fm.getHeight());
 	}
 }

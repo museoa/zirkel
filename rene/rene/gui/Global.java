@@ -57,7 +57,7 @@ public class Global
 	    else
 	    {   return new Font(fontname,
 	    		Font.PLAIN,Global.getParameter(name+".size",defsize));
-	    }	    
+	    }	   
 	}
 	
 	static public Color Background=null,ControlBackground=null;
@@ -364,7 +364,12 @@ public class Global
 		}
 		Warning W=new Warning(F,s,name("warning"),false);
 		W.center();
-		W.show();
+		W.setVisible(true);
+	}
+	public static void warning (Frame f, String s)
+	{	Warning W=new Warning(f,s,name("warning"),false);
+		W.center(f);
+		W.setVisible(true);
 	}
 	
 	// Clipboard for applets

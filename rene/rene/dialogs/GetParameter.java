@@ -20,7 +20,7 @@ A simple dialog to scan for a parameter.
 
 public class GetParameter extends CloseDialog
 {	HistoryTextField Input;
-	static public int InputLength;
+	static public int InputLength=32;
 	String Result="";
 	boolean Aborted=true;
 	

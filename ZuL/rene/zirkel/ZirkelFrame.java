@@ -509,11 +509,8 @@ public class ZirkelFrame extends CloseFrame
 			
 			settings.addSeparator();
 			
-			FontBold=menuaddcheck(settings,"menu.settings.font.bold"); 
-			FontBold.setState(Global.getParameter("font.bold",false)); 
-			FontLarge=menuaddcheck(settings,"menu.settings.font.large"); 
-			FontLarge.setState(Global.getParameter("font.large",false)); 
-			menuadd(settings,"menu.settings.fontname"); 
+			menuadd(settings,"menu.settings.fontname");
+			menuadd(settings,"menu.settings.dialogfontname");
 			
 			settings.addSeparator();
 			 
@@ -1459,15 +1456,21 @@ public class ZirkelFrame extends CloseFrame
 		}
 		else if (s.equals("menu.settings.fontname"))
 		{	setinfo("defaults");
-			GetParameter.InputLength=32;
-			GetParameter d=new GetParameter(this,Zirkel.name("fontname.title"),
-				Zirkel.name("fontname.prompt"),Zirkel.name("ok"));
-			d.center(this);
-			d.set(Global.getParameter("font.name","dialog"));
-			d.setVisible(true);
-			if (d.getResult().equals("")) Global.removeParameter("font.name");  
-			else Global.setParameter("font.name",d.getResult());
+			ZulFontEditor fe=new ZulFontEditor(this,"font","dialog",12,true,false,true);
+			fe.center(this);
+			fe.setVisible(true);
+			if (fe.isAborted()) return;
+			Global.setParameter("font.bold",
+				Global.getParameter("font.mode","plain").equals("bold"));
 			ZC.newImage();
+		}
+		else if (s.equals("menu.settings.dialogfontname"))
+		{	setinfo("defaults");
+			ZulFontEditor fe=new ZulFontEditor(this,"normalfont","dialog",12,false,false,false);
+			fe.center(this);
+			fe.setVisible(true);
+			if (fe.isAborted()) return;
+			Global.warning(this,Global.name("warning.restart"));
 		}
 		ZC.pause(false);
 		ZC.requestFocus();
@@ -1643,14 +1646,6 @@ public class ZirkelFrame extends CloseFrame
 		}
 		else if (o.equals("menu.options.longnames"))
 		{	setLongNames(flag); 
-			setinfo("defaults"); 
-		}
-		else if (o.equals("menu.options.largefont"))
-		{	setLargeFont(flag); 
-			setinfo("defaults"); 
-		}
-		else if (o.equals("menu.options.boldfont"))
-		{	setBoldFont(flag); 
 			setinfo("defaults"); 
 		}
 		else if (o.equals("menu.options.fillbackground"))
